@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bakunawa.unity
     guid: 00877fcd5b9a0c54c88e0ec4fe9dac72
+  - enabled: 1
+    path: Assets/Scenes/manananggal_map_morning.unity
+    guid: 0c676039b3756d54293f777669861cd3
+  - enabled: 1
+    path: Assets/Scenes/Tikbalang.unity
+    guid: 92f1d9c2a30bb8d409ce331b3029399d
   m_configObjects: {}
