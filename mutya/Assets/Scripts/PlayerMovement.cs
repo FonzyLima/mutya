@@ -14,6 +14,25 @@ public class PlayerMovement : MonoBehaviour
     public float timeRemain = 39;
     public bool canMove = false;
 
+    // Crouching Mechanic
+    public SpriteRenderer SpriteRenderer;
+    public Sprite Standing;
+    public Sprite Crouching; // Get Crouching Sprite
+
+    public BoxCollider2D Collider;
+
+    public Vector2 StandingSize;
+    public Vector2 CrouchingSize;
+
+    void Start(){
+        Collider = GetComponent<BoxCollider2D>();
+        Collider.size = StandingSize;
+        
+        SpriteRenderer = GetComponent<SpriteRenderer>();
+        SpriteRenderer.sprite = Standing;
+
+        StandingSize = Collider.size;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +45,16 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.C)){
+            SpriteRenderer.sprite = Crouching;
+            Collider.size = CrouchingSize;
+        }
+
+        if (Input.GetKeyUp(KeyCode.C)){
+            SpriteRenderer.sprite = Standing;
+            Collider.size = StandingSize;
+        }
     }
 
     void FixedUpdate()
