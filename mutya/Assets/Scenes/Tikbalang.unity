@@ -895,6 +895,14 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 96507377}
   animator: {fileID: 96507375}
+  timeRemain: 0
+  canMove: 0
+  SpriteRenderer: {fileID: 0}
+  Standing: {fileID: 0}
+  Crouching: {fileID: 0}
+  Collider: {fileID: 0}
+  StandingSize: {x: 0.739271, y: 1.384295}
+  CrouchingSize: {x: 0, y: 0}
 --- !u!50 &96507377
 Rigidbody2D:
   serializedVersion: 4
@@ -7651,7 +7659,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650190836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.586578, y: -4.782314, z: -10}
+  m_LocalPosition: {x: -11.245005, y: -4.778489, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
