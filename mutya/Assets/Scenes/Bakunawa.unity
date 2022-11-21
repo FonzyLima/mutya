@@ -26142,8 +26142,8 @@ MonoBehaviour:
   moon4: {fileID: 122976325}
   moon5: {fileID: 2046956183}
   moon6: {fileID: 1364066015}
-  timer: 184
-  speed: 3
+  timer: 190
+  speed: 5
 --- !u!1001 &6615944022393404769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26169,7 +26169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6615944023304415072, guid: 4b7969f7ae11adf4fbd7b88c79dea60c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.61
+      value: -27.58
       objectReference: {fileID: 0}
     - target: {fileID: 6615944023304415072, guid: 4b7969f7ae11adf4fbd7b88c79dea60c, type: 3}
       propertyPath: m_LocalPosition.z

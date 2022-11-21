@@ -21,6 +21,16 @@ public class BakunawaSpawner : MonoBehaviour
 
         
     }
+    void MoveMoon(GameObject moon){
+        if(moon.activeSelf){
+                
+                bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
+            }
+            if(bakunawa.transform.position.y > GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+10){
+                bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
+                moon.SetActive(false);
+            }
+    }
 
     // Update is called once per frame
     void Update()
@@ -36,77 +46,31 @@ public class BakunawaSpawner : MonoBehaviour
         }
 
         if(timer<=180){
-            if(moon6.activeSelf){
-                bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
-            }
-            if(bakunawa.transform.position.y > GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+10){
-                bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
-                moon6.SetActive(false);
-            }
+            MoveMoon(moon6);
             
         }
         if(timer<=150){
-            if(moon5.activeSelf){
-                bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
-            }
-            if(bakunawa.transform.position.y > GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+10){
-                bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
-                moon5.SetActive(false);
-            }
+            MoveMoon(moon5);
             
         }
         if(timer<=120){
-            if(moon4.activeSelf){
-                bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
-            }
-            if(bakunawa.transform.position.y > GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+10){
-                bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
-                moon4.SetActive(false);
-            }
+            MoveMoon(moon4);
             
         }
         if(timer<=90){
-            if(moon3.activeSelf){
-                bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
-            }
-            if(bakunawa.transform.position.y > GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+10){
-                bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
-                moon3.SetActive(false);
-            }
+            MoveMoon(moon3);
             
         }
         if(timer<=60){
-            if(moon2.activeSelf){
-                bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
-            }
-            if(bakunawa.transform.position.y > GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+10){
-                bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
-                moon2.SetActive(false);
-            }
-            
+            MoveMoon(moon2);  
         }
         if(timer<=30){
-            if(moon1.activeSelf){
-                bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
-            }
-            if(bakunawa.transform.position.y > GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+10){
-                bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
-                moon1.SetActive(false);
-            }
+            MoveMoon(moon1);
             
         }
         if(timer<=0){
-            if(moon0.activeSelf){
-                bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
-            }
-            if(bakunawa.transform.position.y > GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+10){
-                bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
-                moon0.SetActive(false);
-            }
-            
+            MoveMoon(moon0);
         }
         
-
-
     }
 }
