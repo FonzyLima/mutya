@@ -26101,7 +26101,7 @@ GameObject:
   - component: {fileID: 2114006966}
   - component: {fileID: 2114006967}
   m_Layer: 0
-  m_Name: MoonManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26169,7 +26169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6615944023304415072, guid: 4b7969f7ae11adf4fbd7b88c79dea60c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.58
+      value: 13.66
       objectReference: {fileID: 0}
     - target: {fileID: 6615944023304415072, guid: 4b7969f7ae11adf4fbd7b88c79dea60c, type: 3}
       propertyPath: m_LocalPosition.z
