@@ -33,7 +33,7 @@ public class BakunawaSpawner : MonoBehaviour
         GameObject[] moons;
         moons = GameObject.FindGameObjectsWithTag("Moon");
         for(int i=0;i<moons.Length;i++){
-            moons[i].transform.position = new Vector3(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+i,GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+4,0);
+            moons[i].transform.position = new Vector3(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+7-i,GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+4,0);
         }
         if(timer>0){
             timer -= Time.deltaTime;
