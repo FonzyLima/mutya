@@ -14,20 +14,15 @@ public class BakunawaSpawner : MonoBehaviour
     public GameObject moon6;
     public float timer = 210;
     public float speed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
 
-        
-    }
     void MoveMoon(GameObject moon){
         if(moon.activeSelf){
-                
+                if(bakunawa.transform.position.y>13.6){
+                    bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
+                }
                 bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
             }
-            if(bakunawa.transform.position.y > GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+10){
-                bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
+            if(bakunawa.transform.position.y > 13.6){
                 moon.SetActive(false);
             }
     }
