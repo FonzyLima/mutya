@@ -18238,6 +18238,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0423813, y: 0.7706795}
   m_EdgeRadius: 0
+--- !u!1 &596584420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596584421}
+  m_Layer: 0
+  m_Name: WhipPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596584421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596584420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1, y: -0.86, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1003305469}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &635377311
 GameObject:
   m_ObjectHideFlags: 0
@@ -19582,9 +19613,10 @@ GameObject:
   - component: {fileID: 1003305468}
   - component: {fileID: 1003305467}
   - component: {fileID: 1003305466}
+  - component: {fileID: 1003305473}
+  - component: {fileID: 1003305474}
   - component: {fileID: 1003305470}
   - component: {fileID: 1003305471}
-  - component: {fileID: 1003305472}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -19699,7 +19731,8 @@ Transform:
   m_LocalPosition: {x: -7.43, y: 11.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 596584421}
   m_Father: {fileID: 1840013171}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19749,7 +19782,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.73927104, y: 1.3842951}
   m_EdgeRadius: 0
---- !u!114 &1003305472
+--- !u!114 &1003305473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19758,27 +19791,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 1003305465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 619f42eed933d944ba4b3e924aac4601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  playerMovement: {fileID: 1003305466}
+  cam: {fileID: 2091570632}
+  whipPoint: {fileID: 596584421}
+  whipPrefab: {fileID: 1128970799271201360, guid: b32c2053b2ed35a449140d1b6630968c, type: 3}
+  bulletForce: 10
+  angle: 0
+  lookDir: {x: 0, y: 0}
+--- !u!114 &1003305474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003305465}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 428de4f6dddea4a4092a16eedf77fc96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whipPoint: {fileID: 596584421}
+  whipPrefab: {fileID: 1128970799271201360, guid: b32c2053b2ed35a449140d1b6630968c, type: 3}
+  bulletForce: 20
 --- !u!1 &1026032234
 GameObject:
   m_ObjectHideFlags: 0
@@ -28321,7 +28358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77cade0c50e3b5145a863a07dbde14fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 3
   rb: {fileID: 2017404222}
   animator: {fileID: 2017404221}
   dir: {x: 0, y: 0, z: 0}
