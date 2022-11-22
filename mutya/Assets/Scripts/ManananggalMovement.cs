@@ -7,10 +7,11 @@ public class ManananggalMovement : MonoBehaviour
     public float moveSpeed;
 
 
-    private Transform target;
+    public Transform target;
     public Rigidbody2D rb;
     public Animator animator;
     public Vector3 dir;
+    public float knockbackForce = 10000f;
 
     Vector2 movement;
 
@@ -46,5 +47,21 @@ public class ManananggalMovement : MonoBehaviour
     void OnFire() 
     {
         animator.SetTrigger("whipAttack");
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        print(other.tag);
+        if(other.tag == "Weapon")
+        {
+            Vector2 direction = (Vector2) (dir).normalized;
+            Vector2 knockback = direction * knockbackForce * -1;
+            print(knockback);
+            rb.AddForce(knockback);
+        }
+        else if(other.tag == "Player")
+        {
+            print("Game Over");
+        }
     }
 }

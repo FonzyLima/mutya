@@ -16,6 +16,12 @@ public class PlayerManananggalMechanic : MonoBehaviour
     public float bulletForce = 20f;
     public float angle;
     public Vector2 lookDir;
+    public Animator animator;
+
+    public Rigidbody2D weaponParent;
+
+    public float delay = 100f;
+    private bool attackBlocked;
 
     // Start is called before the first frame update
     void Start()
@@ -30,14 +36,16 @@ public class PlayerManananggalMechanic : MonoBehaviour
 
         if(Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            Attack();
         }
     }
 
     void FixedUpdate()
     {
         lookDir = mousePos - playerMovement.rb.position;
-        angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 270f;
+        weaponParent.position = playerMovement.rb.position;
+        
         // playerMovement.rb.rotation = angle;
     }
 
@@ -47,5 +55,21 @@ public class PlayerManananggalMechanic : MonoBehaviour
         Rigidbody2D rb = whip.GetComponent<Rigidbody2D>();
         rb.rotation = angle;
         rb.AddForce(lookDir * bulletForce, ForceMode2D.Impulse);
+    }
+
+    public void Attack()
+    {
+        if(attackBlocked)
+            return;
+        weaponParent.rotation = angle;
+        animator.SetTrigger("Attack");
+        attackBlocked = true;
+        StartCoroutine(DelayAttack());
+    }
+
+    private IEnumerator DelayAttack()
+    {
+        yield return new WaitForSeconds(delay);
+        attackBlocked = false;
     }
 }
