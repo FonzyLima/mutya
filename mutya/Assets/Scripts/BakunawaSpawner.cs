@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BakunawaSpawner : MonoBehaviour
 {   
+    public GameObject player;
+    public GameObject crack;
     public GameObject bakunawa;
     public GameObject moon0;
     public GameObject moon1;
@@ -15,15 +17,20 @@ public class BakunawaSpawner : MonoBehaviour
     public float timer = 210;
     public float speed;
 
+    void Earthquake(){
+        crack.transform.position = new Vector3(player.transform.position.x,player.transform.position.y,0);
+    }
     void MoveMoon(GameObject moon){
         if(moon.activeSelf){
                 if(bakunawa.transform.position.y>13.6){
                     bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
+                    Earthquake();
                 }
                 bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
             }
             if(bakunawa.transform.position.y > 13.6){
                 moon.SetActive(false);
+                
             }
     }
 
