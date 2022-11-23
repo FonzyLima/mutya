@@ -64,11 +64,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C)){
             SpriteRenderer.sprite = Crouching;
             Collider.size = CrouchingSize;
+            moveSpeed = 2;
         }
 
         if (Input.GetKeyUp(KeyCode.C)){
             SpriteRenderer.sprite = Standing;
             Collider.size = StandingSize;
+            moveSpeed = 5;
         }
     }
 
