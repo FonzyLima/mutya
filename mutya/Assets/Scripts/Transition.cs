@@ -14,7 +14,11 @@ public class Transition : MonoBehaviour
     {
         if (created)
         {
-            Destroy(gameObject);
+            gameObject = GameObject.Find("Timeline");
+            if (gameObject)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
