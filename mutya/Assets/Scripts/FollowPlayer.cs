@@ -11,8 +11,22 @@ public class FollowPlayer : MonoBehaviour
 
     Vector2 movement;
 
-    public float timeRemain = 39;
+    public float timeRemain;
     public bool canMove = false;
+
+    static bool leftMenu = false;
+
+    void Awake()
+    {
+        if (leftMenu)
+        {
+            timeRemain = 0;
+        }
+        else
+        {
+            timeRemain = 39;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -37,6 +51,7 @@ public class FollowPlayer : MonoBehaviour
         }
         else
         {
+            leftMenu = true;
             canMove = true;
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
