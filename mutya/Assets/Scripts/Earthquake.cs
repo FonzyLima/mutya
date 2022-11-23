@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Earthquake : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other) 
+    public BakunawaSceneMovement playerMovement;
+    void Start()
     {
-        print(other.tag);
-        if(other.tag == "Player")
+        playerMovement = GetComponent<BakunawaSceneMovement>();
+    }
+    private void OnTriggerEnter2D(Collider2D other) 
+    {        
+        if(other.tag == "crack")
         {
-            print("earthquakeeee");
+            playerMovement.canMove = false;
         }
     }
 

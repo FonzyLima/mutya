@@ -18,7 +18,9 @@ public class BakunawaSpawner : MonoBehaviour
     public float speed;
 
     void Earthquake(){
-        crack.transform.position = new Vector3(player.transform.position.x,player.transform.position.y,0);
+        float[] randomX = new float[] {-4.79f,4.89f};
+        float[] randomY = new float[] {-3.54f,2.79f}; 
+        crack.transform.position = new Vector3(player.transform.position.x+randomX[Random.Range(0,2)],player.transform.position.y+randomY[Random.Range(0,2)],0);
     }
     void MoveMoon(GameObject moon){
         if(moon.activeSelf){
@@ -40,11 +42,10 @@ public class BakunawaSpawner : MonoBehaviour
         GameObject[] moons;
         moons = GameObject.FindGameObjectsWithTag("Moon");
         for(int i=0;i<moons.Length;i++){
-            moons[i].transform.position = new Vector3(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+7-i,GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+4,0);
+            moons[i].transform.position = new Vector3(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+12-i,GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+6,0);
         }
         if(timer>0){
             timer -= Time.deltaTime;
-            print(timer);
         }
 
         if(timer<=180){
