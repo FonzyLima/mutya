@@ -4,26 +4,50 @@ using UnityEngine;
 
 public class TikbalangAI : MonoBehaviour
 {
+    //waypoints for tikbalang
     public Transform[] waypoints;
 
+    //move speed of tikbalang
     [SerializeField]
-    private float moveSpeed = 4f;
+    public float moveSpeed = 4f;
 
-    [SerializeField]
-    private int wIdx = 1;
+    //waypoint index
+    private int wIdx = 0;
+
+    public GameObject player;
+    private Transform playerPos;
+    private Vector2 currentPos;
+    public float distance;
+
+
     // Start is called before the first frame update
     private void Start()
     {
-        transform.position = waypoints[0].transform.position;
+        //get starting waypoint
+        transform.position = waypoints[wIdx].transform.position;
+
+        //get player position
+        playerPos = player.GetComponent<Transform>();
+        currentPos = GetComponent<Transform>().position;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        Move();
+        if(Vector2.Distance(transform.position, playerPos.position) < distance){
+            FollowPlayer();
+        }
+        else
+            Move();
+    }
+
+    private void FollowPlayer(){
+        moveSpeed = 7f;
+        transform.position = Vector2.MoveTowards(transform.position, playerPos.position, moveSpeed * Time.deltaTime);
     }
 
     private void Move(){
+        moveSpeed = 4f;
         if (wIdx <= waypoints.Length - 1){
             transform.position = Vector2.MoveTowards(transform.position, waypoints[wIdx].transform.position, moveSpeed * Time.deltaTime);
             if(transform.position == waypoints[wIdx].transform.position){

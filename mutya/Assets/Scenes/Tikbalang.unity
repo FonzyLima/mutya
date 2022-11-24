@@ -879,7 +879,8 @@ MonoBehaviour:
   - {fileID: 1376728063}
   - {fileID: 343973045}
   moveSpeed: 4
-  wIdx: 0
+  player: {fileID: 96507372}
+  distance: 3
 --- !u!212 &90127639
 SpriteRenderer:
   m_ObjectHideFlags: 0
