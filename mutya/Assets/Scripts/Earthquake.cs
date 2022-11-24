@@ -15,7 +15,7 @@ public class Earthquake : MonoBehaviour
         if(other.tag == "crack")
         {
             playerMovement.canMove = false;
-            StartCoroutine(delay());
+            StartCoroutine(delayStun());
 
         }
     }
@@ -24,9 +24,14 @@ public class Earthquake : MonoBehaviour
         float[] randomX = new float[] {-4.79f,4.89f};
         float[] randomY = new float[] {-3.54f,2.79f}; 
         crack.transform.position = new Vector3(player.transform.position.x+randomX[Random.Range(0,2)],player.transform.position.y+randomY[Random.Range(0,2)],0);
+        StartCoroutine(delaySpawn());
     }
 
-    public IEnumerator delay(){
+    public IEnumerator delaySpawn(){
+        yield return new WaitForSeconds(8f);
+        crack.SetActive(false);
+    }
+    public IEnumerator delayStun(){
         yield return new WaitForSeconds(3f);
         playerMovement.canMove = true;
         crack.SetActive(false);

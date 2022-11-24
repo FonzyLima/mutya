@@ -13405,7 +13405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.474001, y: -1.8867601, z: -10}
+  m_LocalPosition: {x: 12.017988, y: -1.8873199, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13578,6 +13578,7 @@ MonoBehaviour:
   moon6: {fileID: 0}
   timer: 210
   speed: 5
+  earthquake: {fileID: 0}
 --- !u!1 &568118752
 GameObject:
   m_ObjectHideFlags: 0
@@ -14043,6 +14044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  crack: {fileID: 0}
 --- !u!50 &994391663
 Rigidbody2D:
   serializedVersion: 4
@@ -28383,6 +28385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  crack: {fileID: 994391658}
 --- !u!114 &1890220650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29160,6 +29163,7 @@ MonoBehaviour:
   moon6: {fileID: 1364066015}
   timer: 185
   speed: 5
+  earthquake: {fileID: 1890220649}
 --- !u!1 &2119996504
 GameObject:
   m_ObjectHideFlags: 0
