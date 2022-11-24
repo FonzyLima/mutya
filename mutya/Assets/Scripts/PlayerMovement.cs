@@ -20,13 +20,18 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public Sprite Standing;
     public Sprite Crouching; // Get Crouching Sprite
+
+    // Tikbalang Conditions
     public bool isCrouching; // If player is crouching (For Tikbalang)
     public bool inGrass; // If player is in grass (For Tikbalang)
+    public bool isMoving; // If Player is moving
 
     public BoxCollider2D Collider;
 
     public Vector2 StandingSize;
     public Vector2 CrouchingSize;
+
+    public float velocityTest;
 
     void Awake()
     {
@@ -47,11 +52,21 @@ public class PlayerMovement : MonoBehaviour
         SpriteRenderer = GetComponent<SpriteRenderer>();
         SpriteRenderer.sprite = Standing;
 
+        rb = GetComponent<Rigidbody2D>();
+
         StandingSize = Collider.size;
     }
     // Update is called once per frame
     void Update()
     {
+        //check if player is moving
+        if (movement.sqrMagnitude > 0){
+            isMoving = true;
+        }
+        else{
+            isMoving = false;
+        }
+
         if (canMove)
         {
             movement.x = Input.GetAxisRaw("Horizontal");
@@ -76,6 +91,19 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.tag == "Bush"){
+            inGrass = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision){
+        if(collision.tag == "Bush"){
+            inGrass = false;
+        }
+    }
+
 
     void FixedUpdate()
     {

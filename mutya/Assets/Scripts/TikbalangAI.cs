@@ -38,7 +38,8 @@ public class TikbalangAI : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(!playerMovement.isCrouching && Vector2.Distance( transform.position, playerPos.position) < distance){
+        bool isNoisy = playerMovement.isMoving && (!playerMovement.isCrouching || playerMovement.inGrass);
+        if(isNoisy && Vector2.Distance( transform.position, playerPos.position) < distance){
             FollowPlayer();
         }
         else
