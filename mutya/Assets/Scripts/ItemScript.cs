@@ -11,10 +11,10 @@ public class ItemScript : MonoBehaviour
     private SpriteRenderer itemSprite;
 
 
-    [SerializeField] private Text pickUpText;
+    public GameObject pickUpText;
 
     private void Start(){
-        //pickUpText.gameObject.SetActive(false);
+        pickUpText.gameObject.SetActive(false);
         itemSprite = GetComponent<SpriteRenderer>();
         invManager = GameObject.Find("Player").GetComponent<InventoryManager>();
         gameObject.GetComponent<Renderer>().enabled = false;
@@ -33,11 +33,11 @@ public class ItemScript : MonoBehaviour
                 gameObject.GetComponent<Renderer>().enabled = true;
                 isDiscovered = true;
                 pickUpAllowed = true;
-                //pickUpText.gameObject.SetActive(true);
+                pickUpText.gameObject.SetActive(true);
             }
             else
                 pickUpAllowed = true;
-                //pickUpText.gameObject.SetActive(true);
+                pickUpText.gameObject.SetActive(true);
         }
     }
 
