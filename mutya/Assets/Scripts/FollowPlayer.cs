@@ -12,7 +12,7 @@ public class FollowPlayer : MonoBehaviour
     Vector2 movement;
 
     public float timeRemain;
-    public bool canMove = false;
+    public static bool canMove = true;
 
     static bool leftMenu = false;
 
@@ -31,14 +31,22 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        
         if (canMove)
         {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
+
+            if (Input.GetKeyDown(KeyCode.C)){
+                moveSpeed = 2;
+            }
+
+            if (Input.GetKeyUp(KeyCode.C)){
+                moveSpeed = 5;
+            }
         }
     }
 
@@ -52,8 +60,12 @@ public class FollowPlayer : MonoBehaviour
         else
         {
             leftMenu = true;
-            canMove = true;
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    public void setMove (bool move)
+    {
+        canMove = move;
     }
 }

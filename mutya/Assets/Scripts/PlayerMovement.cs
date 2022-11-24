@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
 
     public float timeRemain;
-    public bool canMove = false;
+    public static bool canMove = true;
 
     static bool leftMenu = false;
 
@@ -38,8 +38,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
-    void Start(){
+    void Start() {
         Collider = GetComponent<BoxCollider2D>();
         Collider.size = StandingSize;
         
@@ -51,26 +50,26 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
         if (canMove)
         {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
-        }
 
-        if (Input.GetKeyDown(KeyCode.C)){
-            SpriteRenderer.sprite = Crouching;
-            Collider.size = CrouchingSize;
-            moveSpeed = 2;
-        }
+            if (Input.GetKeyDown(KeyCode.C)){
+                SpriteRenderer.sprite = Crouching;
+                Collider.size = CrouchingSize;
+                moveSpeed = 2;
+            }
 
-        if (Input.GetKeyUp(KeyCode.C)){
-            SpriteRenderer.sprite = Standing;
-            Collider.size = StandingSize;
-            moveSpeed = 5;
+            if (Input.GetKeyUp(KeyCode.C)){
+                SpriteRenderer.sprite = Standing;
+                Collider.size = StandingSize;
+                moveSpeed = 5;
+            }
         }
     }
 
@@ -83,9 +82,12 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             leftMenu = true;
-            canMove = true;
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
-        
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    public void setMove (bool move)
+    {
+        canMove = move;
     }
 }
