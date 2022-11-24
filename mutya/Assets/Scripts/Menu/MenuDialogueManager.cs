@@ -5,6 +5,7 @@ using UnityEngine;
 public class MenuDialogueManager : MonoBehaviour
 {
     public static bool q1 = false;
+    public static bool q2 = false;
     public static bool dialogue1 = false;
     public static bool dialogue2 = false;
     public static bool dialogue3 = false;
@@ -17,6 +18,16 @@ public class MenuDialogueManager : MonoBehaviour
     public void setQ1(bool val)
     {
         q1 = val;
+    }
+
+    public bool getQ2()
+    {
+        return q2;
+    }
+
+    public void setQ2(bool val)
+    {
+        q2 = val;
     }
 
     public bool getD1()

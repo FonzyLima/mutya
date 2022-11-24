@@ -30,7 +30,6 @@ public class Dialogue1 : MonoBehaviour
         nameText.text = string.Empty;
         dialogueText.text = string.Empty;
         StartDialogue();
-        player.setMove(false);
     }
 
     // Update is called once per frame
@@ -38,6 +37,8 @@ public class Dialogue1 : MonoBehaviour
     {
         if (mdm.getD1())
         {
+            player.setMove(false);
+
             // set panel transparent
             panel = GetComponent<Image>();
             Color c = panel.color;
@@ -112,6 +113,7 @@ public class Dialogue1 : MonoBehaviour
         }
         else
         {
+            mdm.setQ2(true);
             gameObject.SetActive(false);
             player.setMove(true);
         }

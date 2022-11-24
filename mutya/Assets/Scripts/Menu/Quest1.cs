@@ -34,8 +34,9 @@ public class Quest1 : MonoBehaviour
 
             if (wPressed && aPressed && sPressed && dPressed)
             {
-                gameObject.SetActive(false);
+                Input.ResetInputAxes();
                 mdm.setD1(true);
+                gameObject.SetActive(false);
             }
         }
     }
