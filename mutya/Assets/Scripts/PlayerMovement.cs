@@ -20,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public Sprite Standing;
     public Sprite Crouching; // Get Crouching Sprite
-    public bool isCrouching;
-    public bool inGrass;
+    public bool isCrouching; // If player is crouching (For Tikbalang)
+    public bool inGrass; // If player is in grass (For Tikbalang)
 
     public BoxCollider2D Collider;
 
@@ -62,12 +62,14 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", movement.sqrMagnitude);
 
             if (Input.GetKeyDown(KeyCode.C)){
+                isCrouching = true;
                 SpriteRenderer.sprite = Crouching;
                 Collider.size = CrouchingSize;
                 moveSpeed = 2;
             }
 
             if (Input.GetKeyUp(KeyCode.C)){
+                isCrouching = false;
                 SpriteRenderer.sprite = Standing;
                 Collider.size = StandingSize;
                 moveSpeed = 5;
