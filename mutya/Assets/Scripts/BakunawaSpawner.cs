@@ -14,11 +14,22 @@ public class BakunawaSpawner : MonoBehaviour
     public GameObject moon4;
     public GameObject moon5;
     public GameObject moon6;
+    // public InventoryManager inventory;
     public float timer = 210;
     public float speed;
     public Earthquake earthquake;
 
     void MoveMoon(GameObject moon){
+        // print(inventory.tikbalang_item);
+        // if(inventory.tikbalang_item == 2){
+        //     if(bakunawa.transform.position.y<=13.6){
+        //         bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
+        //     }
+        //     if(bakunawa.transform.position.y>13.6){
+        //         bakunawa.transform.Rotation = new Vector3(0,0,-90);
+
+        //     }
+        // }
         if(moon.activeSelf){
                 if(bakunawa.transform.position.y>13.6){
                     bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);

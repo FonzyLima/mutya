@@ -16,7 +16,7 @@ public class Earthquake : MonoBehaviour
         {
             playerMovement.canMove = false;
             StartCoroutine(delayStun());
-
+            
         }
     }
     public void spawnCrack(GameObject player){
