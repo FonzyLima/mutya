@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CutsceneToDialogue : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class CutsceneToDialogue : MonoBehaviour
     public GameObject Intro3;
     public GameObject Intro4;
     public GameObject Intro5;
+
+    public GameObject Button;
 
     public GameObject MenuDialogue;
 
@@ -45,8 +48,18 @@ public class CutsceneToDialogue : MonoBehaviour
             Intro4.SetActive(false);
             Intro5.SetActive(false);
 
+            if (Button)
+            {
+                Button.SetActive(false);
+            }
+
             MenuDialogue.SetActive(true);
         }
+    }
+
+    public void skipCutscene()
+    {
+        timer = 0;
     }
 
     void FixedUpdate()
