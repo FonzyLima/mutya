@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
-public class MenuDialogue : MonoBehaviour
+public class Dialogue1 : MonoBehaviour
 {
     public PlayerMovement player;
     public MenuDialogueManager mdm;
@@ -19,8 +20,9 @@ public class MenuDialogue : MonoBehaviour
     private int nameIndex;
     private int dialogueIndex;
 
-    private bool bStartD = false;
-    private float timer = 40;
+    public static bool diagActive = true;
+
+    public Image panel;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +36,18 @@ public class MenuDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bStartD)
+        if (mdm.getD1())
         {
+            // set panel transparent
+            panel = GetComponent<Image>();
+            Color c = panel.color;
+            c.a = 1;
+            panel.color = c;
+
+            // set texts transparent
+            nameText.color = new Color32(255, 255, 255, 255);
+            dialogueText.color = new Color32(255, 255, 255, 255);
+
             if (Input.GetMouseButtonDown(0))
             {
                 if (dialogueText.text == dialogueLines[dialogueIndex])
@@ -52,18 +64,6 @@ public class MenuDialogue : MonoBehaviour
             }
         }
         
-    }
-
-    void FixedUpdate()
-    {
-        if (timer > 0)
-        {
-            timer -= Time.fixedDeltaTime;
-        }
-        else
-        {
-            bStartD = true;
-        }
     }
 
     void StartDialogue()
@@ -112,7 +112,6 @@ public class MenuDialogue : MonoBehaviour
         }
         else
         {
-            mdm.setQ1(true);
             gameObject.SetActive(false);
             player.setMove(true);
         }
