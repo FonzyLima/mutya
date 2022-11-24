@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Dialogue : MonoBehaviour
+public class MenuDialogue : MonoBehaviour
 {
+    public PlayerMovement player;
+    public FollowPlayer diwata;
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
@@ -16,33 +19,51 @@ public class Dialogue : MonoBehaviour
     private int nameIndex;
     private int dialogueIndex;
 
+    private bool bStartD = false;
+    private float timer = 40;
+
     // Start is called before the first frame update
     void Start()
     {
         nameText.text = string.Empty;
         dialogueText.text = string.Empty;
         StartDialogue();
+        player.setMove(false);
+        diwata.setMove(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (bStartD)
         {
-            if (nameText.text == nameLines[nameIndex])
+            if (Input.GetMouseButtonDown(0))
             {
-                NextNameLine();
+                if (dialogueText.text == dialogueLines[dialogueIndex])
+                {
+                    NextNameLine();
+                    NextDialogueLine();
+                }
+                else
+                {
+                    StopAllCoroutines();
+                    nameText.text = nameLines[nameIndex];
+                    dialogueText.text = dialogueLines[dialogueIndex];
+                }
             }
-            if (dialogueText.text == dialogueLines[dialogueIndex])
-            {
-                NextDialogueLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                nameText.text = nameLines[nameIndex];
-                dialogueText.text = dialogueLines[dialogueIndex];
-            }
+        }
+        
+    }
+
+    void FixedUpdate()
+    {
+        if (timer > 0)
+        {
+            timer -= Time.fixedDeltaTime;
+        }
+        else
+        {
+            bStartD = true;
         }
     }
 
@@ -80,10 +101,6 @@ public class Dialogue : MonoBehaviour
             nameText.text = string.Empty;
             StartCoroutine(TypeNameLine());
         }
-        else
-        {
-            gameObject.SetActive(false);
-        }
     }
 
     void NextDialogueLine()
@@ -97,6 +114,8 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            player.setMove(true);
+            diwata.setMove(true);
         }
     }
 }   

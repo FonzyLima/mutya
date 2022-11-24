@@ -16,17 +16,13 @@ public class BakunawaSpawner : MonoBehaviour
     public GameObject moon6;
     public float timer = 210;
     public float speed;
+    public Earthquake earthquake;
 
-    void Earthquake(){
-        float[] randomX = new float[] {-4.79f,4.89f};
-        float[] randomY = new float[] {-3.54f,2.79f}; 
-        crack.transform.position = new Vector3(player.transform.position.x+randomX[Random.Range(0,2)],player.transform.position.y+randomY[Random.Range(0,2)],0);
-    }
     void MoveMoon(GameObject moon){
         if(moon.activeSelf){
                 if(bakunawa.transform.position.y>13.6){
                     bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
-                    Earthquake();
+                    earthquake.spawnCrack(player);
                 }
                 bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
             }
