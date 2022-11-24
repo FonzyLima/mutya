@@ -6,54 +6,40 @@ public class FollowPlayer : MonoBehaviour
 {
     public float moveSpeed;
 
+    public Transform target;
     public Rigidbody2D rb;
     public Animator animator;
+    public Vector3 dir;
 
     Vector2 movement;
 
-    public float timeRemain;
-    public bool canMove = false;
-
-    static bool leftMenu = false;
-
-    void Awake()
+    void Start()
     {
-        if (leftMenu)
-        {
-            timeRemain = 0;
-        }
-        else
-        {
-            timeRemain = 39;
-        }
+        target = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        
-        if (canMove)
-        {
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
-        }
+        // movement.x = Input.GetAxisRaw("Horizontal");
+        // movement.y = Input.GetAxisRaw("Vertical");
+    
+        dir = target.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        dir.Normalize();
+        movement = dir;
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
+
     }
 
-    // Executes on a fixed time
     void FixedUpdate()
     {
-        if (timeRemain > 0)
+        if (Vector2.Distance(transform.position, target.position) > 1)
         {
-            timeRemain -= Time.fixedDeltaTime;
-        }
-        else
-        {
-            leftMenu = true;
-            canMove = true;
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition((Vector2)transform.position + ((Vector2)dir * moveSpeed * Time.deltaTime));
         }
     }
 }

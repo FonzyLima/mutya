@@ -17,6 +17,7 @@ public class TikbalangAI : MonoBehaviour
     public GameObject player;
     private Transform playerPos;
     private Vector2 currentPos;
+    private PlayerMovement playerMovement;
     public float distance;
 
 
@@ -29,12 +30,16 @@ public class TikbalangAI : MonoBehaviour
         //get player position
         playerPos = player.GetComponent<Transform>();
         currentPos = GetComponent<Transform>().position;
+
+        //get Player Movement
+        playerMovement = player.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if(Vector2.Distance(transform.position, playerPos.position) < distance){
+        bool isNoisy = playerMovement.isMoving && (!playerMovement.isCrouching || playerMovement.inGrass);
+        if(isNoisy && Vector2.Distance( transform.position, playerPos.position) < distance){
             FollowPlayer();
         }
         else

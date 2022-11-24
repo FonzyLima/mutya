@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Weapon
   - crack
+  - Bush
   layers:
   - Default
   - TransparentFX
