@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Quest2 : MonoBehaviour
 {
+    public GameObject Book;
+
     void Update()
     {
-        // if (mdm.getQ2()) 
-        // {   
-        // }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Input.ResetInputAxes();
+            gameObject.SetActive(false);
+            Book.SetActive(false);
+        }
     }
 }
