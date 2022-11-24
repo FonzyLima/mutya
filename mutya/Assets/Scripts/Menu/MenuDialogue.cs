@@ -6,7 +6,7 @@ using TMPro;
 public class MenuDialogue : MonoBehaviour
 {
     public PlayerMovement player;
-    public MenuDialogueManager mdm;
+    public GameObject Quest1;
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
@@ -18,9 +18,6 @@ public class MenuDialogue : MonoBehaviour
 
     private int nameIndex;
     private int dialogueIndex;
-
-    private bool bStartD = false;
-    private float timer = 40;
 
     // Start is called before the first frame update
     void Start()
@@ -34,35 +31,19 @@ public class MenuDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bStartD)
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
+            if (dialogueText.text == dialogueLines[dialogueIndex])
             {
-                if (dialogueText.text == dialogueLines[dialogueIndex])
-                {
-                    NextNameLine();
-                    NextDialogueLine();
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    nameText.text = nameLines[nameIndex];
-                    dialogueText.text = dialogueLines[dialogueIndex];
-                }
+                NextNameLine();
+                NextDialogueLine();
             }
-        }
-        
-    }
-
-    void FixedUpdate()
-    {
-        if (timer > 0)
-        {
-            timer -= Time.fixedDeltaTime;
-        }
-        else
-        {
-            bStartD = true;
+            else
+            {
+                StopAllCoroutines();
+                nameText.text = nameLines[nameIndex];
+                dialogueText.text = dialogueLines[dialogueIndex];
+            }
         }
     }
 
@@ -112,7 +93,7 @@ public class MenuDialogue : MonoBehaviour
         }
         else
         {
-            mdm.setQ1(true);
+            Quest1.SetActive(true);
             gameObject.SetActive(false);
             player.setMove(true);
         }

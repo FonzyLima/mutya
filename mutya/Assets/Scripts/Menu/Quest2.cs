@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Quest2 : MonoBehaviour
 {
-    public MenuDialogueManager mdm;
-
     void Update()
     {
-        if (mdm.getQ2()) 
-        {   
-        }
+        // if (mdm.getQ2()) 
+        // {   
+        // }
     }
 }

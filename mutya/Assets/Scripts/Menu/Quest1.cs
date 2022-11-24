@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Quest1 : MonoBehaviour
 {
-    public MenuDialogueManager mdm;
+    public GameObject Dialogue1;
 
     private bool wPressed = false;
     private bool aPressed = false;
@@ -13,31 +13,28 @@ public class Quest1 : MonoBehaviour
 
     void Update()
     {
-        if (mdm.getQ1()) 
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                wPressed = true;
-            }
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                aPressed = true;
-            }
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                sPressed = true;
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                dPressed = true;
-            }
+            wPressed = true;
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            aPressed = true;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            sPressed = true;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            dPressed = true;
+        }
 
-            if (wPressed && aPressed && sPressed && dPressed)
-            {
-                Input.ResetInputAxes();
-                mdm.setD1(true);
-                gameObject.SetActive(false);
-            }
+        if (wPressed && aPressed && sPressed && dPressed)
+        {
+            Input.ResetInputAxes();
+            Dialogue1.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }

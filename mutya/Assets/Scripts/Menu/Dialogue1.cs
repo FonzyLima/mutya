@@ -7,7 +7,7 @@ using TMPro;
 public class Dialogue1 : MonoBehaviour
 {
     public PlayerMovement player;
-    public MenuDialogueManager mdm;
+    public GameObject Quest2;
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
@@ -35,38 +35,24 @@ public class Dialogue1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (mdm.getD1())
+        player.setMove(false);
+
+        if (Input.GetMouseButtonDown(0))
         {
-            player.setMove(false);
-
-            // set panel transparent
-            panel = GetComponent<Image>();
-            Color c = panel.color;
-            c.a = 1;
-            panel.color = c;
-
-            // set texts transparent
-            nameText.color = new Color32(255, 255, 255, 255);
-            dialogueText.color = new Color32(255, 255, 255, 255);
-
-            if (Input.GetMouseButtonDown(0))
+            if (dialogueText.text == dialogueLines[dialogueIndex])
             {
-                if (dialogueText.text == dialogueLines[dialogueIndex])
-                {
-                    NextNameLine();
-                    NextDialogueLine();
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    nameText.text = nameLines[nameIndex];
-                    dialogueText.text = dialogueLines[dialogueIndex];
-                }
+                NextNameLine();
+                NextDialogueLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                nameText.text = nameLines[nameIndex];
+                dialogueText.text = dialogueLines[dialogueIndex];
             }
         }
-        
     }
-
+        
     void StartDialogue()
     {
         nameIndex = 0;
@@ -113,7 +99,7 @@ public class Dialogue1 : MonoBehaviour
         }
         else
         {
-            mdm.setQ2(true);
+            Quest2.SetActive(true);
             gameObject.SetActive(false);
             player.setMove(true);
         }
