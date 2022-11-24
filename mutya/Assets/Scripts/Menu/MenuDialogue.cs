@@ -6,7 +6,6 @@ using TMPro;
 public class MenuDialogue : MonoBehaviour
 {
     public PlayerMovement player;
-    public FollowPlayer diwata;
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
@@ -29,7 +28,6 @@ public class MenuDialogue : MonoBehaviour
         dialogueText.text = string.Empty;
         StartDialogue();
         player.setMove(false);
-        diwata.setMove(false);
     }
 
     // Update is called once per frame
@@ -115,7 +113,6 @@ public class MenuDialogue : MonoBehaviour
         {
             gameObject.SetActive(false);
             player.setMove(true);
-            diwata.setMove(true);
         }
     }
 }   
