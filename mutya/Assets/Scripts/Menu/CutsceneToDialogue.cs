@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class CutsceneToDialogue : MonoBehaviour
 {
-    public GameObject Image;
+    public GameObject BG;
     public GameObject Title;
-    public GameObject Dummy1;
-    public GameObject Dummy2;
-    public GameObject Dummy3;
+
+    public GameObject Panel1;
+    public GameObject Bughaw;
+    public GameObject Mabaya;
+    public GameObject Esmeralda;
+
+    public GameObject Panel2;
+    public GameObject Panel3;
+
     public GameObject Intro1;
     public GameObject Intro2;
     public GameObject Intro3;
@@ -25,11 +31,14 @@ public class CutsceneToDialogue : MonoBehaviour
     {
         if (sceneDone)
         {
-            Image.SetActive(false);
+            BG.SetActive(false);
             Title.SetActive(false);
-            Dummy1.SetActive(false);
-            Dummy2.SetActive(false);
-            Dummy3.SetActive(false);
+            Panel1.SetActive(false);
+            Bughaw.SetActive(false);
+            Mabaya.SetActive(false);
+            Esmeralda.SetActive(false);
+            Panel2.SetActive(false);
+            Panel3.SetActive(false);
             Intro1.SetActive(false);
             Intro2.SetActive(false);
             Intro3.SetActive(false);
