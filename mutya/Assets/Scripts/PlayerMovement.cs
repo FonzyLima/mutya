@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public Sprite Standing;
     public Sprite Crouching; // Get Crouching Sprite
+    public bool isCrouching;
+    public bool inGrass;
 
     public BoxCollider2D Collider;
 
