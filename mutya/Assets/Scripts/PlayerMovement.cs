@@ -76,14 +76,14 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
 
-            if (Input.GetKeyDown(KeyCode.C)){
+            if (Input.GetKeyDown(KeyCode.LeftControl)){
                 isCrouching = true;
                 SpriteRenderer.sprite = Crouching;
                 Collider.size = CrouchingSize;
                 moveSpeed = 2;
             }
 
-            if (Input.GetKeyUp(KeyCode.C)){
+            if (Input.GetKeyUp(KeyCode.LeftControl)){
                 isCrouching = false;
                 SpriteRenderer.sprite = Standing;
                 Collider.size = StandingSize;
