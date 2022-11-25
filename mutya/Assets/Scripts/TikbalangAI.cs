@@ -19,6 +19,12 @@ public class TikbalangAI : MonoBehaviour
     private Vector2 currentPos;
     private PlayerMovement playerMovement;
     public float distance;
+    
+    public Animator animator;
+
+    public float testx;
+    public float testy;
+    public float tests;
 
 
     // Start is called before the first frame update
@@ -40,10 +46,25 @@ public class TikbalangAI : MonoBehaviour
     {
         bool isNoisy = playerMovement.isMoving && (!playerMovement.isCrouching || playerMovement.inGrass);
         if(isNoisy && Vector2.Distance( transform.position, playerPos.position) < distance){
+            // Vector2 dir = transform.position - playerPos.position;
+            // testx = dir.x;
+            // testy = dir.y;
+            // tests = dir.sqrMagnitude;
+            // animator.SetFloat("Horizontal", dir.x);
+            // animator.SetFloat("Vertical", dir.y);
+            // animator.SetFloat("Speed", 4);
             FollowPlayer();
         }
-        else
+        else{
+            // Vector2 dir = waypoints[wIdx].transform.position - playerPos.position;
+            // testx = dir.x;
+            // testy = dir.y;
+            // tests = dir.sqrMagnitude;
+            // animator.SetFloat("Horizontal", dir.x);
+            // animator.SetFloat("Vertical", dir.y);
+            // animator.SetFloat("Speed", 4);
             Move();
+        }
     }
 
     private void FollowPlayer(){
