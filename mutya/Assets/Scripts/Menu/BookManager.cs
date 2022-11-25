@@ -5,7 +5,8 @@ using UnityEngine;
 public class BookManager : MonoBehaviour
 {
     public GameObject Book;
-    public GameObject Player;
+
+    public PlayerMovement p; // temporary, simulates game pause
 
     public bool equipped = false;
 
@@ -16,13 +17,14 @@ public class BookManager : MonoBehaviour
         {
             if (equipped)
             {
+                p.setMove(true);
                 Book.SetActive(false);
             }
                 
             else
             {
+                p.setMove(false);
                 Book.SetActive(true);
-                Book.transform.position = Player.transform.position;
             }
                 
             equipped = !equipped;
