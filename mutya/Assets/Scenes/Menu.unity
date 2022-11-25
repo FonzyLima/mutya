@@ -131,6 +131,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2095385787}
     m_Modifications:
     - target: {fileID: 4366049984093750029, guid: 36a023f8b8b95ab46854482d4cdb17d4, type: 3}
+      propertyPath: quest2
+      value: 
+      objectReference: {fileID: 883157808}
+    - target: {fileID: 4366049984093750029, guid: 36a023f8b8b95ab46854482d4cdb17d4, type: 3}
       propertyPath: pickUpText
       value: 
       objectReference: {fileID: 7405547383248250246, guid: 66504cca571b5fa46b6bf2e346b18626, type: 3}
@@ -8169,7 +8173,6 @@ GameObject:
   - component: {fileID: 883157812}
   - component: {fileID: 883157811}
   - component: {fileID: 883157810}
-  - component: {fileID: 883157813}
   m_Layer: 5
   m_Name: Quest2
   m_TagString: Untagged
@@ -8256,19 +8259,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883157808}
   m_CullTransparentMesh: 1
---- !u!114 &883157813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883157808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b3c443905db4f489fa3728c96c1f99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Book: {fileID: 38780506}
 --- !u!1 &941541038
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,8 +10,9 @@ public class ItemScript : MonoBehaviour
     private bool isDiscovered;
     private SpriteRenderer itemSprite;
 
-
     public GameObject pickUpText;
+
+    public GameObject quest2;
 
     private void Start(){
         pickUpText.gameObject.SetActive(false);
@@ -51,6 +52,7 @@ public class ItemScript : MonoBehaviour
     private void PickUp(){
         
         invManager.tikbalang_item += 1f;
+        quest2.SetActive(false);
         Destroy(gameObject);
     }
 }
