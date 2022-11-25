@@ -11,26 +11,12 @@ public class BookFlipper : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            StartCoroutine(NextPage());   
+            animator.Play("Base Layer.FlipNext");
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            StartCoroutine(PrevPage());   
+            animator.Play("Base Layer.FlipPrev");
         }
-    }
-
-    IEnumerator NextPage()
-    {
-        animator.SetBool("flipNext", true);
-        yield return new WaitForSeconds(0.5f);
-        animator.SetBool("flipNext", false);
-    }
-
-    IEnumerator PrevPage()
-    {
-        animator.SetBool("flipPrev", true);
-        yield return new WaitForSeconds(0.5f);
-        animator.SetBool("flipPrev", false);
     }
 }

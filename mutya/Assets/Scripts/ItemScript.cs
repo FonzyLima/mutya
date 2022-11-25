@@ -11,8 +11,9 @@ public class ItemScript : MonoBehaviour
     private SpriteRenderer itemSprite;
 
     public GameObject pickUpText;
-
     public GameObject quest2;
+    public GameObject quest3;
+    public GameObject bm;
 
     private void Start(){
         pickUpText.gameObject.SetActive(false);
@@ -53,7 +54,15 @@ public class ItemScript : MonoBehaviour
         
         invManager.tikbalang_item += 1f;
         if(quest2 != null)
+        {
+            if (quest3 != null)
+            {
+                quest3.SetActive(true);
+                bm.SetActive(true);
+            }
             Destroy(quest2);
+        }
+            
         Destroy(gameObject);
     }
 }
