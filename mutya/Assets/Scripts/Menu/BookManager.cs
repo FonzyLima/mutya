@@ -5,6 +5,7 @@ using UnityEngine;
 public class BookManager : MonoBehaviour
 {
     public GameObject Book;
+    public GameObject Player;
 
     public bool equipped = false;
 
@@ -17,6 +18,7 @@ public class BookManager : MonoBehaviour
                 Book.SetActive(false);
             else
                 Book.SetActive(true);
+                Book.transform.position = Player.transform.position;
 
             equipped = !equipped;
         }
