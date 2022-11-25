@@ -8,6 +8,9 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private Image uiFill;
     [SerializeField] private TMP_Text uiText;
+    [SerializeField] public AudioSource finalSFX;
+    [SerializeField] public Color orange;
+    [SerializeField] public Color red;
 
     public int Duration;
     
@@ -28,8 +31,15 @@ public class Timer : MonoBehaviour
     {
         while(remainingDuration >= 0)
         {
+            if(remainingDuration == 30){
+                uiFill.color = orange;
+            }
             uiText.text = $"{remainingDuration / 60:00} : {remainingDuration % 60:00}";
             uiFill.fillAmount = Mathf.InverseLerp(0, Duration, remainingDuration);
+            if(remainingDuration == 10){
+                uiFill.color = red;
+                finalSFX.Play();
+            }
             remainingDuration--;
             yield return new WaitForSeconds(1f);
         }

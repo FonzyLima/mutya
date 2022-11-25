@@ -12,12 +12,36 @@ public class ManananggalMovement : MonoBehaviour
     public Animator animator;
     public Vector3 dir;
     public float knockbackForce = 10000f;
+    private int duration = 0;
+    public AudioSource tiktikSFX;
+    private float dist;
 
     Vector2 movement;
 
     void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
+        StartCoroutine(playTiktik());
+    }
+
+    private IEnumerator playTiktik()
+    {
+        while(duration <= 120f){
+            if(duration % 5 == 0){
+                if(dist < 50f){
+                    tiktikSFX.volume = 0.3f;
+                    print("CLOSE");
+                }
+                else{
+                    tiktikSFX.volume = 1f;
+                    print("FAR");
+                }
+            tiktikSFX.Play();
+            }
+            duration++;
+            yield return new WaitForSeconds(1f);
+        }
+        
     }
 
     // Update is called once per frame
@@ -40,6 +64,8 @@ public class ManananggalMovement : MonoBehaviour
     void FixedUpdate()
     {
         // rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        Vector3 offset = target.position - transform.position;
+        dist = offset.sqrMagnitude;
         rb.MovePosition((Vector2)transform.position + ((Vector2)dir * moveSpeed * Time.deltaTime));
         
     }
@@ -51,7 +77,6 @@ public class ManananggalMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        print(other.tag);
         if(other.tag == "Weapon")
         {
             Vector2 direction = (Vector2) (dir).normalized;

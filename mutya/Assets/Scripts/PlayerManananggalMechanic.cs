@@ -22,6 +22,7 @@ public class PlayerManananggalMechanic : MonoBehaviour
 
     public float delay = 100f;
     private bool attackBlocked;
+    public AudioSource whipSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +64,7 @@ public class PlayerManananggalMechanic : MonoBehaviour
             return;
         weaponParent.rotation = angle;
         animator.SetTrigger("Attack");
+        whipSFX.Play();
         attackBlocked = true;
         StartCoroutine(DelayAttack());
     }
