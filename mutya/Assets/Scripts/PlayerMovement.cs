@@ -78,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.LeftControl)){
                 isCrouching = true;
+                animator.SetBool("isCrouching", isCrouching);
                 SpriteRenderer.sprite = Crouching;
                 Collider.size = CrouchingSize;
                 moveSpeed = 2;
@@ -85,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.LeftControl)){
                 isCrouching = false;
+                animator.SetBool("isCrouching", isCrouching);
                 SpriteRenderer.sprite = Standing;
                 Collider.size = StandingSize;
                 moveSpeed = 5;
