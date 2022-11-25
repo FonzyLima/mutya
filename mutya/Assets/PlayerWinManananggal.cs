@@ -9,6 +9,8 @@ public class PlayerWinManananggal : MonoBehaviour
     private bool isDiscovered;
     private bool hasSalt;
     public GameObject boss;
+    public GameObject transition;
+    public GameObject timer;
 
 
     public GameObject pickUpText;
@@ -23,7 +25,10 @@ public class PlayerWinManananggal : MonoBehaviour
     {
         if (hasSalt && pickUpAllowed && Input.GetKeyDown(KeyCode.F)){
             print("Manananggal Defeated");
+            Destroy(gameObject);
             Destroy(boss);
+            transition.SetActive(true);
+            timer.SetActive(false);
         }
     }
 

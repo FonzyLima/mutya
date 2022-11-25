@@ -52,7 +52,8 @@ public class ItemScript : MonoBehaviour
     private void PickUp(){
         
         invManager.tikbalang_item += 1f;
-        quest2.SetActive(false);
+        if(quest2 != null)
+            quest2.SetActive(false);
         Destroy(gameObject);
     }
 }
