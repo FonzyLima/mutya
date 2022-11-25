@@ -4,11 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Dialogue1 : MonoBehaviour
+public class Dialogue2 : MonoBehaviour
 {
     public PlayerMovement player;
-    public GameObject Quest2;
-    public GameObject Book;
+    public GameObject Quest4;
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
@@ -96,8 +95,7 @@ public class Dialogue1 : MonoBehaviour
         }
         else
         {
-            Quest2.SetActive(true);
-            Book.SetActive(true);
+            Quest4.SetActive(true);
             Destroy(gameObject);
             player.setMove(true);
         }

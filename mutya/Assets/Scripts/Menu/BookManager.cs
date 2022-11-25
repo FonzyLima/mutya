@@ -15,11 +15,16 @@ public class BookManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (equipped)
+            {
                 Book.SetActive(false);
+            }
+                
             else
+            {
                 Book.SetActive(true);
                 Book.transform.position = Player.transform.position;
-
+            }
+                
             equipped = !equipped;
         }
     }
