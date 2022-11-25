@@ -53,7 +53,7 @@ public class ItemScript : MonoBehaviour
         
         invManager.tikbalang_item += 1f;
         if(quest2 != null)
-            quest2.SetActive(false);
+            Destroy(quest2);
         Destroy(gameObject);
     }
 }

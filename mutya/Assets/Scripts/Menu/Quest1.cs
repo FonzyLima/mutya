@@ -34,7 +34,7 @@ public class Quest1 : MonoBehaviour
         {
             Input.ResetInputAxes();
             Dialogue1.SetActive(true);
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

@@ -94,7 +94,7 @@ public class MenuDialogue : MonoBehaviour
         else
         {
             Quest1.SetActive(true);
-            gameObject.SetActive(false);
+            Destroy(gameObject);
             player.setMove(true);
         }
     }

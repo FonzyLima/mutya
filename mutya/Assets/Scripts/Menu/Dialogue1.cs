@@ -102,7 +102,7 @@ public class Dialogue1 : MonoBehaviour
         {
             Quest2.SetActive(true);
             Book.SetActive(true);
-            gameObject.SetActive(false);
+            Destroy(gameObject);
             player.setMove(true);
         }
     }
