@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4305ab4ffe26d094484481d6a6d3ae09
+guid: 181f6cd69628a414dbe6ba5985da4c92
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,10 +120,10 @@ TextureImporter:
       name: Hiraya_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 32
+        x: 2
+        y: 36
+        width: 12
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81d1af8191054d247a065f02ed150969
-      internalID: 1994087132
+      spriteID: 7cfbb08ae07964f458adaaec40606845
+      internalID: 469616768
       vertices: []
       indices: 
       edges: []
@@ -141,10 +141,10 @@ TextureImporter:
       name: Hiraya_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 32
+        x: 18
+        y: 36
+        width: 12
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1d85847a7331394998eba7cbd769226
-      internalID: 1038395914
+      spriteID: b013d1e80f5e34545b8e040335c331cc
+      internalID: 1632575837
       vertices: []
       indices: 
       edges: []
@@ -162,10 +162,10 @@ TextureImporter:
       name: Hiraya_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 32
+        x: 34
+        y: 36
+        width: 12
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7b551a0a50a3c848a34e77fae26a148
-      internalID: 317581097
+      spriteID: f40a416ec8443d949b0a9b9623407630
+      internalID: -180037504
       vertices: []
       indices: 
       edges: []
@@ -183,10 +183,10 @@ TextureImporter:
       name: Hiraya_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 32
+        x: 51
+        y: 36
+        width: 11
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc8bf91c063854447ae5b937cca2a67c
-      internalID: -711504413
+      spriteID: e17d3fd3288a9d34fa45ba9dd2c7f6e9
+      internalID: 2102568818
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
       name: Hiraya_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 32
+        x: 67
+        y: 36
+        width: 11
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57a27a8464efcd94ba8c757c5a5ea0da
-      internalID: -1923813179
+      spriteID: 395481beecfbe4c4a956044f7b3e13fe
+      internalID: -1639278908
       vertices: []
       indices: 
       edges: []
@@ -225,10 +225,10 @@ TextureImporter:
       name: Hiraya_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 32
-        width: 16
-        height: 32
+        x: 83
+        y: 36
+        width: 11
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6b875990705ad84c833af51d0d5c859
-      internalID: -524736989
+      spriteID: 24d9834d59e831a4bb7907731f644792
+      internalID: -2118904663
       vertices: []
       indices: 
       edges: []
@@ -246,10 +246,10 @@ TextureImporter:
       name: Hiraya_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 16
-        height: 32
+        x: 98
+        y: 36
+        width: 11
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,8 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba6f99b72d7d5684daddc1492f779ec3
-      internalID: -2120348522
+      spriteID: 7ecbcc85d0139cc4d94d9a34b7cd2862
+      internalID: -613543876
       vertices: []
       indices: 
       edges: []
@@ -267,10 +267,10 @@ TextureImporter:
       name: Hiraya_7
       rect:
         serializedVersion: 2
-        x: 112
-        y: 32
-        width: 16
-        height: 32
+        x: 114
+        y: 36
+        width: 11
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a4f2fd38c8685e418c48434f31edc83
-      internalID: -866106980
+      spriteID: 49f0349220166a64294b33d73e28ec62
+      internalID: 1363934287
       vertices: []
       indices: 
       edges: []
@@ -288,10 +288,10 @@ TextureImporter:
       name: Hiraya_8
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
-        width: 16
-        height: 32
+        x: 130
+        y: 36
+        width: 11
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,8 +299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffe204070b95ce14a8c8dc6effeb964a
-      internalID: -1880469642
+      spriteID: e6ed7952b18b8f3429ffcc2eaa14f5bc
+      internalID: 194409941
       vertices: []
       indices: 
       edges: []
@@ -309,10 +309,10 @@ TextureImporter:
       name: Hiraya_9
       rect:
         serializedVersion: 2
-        x: 144
-        y: 32
-        width: 16
-        height: 32
+        x: 146
+        y: 36
+        width: 12
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,8 +320,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7781751c628790e44804f1c50ce6bdfa
-      internalID: 480775977
+      spriteID: 7cc1bf76a32af0d4dacd3a9d116c5f84
+      internalID: 1421198609
       vertices: []
       indices: 
       edges: []
@@ -330,10 +330,10 @@ TextureImporter:
       name: Hiraya_10
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
-        width: 16
-        height: 32
+        x: 162
+        y: 36
+        width: 12
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,8 +341,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a790b7a4a5403ed4e873797b43454890
-      internalID: 1009233722
+      spriteID: d535c2e19764b8643964b5159c83f8a7
+      internalID: -232735234
       vertices: []
       indices: 
       edges: []
@@ -351,10 +351,10 @@ TextureImporter:
       name: Hiraya_11
       rect:
         serializedVersion: 2
-        x: 176
-        y: 32
-        width: 16
-        height: 32
+        x: 178
+        y: 36
+        width: 12
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,8 +362,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaf3100c5c8612a42b0b1f6e09eadf5a
-      internalID: -917672943
+      spriteID: ba03ea8854d53a14aaf9a98b8b674a63
+      internalID: -1683290224
       vertices: []
       indices: 
       edges: []
@@ -372,10 +372,10 @@ TextureImporter:
       name: Hiraya_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 32
+        x: 2
+        y: 4
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,8 +383,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83678a84a2e651949abc6255014f1e66
-      internalID: 1761242647
+      spriteID: f2b2c0a69d65b6644a6f2a49b7d6729e
+      internalID: -1286678491
       vertices: []
       indices: 
       edges: []
@@ -393,10 +393,10 @@ TextureImporter:
       name: Hiraya_13
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 32
+        x: 18
+        y: 4
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,8 +404,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c131f349b8f4e0e448362aeeb2bca57e
-      internalID: -1434153192
+      spriteID: a04f4da4182f6e749b8b06918db3e59c
+      internalID: -1653049250
       vertices: []
       indices: 
       edges: []
@@ -414,10 +414,10 @@ TextureImporter:
       name: Hiraya_14
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 32
+        x: 34
+        y: 4
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,8 +425,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d13ef07b912ab74fb9509b45ce3cf5d
-      internalID: 1022848313
+      spriteID: 5ed26f91b4bb88747ba6d871effc0978
+      internalID: 685237423
       vertices: []
       indices: 
       edges: []
@@ -435,10 +435,10 @@ TextureImporter:
       name: Hiraya_15
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 32
+        x: 51
+        y: 4
+        width: 11
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,8 +446,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8449dc9f7af81549add53c36289c7e9
-      internalID: 1761698887
+      spriteID: 83bb1f253b94d6a45b8d2edbbef62a3d
+      internalID: 1264463737
       vertices: []
       indices: 
       edges: []
@@ -456,10 +456,10 @@ TextureImporter:
       name: Hiraya_16
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 32
+        x: 67
+        y: 4
+        width: 11
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,8 +467,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ade0e33faaa136e46a68fb8a88255d73
-      internalID: -1566522258
+      spriteID: 8cbc3fc46cf5b80418ddf34930358290
+      internalID: -844930264
       vertices: []
       indices: 
       edges: []
@@ -477,10 +477,10 @@ TextureImporter:
       name: Hiraya_17
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 32
+        x: 83
+        y: 4
+        width: 11
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,8 +488,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b44784482c60c734da5d574f05b16c52
-      internalID: 370568292
+      spriteID: 4984dd304c9f81a478d02d1348967479
+      internalID: -239231201
       vertices: []
       indices: 
       edges: []
@@ -498,10 +498,10 @@ TextureImporter:
       name: Hiraya_18
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 32
+        x: 98
+        y: 4
+        width: 11
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,8 +509,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28848e7f526c5b7458c359796d1a3e27
-      internalID: 934395112
+      spriteID: 881813360f54d1e4ebf413e025ba2c89
+      internalID: -1001681764
       vertices: []
       indices: 
       edges: []
@@ -519,10 +519,10 @@ TextureImporter:
       name: Hiraya_19
       rect:
         serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 32
+        x: 114
+        y: 4
+        width: 11
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,8 +530,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 889aa56940b3ed64d8756cb6fc59e81e
-      internalID: 779399410
+      spriteID: e2449c4ed44033c46bfef5928fa4dbc2
+      internalID: -1655606483
       vertices: []
       indices: 
       edges: []
@@ -540,10 +540,10 @@ TextureImporter:
       name: Hiraya_20
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 16
-        height: 32
+        x: 130
+        y: 4
+        width: 11
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -551,8 +551,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0bf5575c29559d43af6fc41704ed8b1
-      internalID: 1118752688
+      spriteID: 6d9828072a7098a4499de6d6bd8534a7
+      internalID: 1227927587
       vertices: []
       indices: 
       edges: []
@@ -561,10 +561,10 @@ TextureImporter:
       name: Hiraya_21
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
-        width: 16
-        height: 32
+        x: 146
+        y: 4
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,8 +572,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3afa18d02c827aa4a91cb5e6ceb1a1c2
-      internalID: 1990483955
+      spriteID: 62dd202caafa63a49be7cf77c147063e
+      internalID: -923510539
       vertices: []
       indices: 
       edges: []
@@ -582,10 +582,10 @@ TextureImporter:
       name: Hiraya_22
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 16
-        height: 32
+        x: 162
+        y: 4
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,8 +593,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f43310f623cbb624cb44205d1ea4bf24
-      internalID: -208276308
+      spriteID: 02cb22c3028bad042b7fb6b0e0f5ce73
+      internalID: -2005294460
       vertices: []
       indices: 
       edges: []
@@ -603,10 +603,10 @@ TextureImporter:
       name: Hiraya_23
       rect:
         serializedVersion: 2
-        x: 176
-        y: 0
-        width: 16
-        height: 32
+        x: 178
+        y: 4
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,8 +614,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa91974390ef1ee41ac3b9f15c3addbc
-      internalID: -1514388574
+      spriteID: a8bf75da898eea84e977dcff7be78055
+      internalID: 1630509931
       vertices: []
       indices: 
       edges: []
@@ -631,30 +631,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hiraya_7: -866106980
-      Hiraya_20: 1118752688
-      Hiraya_5: -524736989
-      Hiraya_1: 1038395914
-      Hiraya_11: -917672943
-      Hiraya_9: 480775977
-      Hiraya_19: 779399410
-      Hiraya_22: -208276308
-      Hiraya_3: -711504413
-      Hiraya_18: 934395112
-      Hiraya_13: -1434153192
-      Hiraya_6: -2120348522
-      Hiraya_8: -1880469642
-      Hiraya_15: 1761698887
-      Hiraya_14: 1022848313
-      Hiraya_0: 1994087132
-      Hiraya_16: -1566522258
-      Hiraya_12: 1761242647
-      Hiraya_21: 1990483955
-      Hiraya_10: 1009233722
-      Hiraya_4: -1923813179
-      Hiraya_23: -1514388574
-      Hiraya_17: 370568292
-      Hiraya_2: 317581097
+      Hiraya_7: 1363934287
+      Hiraya_20: 1227927587
+      Hiraya_5: -2118904663
+      Hiraya_1: 1632575837
+      Hiraya_11: -1683290224
+      Hiraya_9: 1421198609
+      Hiraya_19: -1655606483
+      Hiraya_22: -2005294460
+      Hiraya_3: 2102568818
+      Hiraya_18: -1001681764
+      Hiraya_13: -1653049250
+      Hiraya_6: -613543876
+      Hiraya_8: 194409941
+      Hiraya_15: 1264463737
+      Hiraya_14: 685237423
+      Hiraya_0: 469616768
+      Hiraya_16: -844930264
+      Hiraya_12: -1286678491
+      Hiraya_21: -923510539
+      Hiraya_10: -232735234
+      Hiraya_4: -1639278908
+      Hiraya_23: 1630509931
+      Hiraya_17: -239231201
+      Hiraya_2: -180037504
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
