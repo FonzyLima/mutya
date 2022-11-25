@@ -44,27 +44,30 @@ public class TikbalangAI : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
+
         bool isNoisy = playerMovement.isMoving && (!playerMovement.isCrouching || playerMovement.inGrass);
         if(isNoisy && Vector2.Distance( transform.position, playerPos.position) < distance){
-            // Vector2 dir = transform.position - playerPos.position;
-            // testx = dir.x;
-            // testy = dir.y;
-            // tests = dir.sqrMagnitude;
-            // animator.SetFloat("Horizontal", dir.x);
-            // animator.SetFloat("Vertical", dir.y);
-            // animator.SetFloat("Speed", 4);
+            Vector3 dir = playerPos.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            dir.Normalize();
+
+            animator.SetFloat("Horizontal", dir.x);
+            animator.SetFloat("Vertical", dir.y);
+            animator.SetFloat("Speed", dir.sqrMagnitude);
             FollowPlayer();
         }
         else{
-            // Vector2 dir = waypoints[wIdx].transform.position - playerPos.position;
-            // testx = dir.x;
-            // testy = dir.y;
-            // tests = dir.sqrMagnitude;
-            // animator.SetFloat("Horizontal", dir.x);
-            // animator.SetFloat("Vertical", dir.y);
-            // animator.SetFloat("Speed", 4);
+            Vector3 dir = waypoints[wIdx].transform.position - playerPos.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            dir.Normalize();
+
+            animator.SetFloat("Horizontal", dir.x);
+            animator.SetFloat("Vertical", dir.y);
+            animator.SetFloat("Speed", dir.sqrMagnitude);
             Move();
         }
+        
     }
 
     private void FollowPlayer(){

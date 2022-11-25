@@ -885,6 +885,9 @@ MonoBehaviour:
   player: {fileID: 96507372}
   distance: 6
   animator: {fileID: 90127642}
+  testx: 0
+  testy: 0
+  tests: 0
 --- !u!212 &90127639
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -959,7 +962,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90127637}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1018,7 +1021,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &96156030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,7 +1190,6 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 96507377}
   animator: {fileID: 96507375}
-  timeRemain: 0
   SpriteRenderer: {fileID: 0}
   Standing: {fileID: 0}
   Crouching: {fileID: 1761242647, guid: 4305ab4ffe26d094484481d6a6d3ae09, type: 3}
@@ -8511,7 +8513,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650190836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.489693, y: -4.7810144, z: -10}
+  m_LocalPosition: {x: -5.751896, y: -4.786387, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18592,7 +18594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549529813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.92, y: -18.49, z: 0}
+  m_LocalPosition: {x: -13.92, y: -15.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
