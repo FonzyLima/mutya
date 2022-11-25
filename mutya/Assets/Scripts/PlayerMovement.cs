@@ -11,10 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
-    public float timeRemain;
     public static bool canMove = true;
-
-    static bool leftMenu = false;
 
     // Crouching Mechanic
     public SpriteRenderer SpriteRenderer;
@@ -32,18 +29,6 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 CrouchingSize;
 
     public float velocityTest;
-
-    void Awake()
-    {
-        if (leftMenu)
-        {
-            timeRemain = 0;
-        }
-        else
-        {
-            timeRemain = 39;
-        }
-    }
 
     void Start() {
         Collider = GetComponent<BoxCollider2D>();
@@ -109,14 +94,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (timeRemain > 0)
-        {
-            timeRemain -= Time.fixedDeltaTime;
-        }
-        else
-        {
-            leftMenu = true;
-        }
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
