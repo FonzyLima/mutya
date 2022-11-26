@@ -11,9 +11,11 @@ public class BookFlipper : MonoBehaviour
 
     public TextMeshProUGUI monsterName;
     public TextMeshProUGUI monsterDesc;
+    // public Image monsterImage; // replace monster name
 
     public string[] monsters;
     public string[] descs;
+    // public Image[] images; // replace monster list
 
     void Start()
     {

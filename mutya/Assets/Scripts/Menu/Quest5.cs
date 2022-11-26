@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Quest3 : MonoBehaviour
+public class Quest5 : MonoBehaviour
 {
-    private int counter = 0;
-
-    public GameObject Dialogue2;
+    public GameObject Dialogue4;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            Dialogue2.SetActive(true);
+            Dialogue4.SetActive(true);
             Destroy(gameObject);
         }
     }
