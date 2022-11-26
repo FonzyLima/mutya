@@ -43,9 +43,8 @@ public class TikbalangAI : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        
         bool isNoisy = playerMovement.isMoving && (!playerMovement.isCrouching || playerMovement.inGrass);
-        if(found || isNoisy && Vector2.Distance( transform.position, playerPos.position) < distance){
+        if (Vector2.Distance(transform.position, playerPos.position) < 1.5){ // If player is near tikbalang
             Vector3 dir = playerPos.position - transform.position;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             dir.Normalize();
@@ -54,9 +53,22 @@ public class TikbalangAI : MonoBehaviour
             animator.SetFloat("Vertical", dir.y);
             animator.SetFloat("Speed", dir.sqrMagnitude);
             found = true;
+            // playerMovement.canMove = false;
             FollowPlayer();
         }
-        else{
+        else if(found || isNoisy && Vector2.Distance(transform.position, playerPos.position) < distance){// If player is noisy near tikbalang
+            Vector3 dir = playerPos.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            dir.Normalize();
+
+            animator.SetFloat("Horizontal", dir.x);
+            animator.SetFloat("Vertical", dir.y);
+            animator.SetFloat("Speed", dir.sqrMagnitude);
+            found = true;
+            // playerMovement.canMove = false;
+            FollowPlayer();
+        }
+        else{ // If player is far away from tikbalang
             Move();
         }
         
