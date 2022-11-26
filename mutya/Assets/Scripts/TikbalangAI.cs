@@ -12,7 +12,7 @@ public class TikbalangAI : MonoBehaviour
     public float moveSpeed = 4f;
 
     //waypoint index
-    private int wIdx = 0;
+    public int wIdx = 0;
 
     public GameObject player;
     private Transform playerPos;
@@ -57,13 +57,6 @@ public class TikbalangAI : MonoBehaviour
             FollowPlayer();
         }
         else{
-            Vector3 dir = waypoints[wIdx].transform.position - playerPos.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            dir.Normalize();
-
-            animator.SetFloat("Horizontal", dir.x);
-            animator.SetFloat("Vertical", dir.y);
-            animator.SetFloat("Speed", dir.sqrMagnitude);
             Move();
         }
         
@@ -76,7 +69,14 @@ public class TikbalangAI : MonoBehaviour
 
     private void Move(){
         moveSpeed = 4f;
-        if (wIdx <= waypoints.Length - 1){
+        if (wIdx < waypoints.Length){
+            Vector3 dir = waypoints[wIdx].transform.position - playerPos.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            dir.Normalize();
+
+            animator.SetFloat("Horizontal", dir.x);
+            animator.SetFloat("Vertical", dir.y);
+            animator.SetFloat("Speed", dir.sqrMagnitude);
             transform.position = Vector2.MoveTowards(transform.position, waypoints[wIdx].transform.position, moveSpeed * Time.deltaTime);
             if(transform.position == waypoints[wIdx].transform.position){
                 wIdx += 1;
