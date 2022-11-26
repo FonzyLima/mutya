@@ -28,8 +28,6 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 StandingSize;
     public Vector2 CrouchingSize;
 
-    public float velocityTest;
-
     void Start() {
         Collider = GetComponent<BoxCollider2D>();
         Collider.size = StandingSize;

@@ -22,9 +22,7 @@ public class TikbalangAI : MonoBehaviour
     
     public Animator animator;
 
-    public float testx;
-    public float testy;
-    public float tests;
+    private bool found;
 
 
     // Start is called before the first frame update
@@ -39,15 +37,15 @@ public class TikbalangAI : MonoBehaviour
 
         //get Player Movement
         playerMovement = player.GetComponent<PlayerMovement>();
+        found = false;
     }
 
     // Update is called once per frame
     private void Update()
     {
         
-
         bool isNoisy = playerMovement.isMoving && (!playerMovement.isCrouching || playerMovement.inGrass);
-        if(isNoisy && Vector2.Distance( transform.position, playerPos.position) < distance){
+        if(found || isNoisy && Vector2.Distance( transform.position, playerPos.position) < distance){
             Vector3 dir = playerPos.position - transform.position;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             dir.Normalize();
@@ -55,6 +53,7 @@ public class TikbalangAI : MonoBehaviour
             animator.SetFloat("Horizontal", dir.x);
             animator.SetFloat("Vertical", dir.y);
             animator.SetFloat("Speed", dir.sqrMagnitude);
+            found = true;
             FollowPlayer();
         }
         else{
