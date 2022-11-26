@@ -4,18 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Dialogue3 : MonoBehaviour
+public class Dialogue5 : MonoBehaviour
 {
     public PlayerMovement player;
 
-    public GameObject Dialogue5;
+    public GameObject Quest6;
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
     public string[] nameLines;
     public string[] dialogueLines;
-    
+
     public float textSpeed;
 
     private int nameIndex;
@@ -49,7 +49,7 @@ public class Dialogue3 : MonoBehaviour
             }
         }
     }
-        
+
     void StartDialogue()
     {
         nameIndex = 0;
@@ -63,7 +63,7 @@ public class Dialogue3 : MonoBehaviour
         foreach (char c in nameLines[nameIndex].ToCharArray())
         {
             nameText.text += c;
-            yield return new WaitForSeconds(textSpeed); 
+            yield return new WaitForSeconds(textSpeed);
         }
     }
 
@@ -72,7 +72,7 @@ public class Dialogue3 : MonoBehaviour
         foreach (char c in dialogueLines[dialogueIndex].ToCharArray())
         {
             dialogueText.text += c;
-            yield return new WaitForSeconds(textSpeed); 
+            yield return new WaitForSeconds(textSpeed);
         }
     }
 
@@ -96,8 +96,9 @@ public class Dialogue3 : MonoBehaviour
         }
         else
         {
-            Dialogue5.SetActive(true);
+            Quest6.SetActive(true);
             Destroy(gameObject);
+            player.setMove(true);
         }
     }
-}   
+} 
