@@ -39,18 +39,30 @@ public class BookFlipper : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow) && pageCounter < 9)
         {
-            RemoveText();
-            animator.Play("Base Layer.FlipNext");
-            pageCounter++;
-            SpawnText();
+            StartCoroutine(nextPage());
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && pageCounter > 0)
         {
-            RemoveText();
-            animator.Play("Base Layer.FlipPrev");
-            pageCounter--;
-            SpawnText();
+            StartCoroutine(prevPage());
         }
+    }
+
+    IEnumerator nextPage()
+    {
+        RemoveText();
+        animator.Play("Base Layer.FlipNext");
+        pageCounter++;
+        yield return new WaitForSeconds(0.5f);
+        SpawnText();
+    }
+
+    IEnumerator prevPage()
+    {
+        RemoveText();
+        animator.Play("Base Layer.FlipPrev");
+        pageCounter--;
+        yield return new WaitForSeconds(0.5f);
+        SpawnText();
     }
 }
