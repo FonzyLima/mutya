@@ -17,6 +17,9 @@ public class BookFlipper : MonoBehaviour
     public string[] descs;
     // public Image[] images; // replace monster list
 
+    public AudioSource BookSFX;
+
+
     void Start()
     {
         monsterName.text = string.Empty;
@@ -47,12 +50,14 @@ public class BookFlipper : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow) && pageCounter > 0)
         {
             StartCoroutine(prevPage());
+            
         }
     }
 
     IEnumerator nextPage()
     {
         RemoveText();
+        BookSFX.Play();
         animator.Play("Base Layer.FlipNext");
         pageCounter++;
         yield return new WaitForSeconds(0.5f);
@@ -62,6 +67,7 @@ public class BookFlipper : MonoBehaviour
     IEnumerator prevPage()
     {
         RemoveText();
+        BookSFX.Play();
         animator.Play("Base Layer.FlipPrev");
         pageCounter--;
         yield return new WaitForSeconds(0.5f);
