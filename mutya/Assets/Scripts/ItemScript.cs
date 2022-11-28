@@ -14,6 +14,7 @@ public class ItemScript : MonoBehaviour
     public GameObject quest2;
     public GameObject quest3;
     public GameObject bm;
+    public AudioClip pickUpSFX;
 
     private void Start(){
         pickUpText.gameObject.SetActive(false);
@@ -62,7 +63,7 @@ public class ItemScript : MonoBehaviour
             }
             Destroy(quest2);
         }
-            
+        AudioSource.PlayClipAtPoint(pickUpSFX, transform.position);
         Destroy(gameObject);
     }
 }

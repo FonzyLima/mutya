@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
-    public static bool canMove = true;
+    public bool canMove = true;
 
     // Crouching Mechanic
     public SpriteRenderer SpriteRenderer;

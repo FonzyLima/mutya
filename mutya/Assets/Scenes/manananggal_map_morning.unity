@@ -19831,6 +19831,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4366049984093750029, guid: 36a023f8b8b95ab46854482d4cdb17d4, type: 3}
+      propertyPath: pickUpSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 8073f94601e7b714c8521e3e47ad3643, type: 3}
+    - target: {fileID: 4366049984093750029, guid: 36a023f8b8b95ab46854482d4cdb17d4, type: 3}
       propertyPath: pickUpText
       value: 
       objectReference: {fileID: 22462451}
@@ -20759,7 +20763,6 @@ MonoBehaviour:
   Collider: {fileID: 0}
   StandingSize: {x: 0.739271, y: 1.776066}
   CrouchingSize: {x: 0.739271, y: 1}
-  velocityTest: 0
 --- !u!50 &1003305467
 Rigidbody2D:
   serializedVersion: 4
@@ -30548,7 +30551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091570630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.431249, y: 7.9349527, z: -10}
+  m_LocalPosition: {x: -5.2931666, y: 7.9331303, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
