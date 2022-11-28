@@ -8,6 +8,17 @@ public class MenuDialogue : MonoBehaviour
     public PlayerMovement player;
     public GameObject Quest1;
 
+    public GameObject Quest2;
+    public GameObject Book;
+
+    public GameObject Quest4;
+
+    public GameObject Quest5;
+
+    public GameObject Dialogue5;
+
+    public GameObject Quest6;
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
@@ -25,12 +36,13 @@ public class MenuDialogue : MonoBehaviour
         nameText.text = string.Empty;
         dialogueText.text = string.Empty;
         StartDialogue();
-        player.setMove(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        player.setMove(false);
+
         if (Input.GetMouseButtonDown(0))
         {
             if (dialogueText.text == dialogueLines[dialogueIndex])
@@ -93,7 +105,34 @@ public class MenuDialogue : MonoBehaviour
         }
         else
         {
-            Quest1.SetActive(true);
+            if (Quest1 != null)
+            {
+                Quest1.SetActive(true);
+            }
+            if (Quest2 != null)
+            {
+                Quest2.SetActive(true);
+            }
+            if (Book != null)
+            {
+                Book.SetActive(true);
+            }
+            if (Quest4 != null)
+            {
+                Quest4.SetActive(true);
+            }
+            if (Quest5 != null)
+            {
+                Quest5.SetActive(true);
+            }
+            if (Dialogue5 != null)
+            {
+                Dialogue5.SetActive(true);
+            }
+            if (Quest6 != null)
+            {
+                Quest6.SetActive(true);
+            }
             Destroy(gameObject);
             player.setMove(true);
         }

@@ -204,11 +204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8499476464288594554, guid: 36a023f8b8b95ab46854482d4cdb17d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -543.49
+      value: -543.51
       objectReference: {fileID: 0}
     - target: {fileID: 8499476464288594554, guid: 36a023f8b8b95ab46854482d4cdb17d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -343.81
+      value: -342.73
       objectReference: {fileID: 0}
     - target: {fileID: 8499476464288594554, guid: 36a023f8b8b95ab46854482d4cdb17d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -460,17 +460,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 61377140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ff64b1e534770b4ab728bcb3e4eca30, type: 3}
+  m_Script: {fileID: 11500000, guid: a76d47696d627b047b9e77d204d3dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1572406597}
+  Quest1: {fileID: 0}
+  Quest2: {fileID: 0}
+  Book: {fileID: 0}
   Quest4: {fileID: 1114556354}
+  Quest5: {fileID: 0}
+  Dialogue5: {fileID: 0}
+  Quest6: {fileID: 0}
   nameText: {fileID: 123435688}
   dialogueText: {fileID: 1310776729}
   nameLines:
   - ENCYCLOPEDIA
   dialogueLines:
-  - A book containing information about different mythological creatures.
+  - 'A book containing information about different mythological creatures. '
   textSpeed: 0.05
 --- !u!1 &63143068
 GameObject:
@@ -727,10 +733,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 63360903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf37ec0863bdff24f88fe6ca202877c9, type: 3}
+  m_Script: {fileID: 11500000, guid: a76d47696d627b047b9e77d204d3dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1572406597}
+  Quest1: {fileID: 0}
+  Quest2: {fileID: 0}
+  Book: {fileID: 0}
+  Quest4: {fileID: 0}
+  Quest5: {fileID: 0}
+  Dialogue5: {fileID: 0}
+  Quest6: {fileID: 0}
   nameText: {fileID: 1042259960}
   dialogueText: {fileID: 1366870238}
   nameLines:
@@ -5110,7 +5123,7 @@ GameObject:
   - component: {fileID: 407847538}
   - component: {fileID: 407847537}
   - component: {fileID: 407847536}
-  - component: {fileID: 407847535}
+  - component: {fileID: 407847539}
   m_Layer: 5
   m_Name: Dialogue4
   m_TagString: Untagged
@@ -5140,39 +5153,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &407847535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407847533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a7464d088920284cab39d49a5992211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1572406597}
-  Dialogue5: {fileID: 1505940029}
-  nameText: {fileID: 253846734}
-  dialogueText: {fileID: 1380451658}
-  nameLines:
-  - MARIA
-  - MARIA
-  - MARIA
-  - MARIA
-  - MARIA
-  - MARIA
-  dialogueLines:
-  - Thank you, Hiraya! I knew you could do it!
-  - "Here\u2019s what I propose. As you know, three creatures attacked the forest."
-  - Based on my knowledge, you can only fight and defeat other creatures using specific
-    items.
-  - With that said, Bakunawa is the creature closest to us, we should get there first!
-  - I will give you a stone imbued with the magic of this forest. It can transport
-    us to the entrance of Bakunawa.
-  - "Use it when you\u2019re ready!"
-  textSpeed: 0.05
 --- !u!95 &407847536
 Animator:
   serializedVersion: 4
@@ -5231,6 +5211,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407847533}
   m_CullTransparentMesh: 1
+--- !u!114 &407847539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407847533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76d47696d627b047b9e77d204d3dad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1572406597}
+  Quest1: {fileID: 0}
+  Quest2: {fileID: 0}
+  Book: {fileID: 0}
+  Quest4: {fileID: 0}
+  Quest5: {fileID: 0}
+  Dialogue5: {fileID: 1505940029}
+  Quest6: {fileID: 0}
+  nameText: {fileID: 253846734}
+  dialogueText: {fileID: 1380451658}
+  nameLines:
+  - MARIA
+  - MARIA
+  - MARIA
+  - MARIA
+  - MARIA
+  - MARIA
+  dialogueLines:
+  - Thank you, Hiraya! I knew you could do it!
+  - "Here\u2019s what I propose. As you know, three creatures attacked the forest."
+  - Based on my knowledge, you can only fight and defeat other creatures using specific
+    items.
+  - With that said, Bakunawa is the creature closest to us, we should get there first!
+  - I will give you a stone imbued with the magic of this forest. It can transport
+    us to the entrance of Bakunawa.
+  - "Use it when you\u2019re ready!"
+  textSpeed: 0.05
 --- !u!1 &446949115
 GameObject:
   m_ObjectHideFlags: 0
@@ -10685,6 +10704,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1572406597}
   Quest1: {fileID: 452082745}
+  Quest2: {fileID: 0}
+  Book: {fileID: 0}
+  Quest4: {fileID: 0}
+  Quest5: {fileID: 0}
+  Dialogue5: {fileID: 0}
+  Quest6: {fileID: 0}
   nameText: {fileID: 341082466}
   dialogueText: {fileID: 651480259}
   nameLines:
@@ -12776,7 +12801,7 @@ GameObject:
   - component: {fileID: 1450672574}
   - component: {fileID: 1450672573}
   - component: {fileID: 1450672572}
-  - component: {fileID: 1450672571}
+  - component: {fileID: 1450672575}
   m_Layer: 5
   m_Name: Dialogue3
   m_TagString: Untagged
@@ -12806,42 +12831,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1450672571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450672569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ff64b1e534770b4ab728bcb3e4eca30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1572406597}
-  Quest4: {fileID: 237132219}
-  nameText: {fileID: 1207935757}
-  dialogueText: {fileID: 862076799}
-  nameLines:
-  - MARIA
-  - MARIA
-  - MARIA
-  - HIRAYA
-  - MARIA
-  - MARIA
-  - MARIA
-  dialogueLines:
-  - Glad to see it in good condition! I bet we can use this later.
-  - Now Hiraya... to tell you the truth, a lot of things happened after you passed
-    out.
-  - The Guardian Tribe was utterly overwhelmed by the forces of evil. Sadly, many
-    lives perished and some were even taken as prisoners...
-  - "This can\u2019t be... I need to do something! I need to save them!"
-  - I might not be of much help, but I think I will be able to aid you in your journey.
-  - "Please, Hiraya! If we don\u2019t do anything, the world will be thrown into
-    chaos."
-  - I already have a plan, but are you willing to take on this responsibility?
-  textSpeed: 0.05
 --- !u!95 &1450672572
 Animator:
   serializedVersion: 4
@@ -12900,6 +12889,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450672569}
   m_CullTransparentMesh: 1
+--- !u!114 &1450672575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450672569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76d47696d627b047b9e77d204d3dad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1572406597}
+  Quest1: {fileID: 0}
+  Quest2: {fileID: 0}
+  Book: {fileID: 0}
+  Quest4: {fileID: 0}
+  Quest5: {fileID: 237132219}
+  Dialogue5: {fileID: 0}
+  Quest6: {fileID: 0}
+  nameText: {fileID: 1207935757}
+  dialogueText: {fileID: 862076799}
+  nameLines:
+  - MARIA
+  - MARIA
+  - MARIA
+  - HIRAYA
+  - MARIA
+  - MARIA
+  - MARIA
+  dialogueLines:
+  - Glad to see it in good condition! I bet we can use this later.
+  - Now Hiraya... to tell you the truth, a lot of things happened after you passed
+    out.
+  - The Guardian Tribe was utterly overwhelmed by the forces of evil. Sadly, many
+    lives perished and some were even taken as prisoners...
+  - "This can\u2019t be... I need to do something! I need to save them!"
+  - I might not be of much help, but I think I will be able to aid you in your journey.
+  - "Please, Hiraya! If we don\u2019t do anything, the world will be thrown into
+    chaos."
+  - I already have a plan, but are you willing to take on this responsibility?
+  textSpeed: 0.05
 --- !u!1 &1469358718
 GameObject:
   m_ObjectHideFlags: 0
@@ -13174,10 +13205,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1505940029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da0a6e1c62da2fc458f8c89630aadd25, type: 3}
+  m_Script: {fileID: 11500000, guid: a76d47696d627b047b9e77d204d3dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1572406597}
+  Quest1: {fileID: 0}
+  Quest2: {fileID: 0}
+  Book: {fileID: 0}
+  Quest4: {fileID: 0}
+  Quest5: {fileID: 0}
+  Dialogue5: {fileID: 0}
   Quest6: {fileID: 2038006891}
   nameText: {fileID: 801713454}
   dialogueText: {fileID: 456261871}
@@ -13295,12 +13332,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1568897274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 502e46029eb42b14ab3c40d905739e9f, type: 3}
+  m_Script: {fileID: 11500000, guid: a76d47696d627b047b9e77d204d3dad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1572406597}
+  Quest1: {fileID: 0}
   Quest2: {fileID: 883157808}
   Book: {fileID: 38780506}
+  Quest4: {fileID: 0}
+  Quest5: {fileID: 0}
+  Dialogue5: {fileID: 0}
+  Quest6: {fileID: 0}
   nameText: {fileID: 950062656}
   dialogueText: {fileID: 655755869}
   nameLines:
