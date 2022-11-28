@@ -125,3 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpText: {fileID: 7405547383248250246, guid: 66504cca571b5fa46b6bf2e346b18626, type: 3}
+  quest2: {fileID: 0}
+  quest3: {fileID: 0}
+  bm: {fileID: 0}
+  pickUpSFX: {fileID: 8300000, guid: 8073f94601e7b714c8521e3e47ad3643, type: 3}
