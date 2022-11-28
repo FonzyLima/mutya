@@ -24,7 +24,7 @@ public class PlayerTikbalangScript : MonoBehaviour{
     // Update is called once per frame
     void Update()
     {
-        if (!isDestroyed && Input.GetKeyDown(KeyCode.F) && invManager.tikbalang_item >= 2f && Vector2.Distance(transform.position, tikbalangPos.position) < attackDistance){
+        if (!isDestroyed && Input.GetKeyDown(KeyCode.F) && invManager.tikbalang_item >= 1f && Vector2.Distance(transform.position, tikbalangPos.position) < attackDistance){
             Destroy(tikbalang);
             isDestroyed = true;
         }

@@ -53,8 +53,13 @@ public class TikbalangAI : MonoBehaviour
             animator.SetFloat("Vertical", dir.y);
             animator.SetFloat("Speed", dir.sqrMagnitude);
             found = true;
-            // playerMovement.canMove = false;
+
             FollowPlayer();
+            playerMovement.moveSpeed = 0;
+
+            if (Vector2.Distance(transform.position, playerPos.position) == 0){
+                Death();
+            }
         }
         else if(found || isNoisy && Vector2.Distance(transform.position, playerPos.position) < distance){// If player is noisy near tikbalang
             Vector3 dir = playerPos.position - transform.position;
@@ -65,8 +70,13 @@ public class TikbalangAI : MonoBehaviour
             animator.SetFloat("Vertical", dir.y);
             animator.SetFloat("Speed", dir.sqrMagnitude);
             found = true;
-            // playerMovement.canMove = false;
+
+            if (Vector2.Distance(transform.position, playerPos.position) == 0){
+                Death();
+            }
+
             FollowPlayer();
+            playerMovement.moveSpeed = 0;
         }
         else{ // If player is far away from tikbalang
             Move();
@@ -97,5 +107,13 @@ public class TikbalangAI : MonoBehaviour
         else{
             wIdx = 0;
         }
+    }
+
+    private void Death(){
+        /*
+            INSERT CODE FOR DEATH ANIMATION
+        */
+
+        return;
     }
 }
