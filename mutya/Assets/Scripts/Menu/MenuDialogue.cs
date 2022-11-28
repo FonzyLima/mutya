@@ -23,6 +23,10 @@ public class MenuDialogue : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
+    public AudioSource SFXPlayer;
+    public AudioClip hirayaTalk;
+    public AudioClip mariaTalk;
+
     public string[] nameLines;
     public string[] dialogueLines;
     
@@ -79,11 +83,25 @@ public class MenuDialogue : MonoBehaviour
 
     IEnumerator TypeDialogueLine()
     {
+        if (nameLines[nameIndex] == "MARIA")
+        {
+            SFXPlayer.clip = mariaTalk;
+        }
+        if (nameLines[nameIndex] == "HIRAYA")
+        {
+            SFXPlayer.clip = hirayaTalk;
+        }
+
+        SFXPlayer.loop = true;
+        SFXPlayer.Play();
+
         foreach (char c in dialogueLines[dialogueIndex].ToCharArray())
         {
             dialogueText.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+
+        SFXPlayer.Stop();
     }
 
     void NextNameLine()
