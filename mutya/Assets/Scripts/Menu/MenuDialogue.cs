@@ -6,6 +6,10 @@ using TMPro;
 public class MenuDialogue : MonoBehaviour
 {
     public PlayerMovement player;
+
+    public AudioSource hirayaTalk;
+    public AudioSource mariaTalk;
+
     public GameObject Quest1;
 
     public GameObject Quest2;
@@ -36,6 +40,8 @@ public class MenuDialogue : MonoBehaviour
         nameText.text = string.Empty;
         dialogueText.text = string.Empty;
         StartDialogue();
+        hirayaTalk = GetComponent<AudioSource>();
+        mariaTalk = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -81,7 +87,15 @@ public class MenuDialogue : MonoBehaviour
         foreach (char c in dialogueLines[dialogueIndex].ToCharArray())
         {
             dialogueText.text += c;
-            yield return new WaitForSeconds(textSpeed); 
+            if (nameLines[nameIndex] == "MARIA")
+            {
+                mariaTalk.Play();
+            }
+            if (nameLines[nameIndex] == "HIRAYA")
+            {
+                hirayaTalk.Play();
+            }
+            yield return new WaitForSeconds(textSpeed);
         }
     }
 
