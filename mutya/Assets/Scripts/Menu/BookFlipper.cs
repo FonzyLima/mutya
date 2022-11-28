@@ -11,11 +11,11 @@ public class BookFlipper : MonoBehaviour
 
     public TextMeshProUGUI monsterName;
     public TextMeshProUGUI monsterDesc;
-    // public Image monsterImage; // replace monster name
+    public Image monsterImage; // replace monster name
 
     public string[] monsters;
     public string[] descs;
-    // public Image[] images; // replace monster list
+    public Sprite[] images; // replace monster list
 
     public AudioSource BookSFX;
 
@@ -24,19 +24,22 @@ public class BookFlipper : MonoBehaviour
     {
         monsterName.text = string.Empty;
         monsterDesc.text = string.Empty;
-        SpawnText();
+        SpawnContent();
     }
 
-    void SpawnText()
+    void SpawnContent()
     {   
         monsterName.text += monsters[pageCounter];
         monsterDesc.text += descs[pageCounter];
+        monsterImage.color = new Color(1f, 1f, 1f, 1f);
+        monsterImage.sprite = images[pageCounter];
     }
 
-    void RemoveText()
+    void RemoveContent()
     {
         monsterName.text = string.Empty;
         monsterDesc.text = string.Empty;
+        monsterImage.color = new Color(1f, 1f, 1f, 0f);
     }
 
     // Update is called once per frame
@@ -56,21 +59,21 @@ public class BookFlipper : MonoBehaviour
 
     IEnumerator nextPage()
     {
-        RemoveText();
+        RemoveContent();
         BookSFX.Play();
         animator.Play("Base Layer.FlipNext");
         pageCounter++;
         yield return new WaitForSeconds(0.5f);
-        SpawnText();
+        SpawnContent();
     }
 
     IEnumerator prevPage()
     {
-        RemoveText();
+        RemoveContent();
         BookSFX.Play();
         animator.Play("Base Layer.FlipPrev");
         pageCounter--;
         yield return new WaitForSeconds(0.5f);
-        SpawnText();
+        SpawnContent();
     }
 }
