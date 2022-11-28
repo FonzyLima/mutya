@@ -60,6 +60,7 @@ public class MenuDialogue : MonoBehaviour
                 StopAllCoroutines();
                 nameText.text = nameLines[nameIndex];
                 dialogueText.text = dialogueLines[dialogueIndex];
+                SFXPlayer.Stop();
             }
         }
     }

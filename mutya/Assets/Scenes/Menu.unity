@@ -13197,9 +13197,9 @@ MonoBehaviour:
   - Desc9
   - Desc10
   images:
-  - {fileID: 21300000, guid: 6166a52fb3984224b87d918ceb7cfffe, type: 3}
-  - {fileID: 21300000, guid: 661d2feadda677a4cb2dbb6473e5d7cb, type: 3}
-  - {fileID: 21300000, guid: ae903ee1e62ad894d94a0dc81a44d7b6, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
