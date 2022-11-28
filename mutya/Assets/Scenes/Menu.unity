@@ -1210,8 +1210,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6842,8 +6842,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182.2, y: 196.82}
-  m_SizeDelta: {x: 335.0354, y: 49.5531}
+  m_AnchoredPosition: {x: -182.3, y: 202.4}
+  m_SizeDelta: {x: 331.4702, y: 49.5531}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &500314358
 MonoBehaviour:
@@ -13156,7 +13156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1448906419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13180,33 +13180,62 @@ MonoBehaviour:
   - Tikbalang
   - Engkanto
   - Kapre
-  - Monster 6
-  - Monster 7
-  - Monster 8
-  - Monster 9
-  - Monster 10
+  - Tiyanak
+  - Dwende
+  - Siyokoy
+  - Bungisngis
+  - Mangkukulam
   descs:
-  - Desc1
-  - Desc2
-  - Desc3
-  - Desc4
-  - Desc5
-  - Desc6
-  - Desc7
-  - Desc8
-  - Desc9
-  - Desc10
+  - Description:<br>A serpent-like dragon believed to be the cause of eclipses, earthquakes,
+    rain and wind.<br><br>Abilities:<br>Swallow one of seven moons whole every hundred
+    years, thus leading to eclipses and earthquakes.<br><br>Weakness:<br>Loud noises
+  - Description:<br>An evil spirit that detaches her torso from her lower half and
+    then takes flight during the night to eat infants.<br><br>Abilities:<br>Puncture
+    the womb of sleeping pregnant women to suck out the fetus and seduce men to eat
+    them alive. Confuse victims with tik-tik sounds; the fainter the sound, the nearer
+    she is.<br><br>Weakness:<br>Sunlight<br>Salt, ash, and/or garlic to the exposed
+    flesh
+  - "Description:<br>A bipedal horse creature that lurks in mountains and forests.<br><br>Abilities:<br>Transform
+    itself into human form to scare and lead travelers astray.<br><br>Weakness:<br>Taming
+    it with a specially-prepared cord<br>Wearing one\u2019s shirt inside out"
+  - Description:<br>Enchanted human-like beings of the land which includes a variety
+    of mythical races.<br><br>Abilities:<br>Human possession leading to depression,
+    madness, fever, or skin diseases. Brings power and riches to those they favor.<br><br>Weakness:<br>Wearing
+    of magical charm or amulet
+  - "Description:<br>A cryptid creature with the appearance of a phenomenally tall,
+    long-legged, god type of hairy humanoid, that sits in big trees and smokes cigarettes.
+    <br><br>Abilities:<br>Disorient travelers and confuse people even in their own
+    familiar surroundings.<br><br>Weakness:<br>Wearing one\u2019s shirt inside out "
+  - Description:<br>A small humanoid monster which pretends to be an innocent baby
+    before attacking humans.<br><br>Abilities:<br>Wails loudly to attract a passerby
+    and sheds its disguise when picked up.<br><br>Weakness:<br>Loud noises<br>Garlic,
+    rosary
+  - "Description:<br>A dwarf creature who lives in the woods, in an anthill or old
+    houses in remote areas. <br><br>Abilities:<br>Trespassers that destroy or damage
+    their mound experience pain or swelling in any part of his body, an illness that
+    cannot be cured by modern medicine.<br><br>Weakness:<br>Asking permission by
+    saying \u201Ctabi tabi po, makikiraan po\u201D or \u201Cplease let me pass\u201D<br>Albularyo
+    or herbal doctors"
+  - Description:<br>A green-skinned humanoid with scales, webbed limbs, and fins.<br><br>Abilities:<br>Drown
+    and eat mortals.<br><br>Weakness:<br>Dehydration
+  - Description:<br>A one-eyed giant described as always laughing.<br><br>Abilities:<br>Great
+    sense of hearing and displays unusual strength.<br><br>Weakness:<br>Slow thinking
+    and stupidity
+  - Description:<br>Users who practice sorcery for revenge or evil.<br><br>Abilities:<br>Uses
+    a black magic or spell that can cause illness, misfortune to loved ones, loss
+    of mental focus, lack of sleep, loss of appetite, sudden accidents.<br><br>Weakness:<br>Albularyo
+    or herbal doctors
   images:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 6166a52fb3984224b87d918ceb7cfffe, type: 3}
+  - {fileID: 21300000, guid: 661d2feadda677a4cb2dbb6473e5d7cb, type: 3}
+  - {fileID: 21300000, guid: ae903ee1e62ad894d94a0dc81a44d7b6, type: 3}
+  - {fileID: 21300000, guid: d5ac57c5298047a409b042d2a527d81a, type: 3}
+  - {fileID: 21300000, guid: e4a9a7be53df1a64ab759e80e4c26a82, type: 3}
+  - {fileID: 21300000, guid: 1151a89d7d191c14c9633b8b5add2909, type: 3}
+  - {fileID: 21300000, guid: 57c1b30a919901c4187442f7f994b1cf, type: 3}
+  - {fileID: 21300000, guid: ad1787cb5a0ae494e98d4aae779d2b53, type: 3}
+  - {fileID: 21300000, guid: c2f08b61811fb6a46bf77275f6e0ebe0, type: 3}
+  - {fileID: 21300000, guid: 8c7ef63de30f02645ab50e909be848d7, type: 3}
   BookSFX: {fileID: 1448906424}
 --- !u!114 &1448906420
 MonoBehaviour:
