@@ -8,6 +8,7 @@ public class Earthquake : MonoBehaviour
     public GameObject crack;
     public GameObject quake1;
     public GameObject quake2;
+    public AudioSource quakeSFX;
     void Start()
     {
         playerMovement = GetComponent<BakunawaSceneMovement>();
@@ -22,7 +23,8 @@ public class Earthquake : MonoBehaviour
         }
     }
     public void spawnCrack(GameObject player){
-        ShakeShake.Instance.ShakeCamera(5f, 5f);
+        quakeSFX.Play();
+        ShakeShake.Instance.ShakeCamera(5f, 8f);
         GameObject[] earthquakes;
         quake1.SetActive(true);
         quake2.SetActive(true);
@@ -36,11 +38,11 @@ public class Earthquake : MonoBehaviour
     }
 
     public IEnumerator delaySpawn(GameObject earthquake){
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(8f);
         earthquake.SetActive(false);
     }
     public IEnumerator delayStun(){
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(8f);
         playerMovement.canMove = true;
         crack.SetActive(false);
     }
