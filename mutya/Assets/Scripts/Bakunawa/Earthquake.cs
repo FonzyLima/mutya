@@ -6,6 +6,8 @@ public class Earthquake : MonoBehaviour
 {
     public BakunawaSceneMovement playerMovement;
     public GameObject crack;
+    public GameObject quake1;
+    public GameObject quake2;
     void Start()
     {
         playerMovement = GetComponent<BakunawaSceneMovement>();
@@ -20,16 +22,25 @@ public class Earthquake : MonoBehaviour
         }
     }
     public void spawnCrack(GameObject player){
-        crack.SetActive(true);
-        float[] randomX = new float[] {-4.79f,4.89f};
-        float[] randomY = new float[] {-3.54f,2.79f}; 
-        crack.transform.position = new Vector3(player.transform.position.x+randomX[Random.Range(0,2)],player.transform.position.y+randomY[Random.Range(0,2)],0);
-        StartCoroutine(delaySpawn());
+        GameObject[] earthquakes;
+        quake1.SetActive(true);
+        quake2.SetActive(true);
+        earthquakes = GameObject.FindGameObjectsWithTag("Earthquake");
+        int index;
+        index = Random.Range(0,2);
+        quake1.SetActive(false);
+        quake2.SetActive(false);
+        earthquakes[index].SetActive(true);
+        // crack.SetActive(true);
+        // float[] randomX = new float[] {-4.79f,4.89f};
+        // float[] randomY = new float[] {-3.54f,2.79f}; 
+        // crack.transform.position = new Vector3(player.transform.position.x+randomX[Random.Range(0,2)],player.transform.position.y+randomY[Random.Range(0,2)],0);
+        StartCoroutine(delaySpawn(earthquakes[index]));
     }
 
-    public IEnumerator delaySpawn(){
+    public IEnumerator delaySpawn(GameObject earthquake){
         yield return new WaitForSeconds(8f);
-        crack.SetActive(false);
+        earthquake.SetActive(false);
     }
     public IEnumerator delayStun(){
         yield return new WaitForSeconds(3f);
