@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,6 +91,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4277,10 +4289,10 @@ TextureImporter:
       tikbalang tileset_137: -548773525
       tikbalang tileset_118: 2045545803
       tikbalang tileset_37: -936870216
-      tikbalang tileset_70: -618876154
       tikbalang tileset_116: -1723876796
-      tikbalang tileset_146: -1773669827
+      tikbalang tileset_70: -618876154
       tikbalang tileset_95: -2011315428
+      tikbalang tileset_146: -1773669827
       tikbalang tileset_72: 1207116231
       tikbalang tileset_10: -779297031
       tikbalang tileset_101: -1275348458
@@ -4292,9 +4304,9 @@ TextureImporter:
       tikbalang tileset_144: 1976710920
       tikbalang tileset_23: -552273181
       tikbalang tileset_57: 1335190952
+      tikbalang tileset_98: 690517279
       tikbalang tileset_85: 412300237
       tikbalang tileset_129: 207891978
-      tikbalang tileset_98: 690517279
       tikbalang tileset_156: 342523634
       tikbalang tileset_12: 1990225859
       tikbalang tileset_90: -1910109833
@@ -4352,8 +4364,8 @@ TextureImporter:
       tikbalang tileset_38: -1383319311
       tikbalang tileset_67: 944899023
       tikbalang tileset_75: 1197796455
-      tikbalang tileset_151: -118834947
       tikbalang tileset_175: -1503008674
+      tikbalang tileset_151: -118834947
       tikbalang tileset_43: -905887765
       tikbalang tileset_138: -795974127
       tikbalang tileset_171: 1699476554

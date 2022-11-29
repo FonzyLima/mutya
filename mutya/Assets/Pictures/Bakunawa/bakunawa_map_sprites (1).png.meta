@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,6 +91,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -6711,7 +6723,7 @@ TextureImporter:
     nameFileIdTable:
       bakunawa_map_sprites (1)_83: 124943779
       bakunawa_map_sprites (1)_171: -942026800
-      bakunawa_map_sprites (1)_219: 1191458782
+      bakunawa_map_sprites (1)_95: -37990097
       bakunawa_map_sprites (1)_211: -223186542
       bakunawa_map_sprites (1)_17: 165735151
       bakunawa_map_sprites (1)_164: -124681097
@@ -6720,7 +6732,6 @@ TextureImporter:
       bakunawa_map_sprites (1)_47: -885758607
       bakunawa_map_sprites (1)_64: 458331711
       bakunawa_map_sprites (1)_163: 2112343520
-      bakunawa_map_sprites (1)_76: 915668510
       bakunawa_map_sprites (1)_284: 346245091
       bakunawa_map_sprites (1)_254: 1091325619
       bakunawa_map_sprites (1)_255: 1668621930
@@ -6835,6 +6846,7 @@ TextureImporter:
       bakunawa_map_sprites (1)_190: -1132563720
       bakunawa_map_sprites (1)_311: 1231028106
       bakunawa_map_sprites (1)_30: -945136669
+      bakunawa_map_sprites (1)_302: 1831068510
       bakunawa_map_sprites (1)_227: 726263363
       bakunawa_map_sprites (1)_85: -1048400250
       bakunawa_map_sprites (1)_154: -2128859521
@@ -6860,20 +6872,19 @@ TextureImporter:
       bakunawa_map_sprites (1)_100: 2041500376
       bakunawa_map_sprites (1)_307: 1634030274
       bakunawa_map_sprites (1)_176: -1002621727
+      bakunawa_map_sprites (1)_259: 2011188908
       bakunawa_map_sprites (1)_34: 1123786126
       bakunawa_map_sprites (1)_42: 1373616769
       bakunawa_map_sprites (1)_108: -1445289492
-      bakunawa_map_sprites (1)_29: -906985192
+      bakunawa_map_sprites (1)_289: -403182945
       bakunawa_map_sprites (1)_270: -386998494
-      bakunawa_map_sprites (1)_80: 1593876320
+      bakunawa_map_sprites (1)_29: -906985192
       bakunawa_map_sprites (1)_157: -11593126
-      bakunawa_map_sprites (1)_280: -350159189
       bakunawa_map_sprites (1)_156: -1733125855
       bakunawa_map_sprites (1)_305: -876645312
-      bakunawa_map_sprites (1)_259: 2011188908
+      bakunawa_map_sprites (1)_280: -350159189
       bakunawa_map_sprites (1)_53: 539676863
-      bakunawa_map_sprites (1)_302: 1831068510
-      bakunawa_map_sprites (1)_289: -403182945
+      bakunawa_map_sprites (1)_80: 1593876320
       bakunawa_map_sprites (1)_292: -2068784219
       bakunawa_map_sprites (1)_241: -173495529
       bakunawa_map_sprites (1)_183: -598483317
@@ -7014,6 +7025,7 @@ TextureImporter:
       bakunawa_map_sprites (1)_233: -13722821
       bakunawa_map_sprites (1)_0: 1498399309
       bakunawa_map_sprites (1)_294: -40295149
+      bakunawa_map_sprites (1)_76: 915668510
       bakunawa_map_sprites (1)_44: 465911325
       bakunawa_map_sprites (1)_77: 1594297311
       bakunawa_map_sprites (1)_209: -1182211277
@@ -7022,7 +7034,7 @@ TextureImporter:
       bakunawa_map_sprites (1)_126: 803029361
       bakunawa_map_sprites (1)_159: -276536872
       bakunawa_map_sprites (1)_136: -1381048739
-      bakunawa_map_sprites (1)_95: -37990097
+      bakunawa_map_sprites (1)_219: 1191458782
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
