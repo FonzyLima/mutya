@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 StandingSize;
     public Vector2 CrouchingSize;
+    public AudioSource walkSFX;
+    public AudioSource grassSFX;
 
     void Start() {
         Collider = GetComponent<BoxCollider2D>();
@@ -42,12 +44,32 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //check if player is moving
         if (movement.sqrMagnitude > 0){
             isMoving = true;
+            if(!walkSFX.isPlaying)
+            {
+                walkSFX.Play();
+            }
         }
         else{
             isMoving = false;
+            walkSFX.Stop();
+        }
+
+        if(isCrouching){
+            walkSFX.Stop();
+        }
+
+        if(inGrass)
+        {
+            if(!grassSFX.isPlaying){
+                grassSFX.Play();
+            }
+            if(!isMoving){
+                grassSFX.Stop();
+            }
         }
 
         if (canMove)
@@ -86,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision){
         if(collision.tag == "Bush"){
             inGrass = false;
+            grassSFX.Stop();
         }
     }
 

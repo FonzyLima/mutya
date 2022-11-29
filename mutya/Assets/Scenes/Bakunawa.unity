@@ -13405,7 +13405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.726894, y: -1.8890804, z: -10}
+  m_LocalPosition: {x: 10.260353, y: -1.885508, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14472,7 +14472,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9fa882af5da8daf4cb73f5e9c7705ccd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -28793,6 +28793,8 @@ MonoBehaviour:
   Collider: {fileID: 0}
   StandingSize: {x: 0.739271, y: 1.384295}
   CrouchingSize: {x: 0.739271, y: 1}
+  walkSFX: {fileID: 0}
+  grassSFX: {fileID: 0}
 --- !u!50 &1890220646
 Rigidbody2D:
   serializedVersion: 4
