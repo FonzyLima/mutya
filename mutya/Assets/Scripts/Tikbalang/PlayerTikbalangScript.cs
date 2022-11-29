@@ -12,6 +12,7 @@ public class PlayerTikbalangScript : MonoBehaviour{
 
     public float attackDistance;   
     private bool isDestroyed;
+    public GameObject jadePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +26,11 @@ public class PlayerTikbalangScript : MonoBehaviour{
     void Update()
     {
         if (!isDestroyed && Input.GetKeyDown(KeyCode.F) && invManager.tikbalang_item >= 1f && Vector2.Distance(transform.position, tikbalangPos.position) < attackDistance){
+            Vector3 position = tikbalang.transform.position;
             Destroy(tikbalang);
             isDestroyed = true;
+            GameObject jade = Instantiate(jadePrefab);
+            jade.transform.position = position;
         }
     }
 }

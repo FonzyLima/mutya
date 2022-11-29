@@ -1412,6 +1412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tikbalang: {fileID: 90127637}
   attackDistance: 5
+  jadePrefab: {fileID: 6493036282671381393, guid: 06d810116cbedb0439219c87a1d9d4a7, type: 3}
 --- !u!82 &96507381
 AudioSource:
   m_ObjectHideFlags: 0

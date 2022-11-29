@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -2547,17 +2547,17 @@ TextureImporter:
       manananggal_assets2_32: 1514652682
       manananggal_assets2_49: 480446495
       manananggal_assets2_68: 226689815
-      manananggal_assets2_27: 401566124
-      manananggal_assets2_15: 403729429
-      manananggal_assets2_8: 1866795341
-      manananggal_assets2_9: -129967973
-      manananggal_assets2_31: -1758929238
       manananggal_assets2_89: 2067769782
+      manananggal_assets2_15: 403729429
+      manananggal_assets2_58: 906370365
+      manananggal_assets2_31: -1758929238
+      manananggal_assets2_9: -129967973
+      manananggal_assets2_8: 1866795341
+      manananggal_assets2_27: 401566124
       manananggal_assets2_29: -550817305
       manananggal_assets2_41: -1871509732
       manananggal_assets2_56: 901256740
       manananggal_assets2_101: -329675439
-      manananggal_assets2_58: 906370365
       manananggal_assets2_46: -1975231826
       manananggal_assets2_53: -1432060750
       manananggal_assets2_5: 975327678
