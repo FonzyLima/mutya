@@ -16,6 +16,7 @@ public class PlayerWinManananggal : MonoBehaviour
     public GameObject gemPrefab;
     public GameObject handlePrefab;
 
+    public GameObject Quest2;
 
     public GameObject pickUpText;
 
@@ -41,6 +42,8 @@ public class PlayerWinManananggal : MonoBehaviour
             GameObject handle = Instantiate(handlePrefab);
             position.y += 2f;
             handle.transform.position = position;
+
+            Destroy(Quest2);
         }
     }
 

@@ -14,6 +14,11 @@ public class ManananggalDialogue : MonoBehaviour
 
     public GameObject bm;
 
+    public GameObject Quest1;
+    public GameObject Quest2;
+    public GameObject TPQuest;
+    public GameObject TPManager;
+
     public bool gameOver = false;
 
     public TextMeshProUGUI nameText;
@@ -138,13 +143,29 @@ public class ManananggalDialogue : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                if (Quest1 != null)
+                {
+                    Quest1.SetActive(true);
+                }
+
+                if (Quest2 != null)
+                {
+                    Quest2.SetActive(true);
+                }
+
+                if (TPQuest != null && TPManager != null)
+                {
+                    TPQuest.SetActive(true);
+                    TPManager.SetActive(true);
+                }
+
                 player.setMove(true);
                 mechanic.pauseMechanic(false);
                 dtManager.pauseDaytime(false);
                 manananggal.pauseManananggal(false);
                 mTimer.pauseTimer(false);
                 bm.SetActive(true);
+                Destroy(gameObject);
             }
         }
     }
