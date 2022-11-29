@@ -7,6 +7,8 @@ public class TeleportScene : MonoBehaviour
 {
     public static int bossBeaten = 0;
 
+    public Respawn respawn;
+
     // Update is called once per frame
     void Update()
     {
@@ -21,6 +23,8 @@ public class TeleportScene : MonoBehaviour
                 TeleportToMenu();
             }
         }
+
+        respawn.setterMenu(true);
     }
 
     void TeleportToBoss(int boss)

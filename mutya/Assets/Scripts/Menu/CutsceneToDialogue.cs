@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CutsceneToDialogue : MonoBehaviour
-{
+{    
     public GameObject BG;
     public GameObject Title;
 
@@ -34,23 +34,23 @@ public class CutsceneToDialogue : MonoBehaviour
     {
         if (sceneDone)
         {
-            Destroy(BG);
-            Destroy(Title);
-            Destroy(Panel1);
-            Destroy(Bughaw);
-            Destroy(Mabaya);
-            Destroy(Esmeralda);
-            Destroy(Panel2);
-            Destroy(Panel3);
-            Destroy(Intro1);
-            Destroy(Intro2);
-            Destroy(Intro3);
-            Destroy(Intro4);
-            Destroy(Intro5);
+            BG.SetActive(false);
+            Title.SetActive(false);
+            Panel1.SetActive(false);
+            Bughaw.SetActive(false);
+            Mabaya.SetActive(false);
+            Esmeralda.SetActive(false);
+            Panel2.SetActive(false);
+            Panel3.SetActive(false);
+            Intro1.SetActive(false);
+            Intro2.SetActive(false);
+            Intro3.SetActive(false);
+            Intro4.SetActive(false);
+            Intro5.SetActive(false);
 
             if (Button)
             {
-                Destroy(Button);
+                Button.SetActive(false);
             }
 
             MenuDialogue.SetActive(true);
