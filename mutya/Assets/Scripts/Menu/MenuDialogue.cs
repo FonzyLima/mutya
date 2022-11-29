@@ -20,6 +20,8 @@ public class MenuDialogue : MonoBehaviour
 
     public GameObject Quest6;
 
+    public GameObject TPQuest;
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
@@ -152,6 +154,10 @@ public class MenuDialogue : MonoBehaviour
             if (Quest6 != null)
             {
                 Quest6.SetActive(true);
+            }
+            if (TPQuest != null)
+            {
+                TPQuest.SetActive(true);
             }
             Destroy(gameObject);
             player.setMove(true);
