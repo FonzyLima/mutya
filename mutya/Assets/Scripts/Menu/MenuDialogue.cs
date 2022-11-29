@@ -29,6 +29,8 @@ public class MenuDialogue : MonoBehaviour
     public AudioSource SFXPlayer;
     public AudioClip hirayaTalk;
     public AudioClip mariaTalk;
+    
+    public AudioSource playBGM;
 
     public string[] nameLines;
     public string[] dialogueLines;
@@ -43,6 +45,10 @@ public class MenuDialogue : MonoBehaviour
     {
         nameText.text = string.Empty;
         dialogueText.text = string.Empty;
+
+        if(playBGM != null)
+            playBGM.Play();
+            
         StartDialogue();
     }
 
