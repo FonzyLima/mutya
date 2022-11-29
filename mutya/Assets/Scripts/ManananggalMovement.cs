@@ -17,6 +17,7 @@ public class ManananggalMovement : MonoBehaviour
     private float dist;
 
     Vector2 movement;
+    public bool stop = false;
 
     void Start()
     {
@@ -58,7 +59,6 @@ public class ManananggalMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-
     }
 
     void FixedUpdate()
@@ -66,7 +66,8 @@ public class ManananggalMovement : MonoBehaviour
         // rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         Vector3 offset = target.position - transform.position;
         dist = offset.sqrMagnitude;
-        rb.MovePosition((Vector2)transform.position + ((Vector2)dir * moveSpeed * Time.deltaTime));
+        if(!stop)
+            rb.MovePosition((Vector2)transform.position + ((Vector2)dir * moveSpeed * Time.deltaTime));
         
     }
 

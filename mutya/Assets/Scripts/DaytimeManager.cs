@@ -6,6 +6,7 @@ using UnityEngine;
 public class DaytimeManager : MonoBehaviour
 {
     const float secondsInDay = 120f;
+    public bool pause = false;
 
     [SerializeField] Color nightLightColor;
     [SerializeField] Color dayLightColor;
@@ -17,13 +18,16 @@ public class DaytimeManager : MonoBehaviour
 
     private void Update()
     {
-        time += Time.deltaTime;
-        float v = nightTimeCurve.Evaluate(time / 120f);
-        Color c = Color.Lerp(dayLightColor, nightLightColor, v);
-        globalLight.color = c;
-        if(time > secondsInDay)
+        if(!pause)
         {
-            time = 0;
+            time += Time.deltaTime;
+            float v = nightTimeCurve.Evaluate(time / 120f);
+            Color c = Color.Lerp(dayLightColor, nightLightColor, v);
+            globalLight.color = c;
+            if(time > secondsInDay)
+            {
+                time = 0;
+            }
         }
     }
 
