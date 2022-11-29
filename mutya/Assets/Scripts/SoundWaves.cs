@@ -21,8 +21,8 @@ public class SoundWaves : MonoBehaviour
     }
     void FixedUpdate()
     {
-        lookDir = mousePos - playerMovement.rb.position;
-        angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 270f;
+        // lookDir = mousePos - playerMovement.rb.position;
+        // angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 270f;
         
         // playerMovement.rb.rotation = angle;
     }
