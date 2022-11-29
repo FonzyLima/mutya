@@ -24,6 +24,8 @@ public class PlayerManananggalMechanic : MonoBehaviour
     private bool attackBlocked;
     public AudioSource whipSFX;
 
+    public bool Pause = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +37,12 @@ public class PlayerManananggalMechanic : MonoBehaviour
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        if(Input.GetButtonDown("Fire1"))
+        if (!Pause)
         {
-            Attack();
+            if(Input.GetButtonDown("Fire1"))
+            {
+                Attack();
+            }
         }
     }
 
@@ -73,5 +78,10 @@ public class PlayerManananggalMechanic : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         attackBlocked = false;
+    }
+
+    public void pauseMechanic (bool val)
+    {
+        Pause = val;
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerWinManananggal : MonoBehaviour
 {
     private InventoryManager invManager;
+    public DaytimeManager dtManager;
+
     private bool pickUpAllowed;
     private bool isDiscovered;
     private bool hasSalt;
@@ -31,6 +33,7 @@ public class PlayerWinManananggal : MonoBehaviour
             Destroy(gameObject);
             Destroy(boss);
             transition.SetActive(true);
+            dtManager.pauseDaytime(true);
             timer.SetActive(false);
             GameObject gem = Instantiate(gemPrefab);
             gem.transform.position = position;

@@ -21,16 +21,6 @@ public class BakunawaSpawner : MonoBehaviour
     public Earthquake earthquake;
 
     void MoveMoon(GameObject moon){
-        // print(inventory.tikbalang_item);
-        // if(inventory.tikbalang_item == 2){
-        //     if(bakunawa.transform.position.y<=13.6){
-        //         bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
-        //     }
-        //     if(bakunawa.transform.position.y>13.6){
-        //         bakunawa.transform.Rotation = new Vector3(0,0,-90);
-
-        //     }
-        // }
         if(moon.activeSelf){
                 if(bakunawa.transform.position.y>13.6){
                     bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
@@ -42,6 +32,16 @@ public class BakunawaSpawner : MonoBehaviour
                 moon.SetActive(false);
                 
             }
+    }
+    void MoveMoon2(GameObject moon){
+        if(moon.activeSelf){
+            moon.SetActive(false);
+            earthquake.spawnCrack(player);
+        }
+        if(bakunawa.transform.position.y>13.6){
+            bakunawa.transform.position = new Vector3(Random.Range(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x-10,GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+10),-28,transform.position.z);
+        }
+        bakunawa.transform.Translate(Vector2.up*speed*Time.deltaTime);
     }
 
     // Update is called once per frame
@@ -60,30 +60,66 @@ public class BakunawaSpawner : MonoBehaviour
         }
 
         if(timer<=180){
-            MoveMoon(moon6);
+            if(inventory.tikbalang_item == 2){
+                MoveMoon2(moon6);
+            }
+            else{
+                MoveMoon(moon6);
+            }
+            
             
         }
         if(timer<=150){
-            MoveMoon(moon5);
+            if(inventory.tikbalang_item == 2){
+                MoveMoon2(moon5);
+            }
+            else{
+                MoveMoon(moon5);
+            }
             
         }
         if(timer<=120){
-            MoveMoon(moon4);
+            if(inventory.tikbalang_item == 2){
+                MoveMoon2(moon4);
+            }
+            else{
+                MoveMoon(moon4);
+            }
             
         }
         if(timer<=90){
-            MoveMoon(moon3);
+            if(inventory.tikbalang_item == 2){
+                MoveMoon2(moon3);
+            }
+            else{
+                MoveMoon(moon3);
+            }
             
         }
         if(timer<=60){
-            MoveMoon(moon2);  
+            if(inventory.tikbalang_item == 2){
+                MoveMoon2(moon2);
+            }
+            else{
+                MoveMoon(moon2);
+            }  
         }
         if(timer<=30){
-            MoveMoon(moon1);
+            if(inventory.tikbalang_item == 2){
+                MoveMoon2(moon1);
+            }
+            else{
+                MoveMoon(moon1);
+            }
             
         }
         if(timer<=0){
-            MoveMoon(moon0);
+            if(inventory.tikbalang_item == 2){
+                MoveMoon2(moon0);
+            }
+            else{
+                MoveMoon(moon0);
+            }
         }
         
     }
