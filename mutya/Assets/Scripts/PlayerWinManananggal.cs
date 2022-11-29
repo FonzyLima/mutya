@@ -11,6 +11,8 @@ public class PlayerWinManananggal : MonoBehaviour
     public GameObject boss;
     public GameObject transition;
     public GameObject timer;
+    public GameObject gemPrefab;
+    public GameObject handlePrefab;
 
 
     public GameObject pickUpText;
@@ -25,10 +27,17 @@ public class PlayerWinManananggal : MonoBehaviour
     {
         if (hasSalt && pickUpAllowed && Input.GetKeyDown(KeyCode.F)){
             print("Manananggal Defeated");
+            Vector3 position = boss.transform.position;
             Destroy(gameObject);
             Destroy(boss);
             transition.SetActive(true);
             timer.SetActive(false);
+            GameObject gem = Instantiate(gemPrefab);
+            gem.transform.position = position;
+
+            GameObject handle = Instantiate(handlePrefab);
+            position.y += 2f;
+            handle.transform.position = position;
         }
     }
 
