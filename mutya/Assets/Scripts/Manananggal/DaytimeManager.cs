@@ -31,4 +31,8 @@ public class DaytimeManager : MonoBehaviour
         }
     }
 
+    public void pauseDaytime (bool val)
+    {
+        pause = val;
+    }
 }

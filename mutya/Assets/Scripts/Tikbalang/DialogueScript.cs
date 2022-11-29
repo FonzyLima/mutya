@@ -16,34 +16,32 @@ public class DialogueScript : MonoBehaviour
     private int dialogueIndex;
 
     public float textSpeed;
-    
+
     private bool active;
 
-    // Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
         active = false;
         nameText.text = string.Empty;
         dialogueText.text = string.Empty;
-        StartCoroutine(TypeNameLine());
-        StartCoroutine(TypeDialogueLine());
     }
 
     // Update is called once per frame
     void Update()
     {
-        // if (!active && gameObject.activeSelf){
-        //     Debug.Log("START");
-        //     active = true;
-        //     StartCoroutine(TypeNameLine());
-        //     StartCoroutine(TypeDialogueLine());
-        // }
+        if (!active && gameObject.activeSelf){
+            active = true;
+            StartCoroutine(TypeNameLine());
+            StartCoroutine(TypeDialogueLine());
+        }
     }
 
     IEnumerator TypeNameLine()
     {
-        foreach (char c in "Tikbalang")// nameLines[nameIndex].ToCharArray()
+        foreach (char c in nameLines[nameIndex].ToCharArray())// nameLines[nameIndex].ToCharArray()
         {
+            Debug.Log("NAME - " + c);
             nameText.text += c;
             yield return new WaitForSeconds(textSpeed); 
         }
@@ -65,6 +63,7 @@ public class DialogueScript : MonoBehaviour
 
         foreach (char c in dialogueLines[dialogueIndex].ToCharArray())
         {
+            Debug.Log("DIAL - " + c);
             dialogueText.text += c;
             yield return new WaitForSeconds(textSpeed);
         }

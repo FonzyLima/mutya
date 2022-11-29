@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dd573b80cea930147a74959ac961b8f5
+guid: fb05a2db7ac75284a879be297a4f9bd6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tikbalang_0
+      name: random_man_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 85
-        width: 38
-        height: 75
+        y: 1
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1707daca415878148b83c64ed043cb05
-      internalID: 998584004
+      spriteID: 4f9bb456622831449bf336dafe094cd9
+      internalID: 708284648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tikbalang_1
+      name: random_man_1
       rect:
         serializedVersion: 2
-        x: 51
-        y: 85
-        width: 40
-        height: 68
+        x: 33
+        y: 1
+        width: 13
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0702f87790822bc489760bfb81121b57
-      internalID: 319199425
+      spriteID: bb65616771db5c1488825efeea336385
+      internalID: 1799293934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tikbalang_2
+      name: random_man_2
       rect:
         serializedVersion: 2
-        x: 100
-        y: 85
-        width: 40
-        height: 68
+        x: 64
+        y: 1
+        width: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29a89626d10745d4699ef5666b034cb3
-      internalID: 123489615
+      spriteID: e15201933c833e546b02005e8c931ddb
+      internalID: 1893203971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tikbalang_3
+      name: random_man_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 37
-        height: 70
+        x: 97
+        y: 1
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29cbf243c47cb5444803c562fae449f7
-      internalID: 1666177485
+      spriteID: eed0db1eacc209743bc5c8df895e8203
+      internalID: 159521803
       vertices: []
       indices: 
       edges: []
@@ -211,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tikbalang_1: 319199425
-      tikbalang_3: 1666177485
-      tikbalang_2: 123489615
-      tikbalang_0: 998584004
+      random_man_3: 159521803
+      random_man_1: 1799293934
+      random_man_2: 1893203971
+      random_man_0: 708284648
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

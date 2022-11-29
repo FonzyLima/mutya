@@ -6,7 +6,11 @@ public class ManananggalMovement : MonoBehaviour
 {
     public float moveSpeed;
 
+    public ManananggalDialogue dialogue;
 
+    public GameObject DeathScreen;
+    public GameObject DeathDialogue;
+    
     public Transform target;
     public Rigidbody2D rb;
     public Animator animator;
@@ -88,6 +92,14 @@ public class ManananggalMovement : MonoBehaviour
         else if(other.tag == "Player")
         {
             print("Game Over");
+            DeathScreen.SetActive(true);
+            DeathDialogue.SetActive(true);
+            dialogue.gameOverSet(true);
         }
+    }
+
+    public void pauseManananggal(bool val)
+    {
+        stop = val;
     }
 }
