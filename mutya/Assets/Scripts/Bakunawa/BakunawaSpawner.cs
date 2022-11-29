@@ -14,7 +14,8 @@ public class BakunawaSpawner : MonoBehaviour
     public GameObject moon4;
     public GameObject moon5;
     public GameObject moon6;
-    // public InventoryManager inventory;
+    public GameObject finalGameManager;
+    public InventoryManager inventory;
     public float timer = 210;
     public float speed;
     public Earthquake earthquake;
@@ -48,6 +49,9 @@ public class BakunawaSpawner : MonoBehaviour
     {   
         GameObject[] moons;
         moons = GameObject.FindGameObjectsWithTag("Moon");
+        if(inventory.tikbalang_item == 2){
+            finalGameManager.SetActive(true);
+        }
         for(int i=0;i<moons.Length;i++){
             moons[i].transform.position = new Vector3(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+12-i,GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+6,0);
         }

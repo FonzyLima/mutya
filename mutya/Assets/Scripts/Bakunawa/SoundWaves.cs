@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class SoundWaves : MonoBehaviour
 {
-
+    public BakunawaSceneMovement playerMovement;
     public GameObject soundWaves;
     public GameObject player;
     Vector2 mousePos;
-    public Camera cam;
+    //public Camera cam;
     // Update is called once per frame
+
     void Update()
     {
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(0)){
+            soundWaves.transform.position = new Vector3(player.transform.position.x+9.5f,player.transform.position.y+-3.4f,0);
             soundWaves.SetActive(true);
+            playerMovement.canMove = false;
             StartCoroutine(waveTime());
         }
             
@@ -29,5 +32,6 @@ public class SoundWaves : MonoBehaviour
     public IEnumerator waveTime(){
         yield return new WaitForSeconds(1.3f);
         soundWaves.SetActive(false);
+        playerMovement.canMove = true;
     }
 }
