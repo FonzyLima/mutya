@@ -55,4 +55,9 @@ public class Timer : MonoBehaviour
     {
         print("End");
     }
+
+    public void pauseTimer (bool val)
+    {
+        Pause = val;
+    }
 }
