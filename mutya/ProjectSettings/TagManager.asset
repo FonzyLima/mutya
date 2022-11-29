@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - crack
   - Bush
+  - Earthquake
   layers:
   - Default
   - TransparentFX
