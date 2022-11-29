@@ -25,6 +25,7 @@ public class CutsceneToDialogue : MonoBehaviour
     public GameObject Button;
 
     public GameObject MenuDialogue;
+    public AudioSource stopBGM;
 
     private float timer = 41;
     private bool sceneDone = false;
@@ -53,6 +54,7 @@ public class CutsceneToDialogue : MonoBehaviour
                 Button.SetActive(false);
             }
 
+            stopBGM.Stop();
             MenuDialogue.SetActive(true);
         }
     }

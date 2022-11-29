@@ -15,6 +15,7 @@ public class Timer : MonoBehaviour
     public int Duration;
     
     private int remainingDuration;
+    public bool Pause = false;
 
     private void Start()
     {
@@ -31,17 +32,22 @@ public class Timer : MonoBehaviour
     {
         while(remainingDuration >= 0)
         {
-            if(remainingDuration == 30){
-                uiFill.color = orange;
+            if(!Pause)
+            {
+                if(remainingDuration == 30){
+                    uiFill.color = orange;
+                }
+                uiText.text = $"{remainingDuration / 60:00} : {remainingDuration % 60:00}";
+                uiFill.fillAmount = Mathf.InverseLerp(0, Duration, remainingDuration);
+                if(remainingDuration <= 10){
+                    uiFill.color = red;
+                    finalSFX.Play();
+                }
+                remainingDuration--;
+                yield return new WaitForSeconds(1f);
             }
-            uiText.text = $"{remainingDuration / 60:00} : {remainingDuration % 60:00}";
-            uiFill.fillAmount = Mathf.InverseLerp(0, Duration, remainingDuration);
-            if(remainingDuration == 10){
-                uiFill.color = red;
-                finalSFX.Play();
-            }
-            remainingDuration--;
-            yield return new WaitForSeconds(1f);
+            finalSFX.Pause();
+            yield return null;
         }
     }
 
