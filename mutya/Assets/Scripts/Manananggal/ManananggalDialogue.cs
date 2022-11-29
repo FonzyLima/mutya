@@ -12,6 +12,8 @@ public class ManananggalDialogue : MonoBehaviour
     public ManananggalMovement manananggal;
     public Timer mTimer;
 
+    public GameObject bm;
+
     public bool gameOver = false;
 
     public TextMeshProUGUI nameText;
@@ -51,6 +53,7 @@ public class ManananggalDialogue : MonoBehaviour
         dtManager.pauseDaytime(true);
         manananggal.pauseManananggal(true);
         mTimer.pauseTimer(true);
+        bm.SetActive(false);
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -141,6 +144,7 @@ public class ManananggalDialogue : MonoBehaviour
                 dtManager.pauseDaytime(false);
                 manananggal.pauseManananggal(false);
                 mTimer.pauseTimer(false);
+                bm.SetActive(true);
             }
         }
     }

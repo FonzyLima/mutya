@@ -573,6 +573,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  bm: {fileID: 0}
   nameText: {fileID: 123435688}
   dialogueText: {fileID: 1310776729}
   SFXPlayer: {fileID: 61377147}
@@ -948,6 +949,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 1132619445}
   TPManager: {fileID: 1623485306}
+  bm: {fileID: 1011811776}
   nameText: {fileID: 1042259960}
   dialogueText: {fileID: 1366870238}
   SFXPlayer: {fileID: 63360910}
@@ -5443,6 +5445,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  bm: {fileID: 1011811776}
   nameText: {fileID: 253846734}
   dialogueText: {fileID: 1380451658}
   SFXPlayer: {fileID: 407847540}
@@ -8640,6 +8643,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 1132619445}
   TPManager: {fileID: 1623485306}
+  bm: {fileID: 1011811776}
   nameText: {fileID: 805064894}
   dialogueText: {fileID: 1747635021}
   SFXPlayer: {fileID: 760068552}
@@ -11128,6 +11132,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Book: {fileID: 1448906418}
   p: {fileID: 1572406597}
+  mechanic: {fileID: 0}
+  dtManager: {fileID: 0}
+  manananggal: {fileID: 0}
+  mTimer: {fileID: 0}
   equipped: 0
 --- !u!4 &1011811778
 Transform:
@@ -11467,6 +11475,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  bm: {fileID: 0}
   nameText: {fileID: 341082466}
   dialogueText: {fileID: 651480259}
   SFXPlayer: {fileID: 1053827296}
@@ -14142,6 +14151,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  bm: {fileID: 1011811776}
   nameText: {fileID: 1207935757}
   dialogueText: {fileID: 862076799}
   SFXPlayer: {fileID: 1450672576}
@@ -14457,6 +14467,7 @@ MonoBehaviour:
   Quest6: {fileID: 2038006891}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  bm: {fileID: 1011811776}
   nameText: {fileID: 801713454}
   dialogueText: {fileID: 456261871}
   SFXPlayer: {fileID: 1505940035}
@@ -14687,6 +14698,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  bm: {fileID: 0}
   nameText: {fileID: 950062656}
   dialogueText: {fileID: 655755869}
   SFXPlayer: {fileID: 1568897280}
@@ -18767,6 +18779,7 @@ MonoBehaviour:
   Intro4: {fileID: 1798593594}
   Intro5: {fileID: 2016096006}
   Button: {fileID: 597533528}
+  bm: {fileID: 1011811776}
 --- !u!1 &1782687592
 GameObject:
   m_ObjectHideFlags: 0

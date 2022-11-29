@@ -27,12 +27,15 @@ public class Respawn : MonoBehaviour
 
     public GameObject Button;
 
+    public GameObject bm;
+
     // Start is called before the first frame update
     void Start()
     {
         if (leftMenu)
         {
             RespawnDialogue.SetActive(true);
+            bm.SetActive(true);
         }
         else
         {
