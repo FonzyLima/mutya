@@ -31,10 +31,6 @@ public class Earthquake : MonoBehaviour
         quake1.SetActive(false);
         quake2.SetActive(false);
         earthquakes[index].SetActive(true);
-        // crack.SetActive(true);
-        // float[] randomX = new float[] {-4.79f,4.89f};
-        // float[] randomY = new float[] {-3.54f,2.79f}; 
-        // crack.transform.position = new Vector3(player.transform.position.x+randomX[Random.Range(0,2)],player.transform.position.y+randomY[Random.Range(0,2)],0);
         StartCoroutine(delaySpawn(earthquakes[index]));
     }
 

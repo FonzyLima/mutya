@@ -31,7 +31,7 @@ public class SoundWaves : MonoBehaviour
     {
         lookDir = mousePos - playerMovement.rb.position;
         angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-        print(angle);
+
         
     }
     public IEnumerator waveTime(){
