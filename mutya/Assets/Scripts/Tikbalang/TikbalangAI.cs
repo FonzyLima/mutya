@@ -29,7 +29,9 @@ public class TikbalangAI : MonoBehaviour
     
     public Animator animator;
 
-    private bool found;
+    public bool found;
+
+    public AudioClip attackSFX;
 
 
     // Start is called before the first frame update
@@ -56,6 +58,8 @@ public class TikbalangAI : MonoBehaviour
         {
             bool isNoisy = playerMovement.isMoving && (!playerMovement.isCrouching || playerMovement.inGrass);
             if (Vector2.Distance(transform.position, playerPos.position) < 1.5){ // If player is near tikbalang
+                AudioSource.PlayClipAtPoint(attackSFX, transform.position);
+
                 Vector3 dir = playerPos.position - transform.position;
                 float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
                 dir.Normalize();
@@ -73,6 +77,8 @@ public class TikbalangAI : MonoBehaviour
                 }
             }
             else if(found || isNoisy && Vector2.Distance(transform.position, playerPos.position) < distance){// If player is noisy near tikbalang
+                AudioSource.PlayClipAtPoint(attackSFX, transform.position);
+                
                 Vector3 dir = playerPos.position - transform.position;
                 float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
                 dir.Normalize();
