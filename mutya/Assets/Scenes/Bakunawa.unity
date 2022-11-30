@@ -36515,7 +36515,7 @@ MonoBehaviour:
   Dialogue3: {fileID: 161563153}
   Dialogue4: {fileID: 132290669}
   Quest1: {fileID: 1692595846}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 1700181622}
   respawn: {fileID: 431375476}
   DeathScreen: {fileID: 1504288004}
   DeathDialogue: {fileID: 1700181615}
