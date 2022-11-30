@@ -429,7 +429,6 @@ MonoBehaviour:
   SFXPlayer: {fileID: 53285181}
   hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
   mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
-  playBGM: {fileID: 53285181}
   nameLines:
   - MARIA
   dialogueLines:
@@ -1024,7 +1023,6 @@ MonoBehaviour:
   SFXPlayer: {fileID: 132290671}
   hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
   mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
-  playBGM: {fileID: 132290671}
   nameLines:
   - EVENT
   - MARIA
@@ -1261,7 +1259,6 @@ MonoBehaviour:
   SFXPlayer: {fileID: 161563155}
   hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
   mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
-  playBGM: {fileID: 161563155}
   nameLines:
   - EVENT
   - MARIA
@@ -15608,7 +15605,6 @@ MonoBehaviour:
   SFXPlayer: {fileID: 524883654}
   hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
   mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
-  playBGM: {fileID: 524883654}
   nameLines:
   - MARIA
   dialogueLines:
@@ -32818,10 +32814,9 @@ MonoBehaviour:
   gameOver: 0
   nameText: {fileID: 401829863}
   dialogueText: {fileID: 1142472884}
-  SFXPlayer: {fileID: 0}
+  SFXPlayer: {fileID: 1700181617}
   hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
   mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
-  playBGM: {fileID: 1700181617}
   nameLines:
   - MARIA
   dialogueLines:
@@ -33773,10 +33768,9 @@ MonoBehaviour:
   gameOver: 0
   nameText: {fileID: 1139247024}
   dialogueText: {fileID: 1936497471}
-  SFXPlayer: {fileID: 0}
+  SFXPlayer: {fileID: 1851955192}
   hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
   mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
-  playBGM: {fileID: 1851955192}
   nameLines:
   - MARIA
   - MARIA
