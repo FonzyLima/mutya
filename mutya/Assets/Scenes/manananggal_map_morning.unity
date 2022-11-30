@@ -4859,6 +4859,7 @@ MonoBehaviour:
   RespawnDialogue: {fileID: 0}
   winBakunawa: {fileID: 0}
   winManananggal: {fileID: 0}
+  winTikbalang: {fileID: 0}
   BG: {fileID: 0}
   Title: {fileID: 0}
   Panel1: {fileID: 0}
@@ -18653,8 +18654,8 @@ MonoBehaviour:
   nameText: {fileID: 1145675805}
   dialogueText: {fileID: 1377122879}
   SFXPlayer: {fileID: 388608289}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - MARIA
@@ -21931,8 +21932,8 @@ MonoBehaviour:
   nameText: {fileID: 2122624534}
   dialogueText: {fileID: 1815800588}
   SFXPlayer: {fileID: 882227414}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - EVENT
@@ -22876,6 +22877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tikbalang_item: 0
   DialogueManananggal: {fileID: 1157692800}
+  DialogueTikbalang: {fileID: 0}
 --- !u!82 &1003305476
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24428,8 +24430,8 @@ MonoBehaviour:
   nameText: {fileID: 1511359512}
   dialogueText: {fileID: 1425414977}
   SFXPlayer: {fileID: 1157692802}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - MARIA
@@ -24813,6 +24815,7 @@ MonoBehaviour:
   dtManager: {fileID: 897357041}
   manananggal: {fileID: 2017404225}
   mTimer: {fileID: 344254867}
+  tikbalang: {fileID: 0}
   equipped: 0
 --- !u!4 &1253481097
 Transform:
@@ -27377,8 +27380,8 @@ MonoBehaviour:
   nameText: {fileID: 42256598}
   dialogueText: {fileID: 259332116}
   SFXPlayer: {fileID: 1401449152}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - MARIA

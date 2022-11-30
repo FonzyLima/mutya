@@ -1429,7 +1429,6 @@ MonoBehaviour:
   tikbalang: {fileID: 90127637}
   attackDistance: 5
   jadePrefab: {fileID: 6493036282671381393, guid: 06d810116cbedb0439219c87a1d9d4a7, type: 3}
-  WinDialogue: {fileID: 563381846}
 --- !u!82 &96507381
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6352,8 +6351,8 @@ MonoBehaviour:
   nameText: {fileID: 1590148162}
   dialogueText: {fileID: 378799847}
   SFXPlayer: {fileID: 563381847}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   nameLines:
   - MARIA
   - EVENT
@@ -10133,8 +10132,8 @@ MonoBehaviour:
   nameText: {fileID: 1420984994}
   dialogueText: {fileID: 298286768}
   SFXPlayer: {fileID: 688454349}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   nameLines:
   - EVENT
   dialogueLines:
@@ -14163,8 +14162,8 @@ MonoBehaviour:
   nameText: {fileID: 1607223974}
   dialogueText: {fileID: 1595923754}
   SFXPlayer: {fileID: 998482296}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   nameLines:
   - MARIA
   dialogueLines:
@@ -17106,8 +17105,8 @@ MonoBehaviour:
   nameText: {fileID: 1147817408}
   dialogueText: {fileID: 168200590}
   SFXPlayer: {fileID: 1353848264}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   nameLines:
   - MARIA
   - EVENT

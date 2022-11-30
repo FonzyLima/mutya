@@ -711,8 +711,8 @@ MonoBehaviour:
   nameText: {fileID: 123435688}
   dialogueText: {fileID: 1310776729}
   SFXPlayer: {fileID: 61377147}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - ENCYCLOPEDIA
@@ -1086,8 +1086,8 @@ MonoBehaviour:
   nameText: {fileID: 1042259960}
   dialogueText: {fileID: 1366870238}
   SFXPlayer: {fileID: 63360910}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - TRANSPORTATION STONE
@@ -2026,8 +2026,8 @@ MonoBehaviour:
   nameText: {fileID: 1589506916}
   dialogueText: {fileID: 1842526188}
   SFXPlayer: {fileID: 262289760}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - EVENT
@@ -5811,8 +5811,8 @@ MonoBehaviour:
   nameText: {fileID: 253846734}
   dialogueText: {fileID: 1380451658}
   SFXPlayer: {fileID: 407847540}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - MARIA
@@ -9143,8 +9143,8 @@ MonoBehaviour:
   nameText: {fileID: 805064894}
   dialogueText: {fileID: 1747635021}
   SFXPlayer: {fileID: 760068552}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - MARIA
@@ -9443,8 +9443,8 @@ MonoBehaviour:
   nameText: {fileID: 746735731}
   dialogueText: {fileID: 1959095194}
   SFXPlayer: {fileID: 799492995}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - EVENT
@@ -12210,8 +12210,8 @@ MonoBehaviour:
   nameText: {fileID: 341082466}
   dialogueText: {fileID: 651480259}
   SFXPlayer: {fileID: 1053827296}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 1782687595}
   nameLines:
   - MARIA
@@ -15020,8 +15020,8 @@ MonoBehaviour:
   nameText: {fileID: 1207935757}
   dialogueText: {fileID: 862076799}
   SFXPlayer: {fileID: 1450672576}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - MARIA
@@ -15335,8 +15335,8 @@ MonoBehaviour:
   nameText: {fileID: 801713454}
   dialogueText: {fileID: 456261871}
   SFXPlayer: {fileID: 1505940035}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - EVENT
@@ -15565,8 +15565,8 @@ MonoBehaviour:
   nameText: {fileID: 950062656}
   dialogueText: {fileID: 655755869}
   SFXPlayer: {fileID: 1568897280}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - MARIA
@@ -22143,8 +22143,8 @@ MonoBehaviour:
   nameText: {fileID: 1208334472}
   dialogueText: {fileID: 45208153}
   SFXPlayer: {fileID: 1888235945}
-  hirayaTalk: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
-  mariaTalk: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  hirayaTalk: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
+  mariaTalk: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   playBGM: {fileID: 0}
   nameLines:
   - EVENT
