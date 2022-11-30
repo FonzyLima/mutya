@@ -14891,6 +14891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TPScene: {fileID: 1010864980}
   RespawnDialogue: {fileID: 0}
+  winBakunawa: {fileID: 0}
   winManananggal: {fileID: 0}
   BG: {fileID: 0}
   Title: {fileID: 0}
@@ -29051,6 +29052,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 2114006964}
   finalGameManager: {fileID: 1552222526}
+  TPScene: {fileID: 1010864980}
+  WinDialogue: {fileID: 1851955190}
   currentHealth: 10
   maxHealth: 10
 --- !u!60 &1379232346
