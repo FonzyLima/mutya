@@ -6,7 +6,7 @@ public class SoundCollide : MonoBehaviour
 {
     public GameObject gameManager;
     public GameObject finalGameManager;
-
+    public GameObject bakunawa;
     public TeleportScene TPScene;
     public GameObject WinDialogue;
     public GameObject whipTailPrefab;
@@ -35,7 +35,7 @@ public class SoundCollide : MonoBehaviour
             finalGameManager.SetActive(false);
             WinDialogue.SetActive(true);
             gameObject.SetActive(false);
-
+            bakunawa.SetActive(false);
             Vector3 position = new Vector3(-1.64f, -1.47f, 0);
             GameObject gem = Instantiate(garnetPrefab);
             gem.transform.position = position;
