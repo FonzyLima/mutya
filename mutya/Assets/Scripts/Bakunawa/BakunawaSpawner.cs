@@ -47,22 +47,27 @@ public class BakunawaSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        //delay this then have a void start for starting cutscene?
         GameObject[] moons;
         moons = GameObject.FindGameObjectsWithTag("Moon");
         if(inventory.tikbalang_item == 2){
+            // this is the transition to the boss fight
             finalGameManager.SetActive(true);
         }
         for(int i=0;i<moons.Length;i++){
             moons[i].transform.position = new Vector3(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+12-i,GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+6,0);
         }
+        //Here you can pause the moons and timer
         if(timer>0){
             timer -= Time.deltaTime;
         }
 
         if(timer<=180){
+            //add nalang siguro another boolean for like if not pause ganun
             if(inventory.tikbalang_item == 2){
                 MoveMoon2(moon6);
             }
+            //then make this else if with the pause boolean
             else{
                 MoveMoon(moon6);
             }
@@ -114,12 +119,14 @@ public class BakunawaSpawner : MonoBehaviour
             
         }
         if(timer<=0){
+            
             if(inventory.tikbalang_item == 2){
                 MoveMoon2(moon0);
             }
             else{
                 MoveMoon(moon0);
             }
+            //game over
         }
         
     }

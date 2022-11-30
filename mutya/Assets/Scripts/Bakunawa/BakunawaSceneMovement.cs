@@ -13,7 +13,7 @@ public class BakunawaSceneMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-
+        //this is my movement for the player had to be diff i forgot why 
         if(!canMove){
             movement.x = 0;
             movement.y = 0;
