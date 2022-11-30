@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89187338898bdec47b6bebf08fd1d527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
+  respawn: {fileID: 314390171}
 --- !u!4 &62709352
 Transform:
   m_ObjectHideFlags: 0
@@ -4826,6 +4826,68 @@ PolygonCollider2D:
       - {x: -0.96487945, y: -0.8090161}
       - {x: 1.0519005, y: -0.78000903}
       - {x: 1.1251001, y: 0.10596746}
+--- !u!1 &314390170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 314390172}
+  - component: {fileID: 314390171}
+  m_Layer: 0
+  m_Name: RespawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &314390171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314390170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15e84a065120514d8de5ef92a038d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TPScene: {fileID: 62709351}
+  RespawnDialogue: {fileID: 0}
+  winManananggal: {fileID: 0}
+  BG: {fileID: 0}
+  Title: {fileID: 0}
+  Panel1: {fileID: 0}
+  Bughaw: {fileID: 0}
+  Mabaya: {fileID: 0}
+  Esmeralda: {fileID: 0}
+  Panel2: {fileID: 0}
+  Panel3: {fileID: 0}
+  Intro1: {fileID: 0}
+  Intro2: {fileID: 0}
+  Intro3: {fileID: 0}
+  Intro4: {fileID: 0}
+  Intro5: {fileID: 0}
+  Button: {fileID: 0}
+  bm: {fileID: 0}
+--- !u!4 &314390172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314390170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 526.18805, y: 366.76758, z: -1.5435472}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &327702732
 GameObject:
   m_ObjectHideFlags: 0
@@ -23430,6 +23492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dtManager: {fileID: 897357041}
+  TPScene: {fileID: 62709351}
   boss: {fileID: 2017404219}
   transition: {fileID: 1337954728}
   timer: {fileID: 344254865}
@@ -34545,6 +34608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   dialogue: {fileID: 388608291}
+  respawn: {fileID: 314390171}
   DeathScreen: {fileID: 217753752}
   DeathDialogue: {fileID: 388608287}
   target: {fileID: 1003305469}

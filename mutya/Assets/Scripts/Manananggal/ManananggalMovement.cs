@@ -8,6 +8,8 @@ public class ManananggalMovement : MonoBehaviour
 
     public ManananggalDialogue dialogue;
 
+    public Respawn respawn;
+
     public GameObject DeathScreen;
     public GameObject DeathDialogue;
     
@@ -95,6 +97,7 @@ public class ManananggalMovement : MonoBehaviour
             DeathScreen.SetActive(true);
             DeathDialogue.SetActive(true);
             dialogue.gameOverSet(true);
+            respawn.setterDead(true);
         }
     }
 

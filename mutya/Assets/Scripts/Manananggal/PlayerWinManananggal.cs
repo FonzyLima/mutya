@@ -6,6 +6,7 @@ public class PlayerWinManananggal : MonoBehaviour
 {
     private InventoryManager invManager;
     public DaytimeManager dtManager;
+    public TeleportScene TPScene;
 
     private bool pickUpAllowed;
     private bool isDiscovered;
@@ -44,6 +45,8 @@ public class PlayerWinManananggal : MonoBehaviour
             handle.transform.position = position;
 
             Destroy(Quest2);
+
+            TPScene.addBossBeaten();
         }
     }
 

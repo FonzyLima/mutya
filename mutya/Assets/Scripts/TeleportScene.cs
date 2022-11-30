@@ -35,4 +35,14 @@ public class TeleportScene : MonoBehaviour
     {
         SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
+
+    public int getBossDefeat()
+    {
+        return bossBeaten;
+    }
+
+    public void addBossBeaten()
+    {
+        bossBeaten++;
+    }
 }

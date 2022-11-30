@@ -5,8 +5,15 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
     public static bool leftMenu = false;
+    public static bool diedBoss = false;
+
+    public TeleportScene TPScene;
 
     public GameObject RespawnDialogue;
+
+    // public GameObject winBakunawa;
+    public GameObject winManananggal;
+    // public GameObject winTikbalang;
 
     public GameObject BG;
     public GameObject Title;
@@ -29,35 +36,69 @@ public class Respawn : MonoBehaviour
 
     public GameObject bm;
 
+    private int bossDefeat;
+
     // Start is called before the first frame update
     void Start()
     {
         if (leftMenu)
         {
-            RespawnDialogue.SetActive(true);
+            // if died
+            if (diedBoss)
+            {
+                RespawnDialogue.SetActive(true);
+                diedBoss = false;
+            }
+
+            // if win
+            else
+            {
+                bossDefeat = TPScene.getBossDefeat();
+                // if (bossDefeat == 1) // if bakunawa defeated, spawn bakunawa dialogue
+                // {
+
+                // }
+                if (bossDefeat == 2) // if manananggal defeated, spawn manananggal dialogue
+                {
+                    winManananggal.SetActive(true);
+                }
+                // if (bossDefeat == 3) // if tikbalang defeated, spawn tikbalang dialogue
+                // {
+
+                // }
+            }
+            
             bm.SetActive(true);
         }
         else
         {
-            BG.SetActive(true);
-            Title.SetActive(true);
-            Panel1.SetActive(true);
-            Bughaw.SetActive(true);
-            Mabaya.SetActive(true);
-            Esmeralda.SetActive(true);
-            Panel2.SetActive(true);
-            Panel3.SetActive(true);
-            Intro1.SetActive(true);
-            Intro2.SetActive(true);
-            Intro3.SetActive(true);
-            Intro4.SetActive(true);
-            Intro5.SetActive(true);
-            Button.SetActive(true);
+            if (BG != null)
+            {
+                BG.SetActive(true);
+                Title.SetActive(true);
+                Panel1.SetActive(true);
+                Bughaw.SetActive(true);
+                Mabaya.SetActive(true);
+                Esmeralda.SetActive(true);
+                Panel2.SetActive(true);
+                Panel3.SetActive(true);
+                Intro1.SetActive(true);
+                Intro2.SetActive(true);
+                Intro3.SetActive(true);
+                Intro4.SetActive(true);
+                Intro5.SetActive(true);
+                Button.SetActive(true);
+            }   
         }
     }
 
     public void setterMenu (bool val)
     {
         leftMenu = val;
+    }
+
+    public void setterDead (bool val)
+    {
+        diedBoss = val;
     }
 }
