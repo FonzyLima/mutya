@@ -29196,6 +29196,8 @@ MonoBehaviour:
   finalGameManager: {fileID: 1552222526}
   TPScene: {fileID: 1010864980}
   WinDialogue: {fileID: 1851955190}
+  whipTailPrefab: {fileID: 6493036282671381393, guid: 7a7866f4fce61634c9ff25bfb96a55bb, type: 3}
+  garnetPrefab: {fileID: 6493036282671381393, guid: 63a15cd0f7c96b442ab185e0ee79681a, type: 3}
   currentHealth: 10
   maxHealth: 10
 --- !u!60 &1379232346

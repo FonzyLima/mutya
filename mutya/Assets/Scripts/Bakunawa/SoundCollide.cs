@@ -9,6 +9,8 @@ public class SoundCollide : MonoBehaviour
 
     public TeleportScene TPScene;
     public GameObject WinDialogue;
+    public GameObject whipTailPrefab;
+    public GameObject garnetPrefab;
 
     public float currentHealth = 10f;
     public float maxHealth = 10f;
@@ -32,6 +34,14 @@ public class SoundCollide : MonoBehaviour
             gameManager.SetActive(false);
             finalGameManager.SetActive(false);
             WinDialogue.SetActive(true);
+
+            Vector3 position = new Vector3(-1.64f, -1.47f, 0);
+            GameObject gem = Instantiate(garnetPrefab);
+            gem.transform.position = position;
+
+            GameObject whip = Instantiate(whipTailPrefab);
+            position.y += 2f;
+            whip.transform.position = position;
         }
         
     }
