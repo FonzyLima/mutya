@@ -25,7 +25,7 @@ public class SoundWaves : MonoBehaviour
         if (!Pause)
         {
             if (Input.GetMouseButtonDown(0)){
-                soundWaves.transform.position = new Vector3(player.transform.position.x+9.5f,player.transform.position.y+-3.4f,0);
+                // soundWaves.transform.position = new Vector3(player.transform.position.x+9.5f,player.transform.position.y+-3.4f,0);
                 soundWaves.SetActive(true);
                 playerMovement.canMove = false;
                 bangSFX.Play();
@@ -41,7 +41,23 @@ public class SoundWaves : MonoBehaviour
         //itoy wala pang ginagawa hahahha
         lookDir = mousePos - playerMovement.rb.position;
         angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-
+        if(angle >= -45 && angle < 45){
+            angle = 0;
+            soundWaves.transform.position = new Vector3(player.transform.position.x + 10.95f, player.transform.position.y - 3.51f, 0);
+        }
+        else if(angle >= 45 && angle < 145){
+            angle = 90;
+            soundWaves.transform.position = new Vector3(player.transform.position.x + 3.51f, player.transform.position.y + 10.51f, 0);
+        }
+        else if((angle >= 145 && angle <= 180) || (angle >= -180 && angle <= -145)){
+            angle = 179;
+            soundWaves.transform.position = new Vector3(player.transform.position.x - 10.25f, player.transform.position.y + 3.4f, 0);
+        }
+        else{
+            angle = -90;
+            soundWaves.transform.position = new Vector3(player.transform.position.x - 3.51f, player.transform.position.y - 10.51f, 0);
+        }
+        rbWave.rotation = angle;
         
     }
     public IEnumerator waveTime(){

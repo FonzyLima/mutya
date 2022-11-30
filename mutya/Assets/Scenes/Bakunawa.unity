@@ -17549,7 +17549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147745435}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.71, y: 3.24, z: 10.106829}
+  m_LocalPosition: {x: -7.7100015, y: 3.2400007, z: 10.106829}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17739,7 +17739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183192627}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.58, y: 3.24, z: 10.106829}
+  m_LocalPosition: {x: -6.580002, y: 3.2400007, z: 10.106829}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26506,7 +26506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274114304}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.96, y: 3.24, z: 10.106829}
+  m_LocalPosition: {x: -8.960003, y: 3.2399998, z: 10.106829}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29149,8 +29149,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379232341}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4, y: 0.44, z: -10.106829}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0017549321, w: -0.99999845}
+  m_LocalPosition: {x: 34.94, y: -5.63, z: -10.106829}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29159,7 +29159,7 @@ Transform:
   - {fileID: 1183192628}
   m_Father: {fileID: 0}
   m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360.201}
 --- !u!95 &1379232344
 Animator:
   serializedVersion: 4
@@ -31575,7 +31575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1552222527
 Transform:
   m_ObjectHideFlags: 0
@@ -31623,7 +31623,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   angle: 0
   lookDir: {x: 0, y: 0}
-  rbWave: {fileID: 0}
+  rbWave: {fileID: 1379232347}
   Pause: 0
 --- !u!82 &1552222530
 AudioSource:
@@ -34352,8 +34352,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 0.75, y: 1.5625}
+    newSize: {x: 0.75, y: 1.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -34443,15 +34443,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 1038395914, guid: 4305ab4ffe26d094484481d6a6d3ae09, type: 3}
+  m_Sprite: {fileID: 1632575837, guid: 181f6cd69628a414dbe6ba5985da4c92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.75, y: 1.5625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1890220648
