@@ -32470,6 +32470,7 @@ GameObject:
   - component: {fileID: 1692595850}
   - component: {fileID: 1692595849}
   - component: {fileID: 1692595848}
+  - component: {fileID: 1692595851}
   m_Layer: 5
   m_Name: Quest1
   m_TagString: Untagged
@@ -32556,6 +32557,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692595846}
   m_CullTransparentMesh: 1
+--- !u!114 &1692595851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692595846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e061e09b85e85e4a8468c80d6f2fd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisQuest: {fileID: 1692595846}
 --- !u!1 &1694329359
 GameObject:
   m_ObjectHideFlags: 0
@@ -36107,6 +36121,7 @@ GameObject:
   - component: {fileID: 2023193678}
   - component: {fileID: 2023193677}
   - component: {fileID: 2023193676}
+  - component: {fileID: 2023193679}
   m_Layer: 5
   m_Name: Quest2
   m_TagString: Untagged
@@ -36193,6 +36208,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023193674}
   m_CullTransparentMesh: 1
+--- !u!114 &2023193679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023193674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e061e09b85e85e4a8468c80d6f2fd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisQuest: {fileID: 2023193674}
 --- !u!1 &2032259046
 GameObject:
   m_ObjectHideFlags: 0
