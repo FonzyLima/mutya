@@ -11,7 +11,7 @@ public class Respawn : MonoBehaviour
 
     public GameObject RespawnDialogue;
 
-    // public GameObject winBakunawa;
+    public GameObject winBakunawa;
     public GameObject winManananggal;
     // public GameObject winTikbalang;
 
@@ -54,10 +54,10 @@ public class Respawn : MonoBehaviour
             else
             {
                 bossDefeat = TPScene.getBossDefeat();
-                // if (bossDefeat == 1) // if bakunawa defeated, spawn bakunawa dialogue
-                // {
-
-                // }
+                if (bossDefeat == 1) // if bakunawa defeated, spawn bakunawa dialogue
+                {
+                    winBakunawa.SetActive(true);
+                }
                 if (bossDefeat == 2) // if manananggal defeated, spawn manananggal dialogue
                 {
                     winManananggal.SetActive(true);
