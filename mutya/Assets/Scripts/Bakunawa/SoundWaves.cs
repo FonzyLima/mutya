@@ -14,18 +14,26 @@ public class SoundWaves : MonoBehaviour
     public Vector2 lookDir;
     // Update is called once per frame
     public Rigidbody2D rbWave;
+
+    public bool Pause = false;
+
     void Update()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         //heres the clicking thing
-        if (Input.GetMouseButtonDown(0)){
-            
-            soundWaves.transform.position = new Vector3(player.transform.position.x+9.5f,player.transform.position.y+-3.4f,0);
-            soundWaves.SetActive(true);
-            playerMovement.canMove = false;
-            bangSFX.Play();
-            StartCoroutine(waveTime());
+
+        if (!Pause)
+        {
+            if (Input.GetMouseButtonDown(0)){
+                soundWaves.transform.position = new Vector3(player.transform.position.x+9.5f,player.transform.position.y+-3.4f,0);
+                soundWaves.SetActive(true);
+                playerMovement.canMove = false;
+                bangSFX.Play();
+                StartCoroutine(waveTime());
+            }
         }
+
+        
             
     }
     void FixedUpdate()
@@ -40,5 +48,10 @@ public class SoundWaves : MonoBehaviour
         yield return new WaitForSeconds(1f);
         soundWaves.SetActive(false);
         playerMovement.canMove = true;
+    }
+
+    public void pauseSound (bool val)
+    {
+        Pause = val;
     }
 }

@@ -9,6 +9,11 @@ public class BookManager : MonoBehaviour
 
     public PlayerMovement p;
 
+    // bakunawa assets
+    public BakunawaSceneMovement pBakunawa;
+    public BakunawaSpawner bakunawaSpawn;
+    public SoundWaves soundWaves;
+
     // manananaggal assets
     public PlayerManananggalMechanic mechanic;
     public DaytimeManager dtManager;
@@ -24,7 +29,16 @@ public class BookManager : MonoBehaviour
         {
             if (equipped)
             {
-                p.setMove(true);
+                if (p != null)
+                {
+                    p.setMove(true);
+                }
+                if (pBakunawa != null);
+                {
+                    pBakunawa.setMove(true);
+                    bakunawaSpawn.pauseBSpawner(false);
+                    soundWaves.pauseSound(false);
+                }
                 if (mechanic != null && dtManager != null && manananggal != null && mTimer != null)
                 {
                     mechanic.pauseMechanic(false);
@@ -37,7 +51,16 @@ public class BookManager : MonoBehaviour
                 
             else
             {
-                p.setMove(false);
+                if (p != null)
+                {
+                    p.setMove(false);
+                }
+                if (pBakunawa != null);
+                {
+                    pBakunawa.setMove(false);
+                    bakunawaSpawn.pauseBSpawner(true);
+                    soundWaves.pauseSound(true);
+                }
                 if (mechanic != null && dtManager != null && manananggal != null && mTimer != null)
                 {
                     mechanic.pauseMechanic(true);

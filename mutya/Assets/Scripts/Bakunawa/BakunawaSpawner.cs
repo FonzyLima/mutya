@@ -15,10 +15,22 @@ public class BakunawaSpawner : MonoBehaviour
     public GameObject moon5;
     public GameObject moon6;
     public GameObject finalGameManager;
+
+    public GameObject Dialogue3;
+    public GameObject Dialogue4;
+    public GameObject Quest1;
+
+    public BakunawaDialogue dialogue;
+    public Respawn respawn;
+    public GameObject DeathScreen;
+    public GameObject DeathDialogue;
+
     public InventoryManager inventory;
     public float timer = 210;
     public float speed;
     public Earthquake earthquake;
+
+    public bool Pause = false;
 
     void MoveMoon(GameObject moon){
         if(moon.activeSelf){
@@ -50,29 +62,45 @@ public class BakunawaSpawner : MonoBehaviour
         //delay this then have a void start for starting cutscene?
         GameObject[] moons;
         moons = GameObject.FindGameObjectsWithTag("Moon");
+
+        if(inventory.tikbalang_item == 1){
+            if (Dialogue3 != null)
+            {
+                Dialogue3.SetActive(true);
+            }
+        }
+
         if(inventory.tikbalang_item == 2){
             // this is the transition to the boss fight
+            if (Dialogue4 != null)
+            {
+                Dialogue4.SetActive(true);
+                Destroy(Quest1);
+            }
             finalGameManager.SetActive(true);
         }
         for(int i=0;i<moons.Length;i++){
             moons[i].transform.position = new Vector3(GameObject.FindGameObjectWithTag("MainCamera").transform.position.x+12-i,GameObject.FindGameObjectWithTag("MainCamera").transform.position.y+6,0);
         }
-        //Here you can pause the moons and timer
-        if(timer>0){
-            timer -= Time.deltaTime;
+        
+        if (!Pause)
+        {
+            if(timer>0){
+                timer -= Time.deltaTime;
+            }
         }
 
         if(timer<=180){
-            //add nalang siguro another boolean for like if not pause ganun
-            if(inventory.tikbalang_item == 2){
-                MoveMoon2(moon6);
-            }
-            //then make this else if with the pause boolean
-            else{
-                MoveMoon(moon6);
-            }
-            
-            
+                //add nalang siguro another boolean for like if not pause ganun
+                if(inventory.tikbalang_item == 2){
+                    MoveMoon2(moon6);
+                }
+                //then make this else if with the pause boolean
+                else{
+                    MoveMoon(moon6);
+                }
+                
+                
         }
         if(timer<=150){
             if(inventory.tikbalang_item == 2){
@@ -127,7 +155,15 @@ public class BakunawaSpawner : MonoBehaviour
                 MoveMoon(moon0);
             }
             //game over
+            DeathScreen.SetActive(true);
+            DeathDialogue.SetActive(true);
+            dialogue.gameOverSet(true);
+            respawn.setterDead(true);
         }
-        
+    }
+
+    public void pauseBSpawner (bool val)
+    {
+        Pause = val;
     }
 }

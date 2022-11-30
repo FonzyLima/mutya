@@ -8,7 +8,7 @@ public class BakunawaSceneMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
-    public bool canMove;
+    public bool canMove = true;
     Vector2 movement;
     // Update is called once per frame
     void Update()
@@ -37,11 +37,10 @@ public class BakunawaSceneMovement : MonoBehaviour
         if(canMove){
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
+    }
 
-        
-        
-        
-        
-        
+    public void setMove (bool val)
+    {
+        canMove = val;
     }
 }
