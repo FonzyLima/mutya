@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TeleportScene : MonoBehaviour
 {
-    public static int bossBeaten = 3;
+    public static int bossBeaten = 0;
 
     public Respawn respawn;
 
