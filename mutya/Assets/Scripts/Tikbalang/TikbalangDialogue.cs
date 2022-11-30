@@ -47,6 +47,7 @@ public class TikbalangDialogue : MonoBehaviour
     {
         p.setMove(false);
         t.setMove(false);
+        bm.SetActive(false);
 
         if (Input.GetMouseButtonDown(0))
         {

@@ -36,7 +36,7 @@ public class BookManager : MonoBehaviour
                 {
                     p.setMove(true);
                 }
-                if (pBakunawa != null);
+                if (pBakunawa != null)
                 {
                     pBakunawa.setMove(true);
                     bakunawaSpawn.pauseBSpawner(false);
@@ -62,7 +62,7 @@ public class BookManager : MonoBehaviour
                 {
                     p.setMove(false);
                 }
-                if (pBakunawa != null);
+                if (pBakunawa != null)
                 {
                     pBakunawa.setMove(false);
                     bakunawaSpawn.pauseBSpawner(true);
