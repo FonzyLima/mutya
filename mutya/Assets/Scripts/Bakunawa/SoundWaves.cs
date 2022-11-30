@@ -17,6 +17,7 @@ public class SoundWaves : MonoBehaviour
     void Update()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //heres the clicking thing
         if (Input.GetMouseButtonDown(0)){
             
             soundWaves.transform.position = new Vector3(player.transform.position.x+9.5f,player.transform.position.y+-3.4f,0);
@@ -29,6 +30,7 @@ public class SoundWaves : MonoBehaviour
     }
     void FixedUpdate()
     {
+        //itoy wala pang ginagawa hahahha
         lookDir = mousePos - playerMovement.rb.position;
         angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
