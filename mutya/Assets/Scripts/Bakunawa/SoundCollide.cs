@@ -34,6 +34,7 @@ public class SoundCollide : MonoBehaviour
             gameManager.SetActive(false);
             finalGameManager.SetActive(false);
             WinDialogue.SetActive(true);
+            gameObject.SetActive(false);
 
             Vector3 position = new Vector3(-1.64f, -1.47f, 0);
             GameObject gem = Instantiate(garnetPrefab);

@@ -7,7 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     public float tikbalang_item; 
 
-    // public GameObject DialogueBakunawa
+    public GameObject DialogueBakunawa;
     public GameObject DialogueManananggal;
     public GameObject DialogueTikbalang;
 
@@ -24,13 +24,13 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         // if bakunawa
-        // if (curScene == 1 && tikbalang_item == 3f)
-        // {
-        //     if (DialogueManananggal != null)
-        //     {
-        //         DialogueManananggal.SetActive(true);
-        //     }
-        // }
+        if (curScene == 1 && tikbalang_item == 4f)
+        {
+            if (DialogueBakunawa != null)
+            {
+                DialogueBakunawa.SetActive(true);
+            }
+        }
 
         // if manananggal
         if (curScene == 2 && tikbalang_item == 3f)
