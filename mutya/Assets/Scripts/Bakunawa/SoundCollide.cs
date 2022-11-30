@@ -22,6 +22,7 @@ public class SoundCollide : MonoBehaviour
     void Update()
     {
         if(currentHealth==0){
+            //win condition
             print("Game Over!");
             gameManager.SetActive(false);
             finalGameManager.SetActive(false);
