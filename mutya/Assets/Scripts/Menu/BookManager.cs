@@ -20,6 +20,9 @@ public class BookManager : MonoBehaviour
     public ManananggalMovement manananggal;
     public Timer mTimer;
 
+    // tikbalang assets
+    public TikbalangAI tikbalang;
+
     public bool equipped = false;
 
     // Update is called once per frame
@@ -46,6 +49,10 @@ public class BookManager : MonoBehaviour
                     manananggal.pauseManananggal(false);
                     mTimer.pauseTimer(false);
                 }
+                if (tikbalang != null)
+                {
+                    tikbalang.setMove(true);
+                }
                 Book.SetActive(false);
             }
                 
@@ -67,6 +74,10 @@ public class BookManager : MonoBehaviour
                     dtManager.pauseDaytime(true);
                     manananggal.pauseManananggal(true);
                     mTimer.pauseTimer(true);
+                }
+                if (tikbalang != null)
+                {
+                    tikbalang.setMove(false);
                 }
                 Book.SetActive(true);
             }
