@@ -88,9 +88,8 @@ public class BakunawaSpawner : MonoBehaviour
             if(timer>0){
                 timer -= Time.deltaTime;
             }
-        }
 
-        if(timer<=180){
+            if(timer<=180){
                 //add nalang siguro another boolean for like if not pause ganun
                 if(inventory.tikbalang_item == 2){
                     MoveMoon2(moon6);
@@ -99,66 +98,65 @@ public class BakunawaSpawner : MonoBehaviour
                 else{
                     MoveMoon(moon6);
                 }
+            }
+            if(timer<=150){
+                if(inventory.tikbalang_item == 2){
+                    MoveMoon2(moon5);
+                }
+                else{
+                    MoveMoon(moon5);
+                }
                 
+            }
+            if(timer<=120){
+                if(inventory.tikbalang_item == 2){
+                    MoveMoon2(moon4);
+                }
+                else{
+                    MoveMoon(moon4);
+                }
                 
-        }
-        if(timer<=150){
-            if(inventory.tikbalang_item == 2){
-                MoveMoon2(moon5);
             }
-            else{
-                MoveMoon(moon5);
+            if(timer<=90){
+                if(inventory.tikbalang_item == 2){
+                    MoveMoon2(moon3);
+                }
+                else{
+                    MoveMoon(moon3);
+                }
+                
             }
-            
-        }
-        if(timer<=120){
-            if(inventory.tikbalang_item == 2){
-                MoveMoon2(moon4);
+            if(timer<=60){
+                if(inventory.tikbalang_item == 2){
+                    MoveMoon2(moon2);
+                }
+                else{
+                    MoveMoon(moon2);
+                }  
             }
-            else{
-                MoveMoon(moon4);
+            if(timer<=30){
+                if(inventory.tikbalang_item == 2){
+                    MoveMoon2(moon1);
+                }
+                else{
+                    MoveMoon(moon1);
+                }
+                
             }
-            
-        }
-        if(timer<=90){
-            if(inventory.tikbalang_item == 2){
-                MoveMoon2(moon3);
+            if(timer<=0){
+                
+                if(inventory.tikbalang_item == 2){
+                    MoveMoon2(moon0);
+                }
+                else{
+                    MoveMoon(moon0);
+                }
+                //game over
+                DeathScreen.SetActive(true);
+                DeathDialogue.SetActive(true);
+                dialogue.gameOverSet(true);
+                respawn.setterDead(true);
             }
-            else{
-                MoveMoon(moon3);
-            }
-            
-        }
-        if(timer<=60){
-            if(inventory.tikbalang_item == 2){
-                MoveMoon2(moon2);
-            }
-            else{
-                MoveMoon(moon2);
-            }  
-        }
-        if(timer<=30){
-            if(inventory.tikbalang_item == 2){
-                MoveMoon2(moon1);
-            }
-            else{
-                MoveMoon(moon1);
-            }
-            
-        }
-        if(timer<=0){
-            
-            if(inventory.tikbalang_item == 2){
-                MoveMoon2(moon0);
-            }
-            else{
-                MoveMoon(moon0);
-            }
-            //game over
-            DeathScreen.SetActive(true);
-            DeathDialogue.SetActive(true);
-            dialogue.gameOverSet(true);
-            respawn.setterDead(true);
         }
     }
 

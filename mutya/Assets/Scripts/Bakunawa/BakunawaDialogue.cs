@@ -16,6 +16,7 @@ public class BakunawaDialogue : MonoBehaviour
 
     public GameObject Dialogue2Trigger;
     public GameObject Quest1;
+    public GameObject Quest2;
 
     public bool gameOver = false;
 
@@ -147,6 +148,11 @@ public class BakunawaDialogue : MonoBehaviour
                 if (Quest1 != null)
                 {
                     Quest1.SetActive(true);
+                }
+
+                if (Quest2 != null)
+                {
+                    Quest2.SetActive(true);
                 }
 
                 if (TPQuest != null && TPManager != null)
