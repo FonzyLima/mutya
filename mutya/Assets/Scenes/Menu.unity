@@ -708,6 +708,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  OutroManager: {fileID: 0}
   nameText: {fileID: 123435688}
   dialogueText: {fileID: 1310776729}
   SFXPlayer: {fileID: 61377147}
@@ -1083,6 +1084,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 1132619445}
   TPManager: {fileID: 1623485306}
+  OutroManager: {fileID: 0}
   nameText: {fileID: 1042259960}
   dialogueText: {fileID: 1366870238}
   SFXPlayer: {fileID: 63360910}
@@ -2023,6 +2025,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  OutroManager: {fileID: 399881996}
   nameText: {fileID: 1589506916}
   dialogueText: {fileID: 1842526188}
   SFXPlayer: {fileID: 262289760}
@@ -5685,6 +5688,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376014044}
   m_CullTransparentMesh: 1
+--- !u!1 &399881996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 399881997}
+  - component: {fileID: 399881998}
+  m_Layer: 0
+  m_Name: OutroManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &399881997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399881996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.599958, y: -3.2109315, z: 3.7980108}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &399881998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399881996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99638020c125804981ed1a75f68b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &407847533
 GameObject:
   m_ObjectHideFlags: 0
@@ -5808,6 +5855,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  OutroManager: {fileID: 0}
   nameText: {fileID: 253846734}
   dialogueText: {fileID: 1380451658}
   SFXPlayer: {fileID: 407847540}
@@ -9140,6 +9188,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 1132619445}
   TPManager: {fileID: 1623485306}
+  OutroManager: {fileID: 0}
   nameText: {fileID: 805064894}
   dialogueText: {fileID: 1747635021}
   SFXPlayer: {fileID: 760068552}
@@ -9440,6 +9489,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 1132619445}
   TPManager: {fileID: 1623485306}
+  OutroManager: {fileID: 0}
   nameText: {fileID: 746735731}
   dialogueText: {fileID: 1959095194}
   SFXPlayer: {fileID: 799492995}
@@ -12207,6 +12257,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  OutroManager: {fileID: 0}
   nameText: {fileID: 341082466}
   dialogueText: {fileID: 651480259}
   SFXPlayer: {fileID: 1053827296}
@@ -15017,6 +15068,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  OutroManager: {fileID: 0}
   nameText: {fileID: 1207935757}
   dialogueText: {fileID: 862076799}
   SFXPlayer: {fileID: 1450672576}
@@ -15332,6 +15384,7 @@ MonoBehaviour:
   Quest6: {fileID: 2038006891}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  OutroManager: {fileID: 0}
   nameText: {fileID: 801713454}
   dialogueText: {fileID: 456261871}
   SFXPlayer: {fileID: 1505940035}
@@ -15562,6 +15615,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 0}
   TPManager: {fileID: 0}
+  OutroManager: {fileID: 0}
   nameText: {fileID: 950062656}
   dialogueText: {fileID: 655755869}
   SFXPlayer: {fileID: 1568897280}
@@ -22140,6 +22194,7 @@ MonoBehaviour:
   Quest6: {fileID: 0}
   TPQuest: {fileID: 1132619445}
   TPManager: {fileID: 1623485306}
+  OutroManager: {fileID: 0}
   nameText: {fileID: 1208334472}
   dialogueText: {fileID: 45208153}
   SFXPlayer: {fileID: 1888235945}
