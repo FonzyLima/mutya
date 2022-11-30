@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Bakunawa ("+soundCollide.currentHealth.ToString()+"/"+soundCollide.maxHealth.ToString()+")";
+        healthText.text = "Bakunawa ("+(soundCollide.currentHealth*10).ToString()+"/"+(soundCollide.maxHealth*10).ToString()+")";
         float fillValue = soundCollide.currentHealth/soundCollide.maxHealth;
         slider.value = fillValue;
     }
