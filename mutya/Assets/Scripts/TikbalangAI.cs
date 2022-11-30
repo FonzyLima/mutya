@@ -14,11 +14,18 @@ public class TikbalangAI : MonoBehaviour
     //waypoint index
     public int wIdx = 0;
 
+    public bool canMove = true;
+
     public GameObject player;
     private Transform playerPos;
     private Vector2 currentPos;
     private PlayerMovement playerMovement;
     public float distance;
+
+    public TikbalangDialogue tDialogue;
+    public GameObject deathDialogue;
+    public GameObject deathScreen;
+    public Respawn respawn;
     
     public Animator animator;
 
@@ -38,50 +45,54 @@ public class TikbalangAI : MonoBehaviour
         //get Player Movement
         playerMovement = player.GetComponent<PlayerMovement>();
         found = false;
+
+        
     }
 
     // Update is called once per frame
     private void Update()
     {
-        bool isNoisy = playerMovement.isMoving && (!playerMovement.isCrouching || playerMovement.inGrass);
-        if (Vector2.Distance(transform.position, playerPos.position) < 1.5){ // If player is near tikbalang
-            Vector3 dir = playerPos.position - transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            dir.Normalize();
+        if (canMove)
+        {
+            bool isNoisy = playerMovement.isMoving && (!playerMovement.isCrouching || playerMovement.inGrass);
+            if (Vector2.Distance(transform.position, playerPos.position) < 1.5){ // If player is near tikbalang
+                Vector3 dir = playerPos.position - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                dir.Normalize();
 
-            animator.SetFloat("Horizontal", dir.x);
-            animator.SetFloat("Vertical", dir.y);
-            animator.SetFloat("Speed", dir.sqrMagnitude);
-            found = true;
+                animator.SetFloat("Horizontal", dir.x);
+                animator.SetFloat("Vertical", dir.y);
+                animator.SetFloat("Speed", dir.sqrMagnitude);
+                found = true;
 
-            FollowPlayer();
-            playerMovement.moveSpeed = 0;
+                FollowPlayer();
+                playerMovement.moveSpeed = 0;
 
-            if (Vector2.Distance(transform.position, playerPos.position) == 0){
-                Death();
+                if (Vector2.Distance(transform.position, playerPos.position) == 0){
+                    Death();
+                }
+            }
+            else if(found || isNoisy && Vector2.Distance(transform.position, playerPos.position) < distance){// If player is noisy near tikbalang
+                Vector3 dir = playerPos.position - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                dir.Normalize();
+
+                animator.SetFloat("Horizontal", dir.x);
+                animator.SetFloat("Vertical", dir.y);
+                animator.SetFloat("Speed", dir.sqrMagnitude);
+                found = true;
+
+                if (Vector2.Distance(transform.position, playerPos.position) == 0){
+                    Death();
+                }
+
+                FollowPlayer();
+                playerMovement.moveSpeed = 0;
+            }
+            else{ // If player is far away from tikbalang
+                Move();
             }
         }
-        else if(found || isNoisy && Vector2.Distance(transform.position, playerPos.position) < distance){// If player is noisy near tikbalang
-            Vector3 dir = playerPos.position - transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            dir.Normalize();
-
-            animator.SetFloat("Horizontal", dir.x);
-            animator.SetFloat("Vertical", dir.y);
-            animator.SetFloat("Speed", dir.sqrMagnitude);
-            found = true;
-
-            if (Vector2.Distance(transform.position, playerPos.position) == 0){
-                Death();
-            }
-
-            FollowPlayer();
-            playerMovement.moveSpeed = 0;
-        }
-        else{ // If player is far away from tikbalang
-            Move();
-        }
-        
     }
 
     private void FollowPlayer(){
@@ -109,11 +120,18 @@ public class TikbalangAI : MonoBehaviour
         }
     }
 
-    private void Death(){
-        /*
-            INSERT CODE FOR DEATH ANIMATION
-        */
+    public void setMove (bool val)
+    {
+        canMove = val;
+    }
 
-        return;
+    private void Death(){
+        if (tDialogue != null)
+        {
+            deathScreen.SetActive(true);
+            deathDialogue.SetActive(true);
+            tDialogue.gameOverSet(true);
+            respawn.setterDead(true);
+        }
     }
 }
