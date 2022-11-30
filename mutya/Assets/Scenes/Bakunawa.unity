@@ -37406,7 +37406,7 @@ MonoBehaviour:
   DeathScreen: {fileID: 1504288004}
   DeathDialogue: {fileID: 1700181615}
   inventory: {fileID: 1890220651}
-  timer: 210
+  timer: 190
   speed: 8
   earthquake: {fileID: 1890220649}
   Pause: 0
