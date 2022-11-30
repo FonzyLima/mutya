@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/manananggal_map_morning.unity
     guid: 0c676039b3756d54293f777669861cd3
   - enabled: 1
+    path: Assets/Scenes/Tikbalang_Intro.unity
+    guid: 9d61bb68d12bf734091847317469ad4c
+  - enabled: 1
     path: Assets/Scenes/Tikbalang.unity
     guid: 92f1d9c2a30bb8d409ce331b3029399d
   m_configObjects: {}

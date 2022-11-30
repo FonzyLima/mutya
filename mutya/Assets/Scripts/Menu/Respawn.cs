@@ -13,7 +13,7 @@ public class Respawn : MonoBehaviour
 
     public GameObject winBakunawa;
     public GameObject winManananggal;
-    // public GameObject winTikbalang;
+    public GameObject winTikbalang;
 
     public GameObject BG;
     public GameObject Title;
@@ -62,10 +62,10 @@ public class Respawn : MonoBehaviour
                 {
                     winManananggal.SetActive(true);
                 }
-                // if (bossDefeat == 3) // if tikbalang defeated, spawn tikbalang dialogue
-                // {
-
-                // }
+                if (bossDefeat == 4) // if tikbalang defeated, spawn tikbalang dialogue
+                {
+                    winTikbalang.SetActive(true);
+                }
             }
             
             bm.SetActive(true);

@@ -44,7 +44,10 @@ public class PlayerWinManananggal : MonoBehaviour
             position.y += 2f;
             handle.transform.position = position;
 
-            Destroy(Quest2);
+            if (Quest2 != null)
+            {
+                Destroy(Quest2);
+            }
 
             TPScene.addBossBeaten();
         }

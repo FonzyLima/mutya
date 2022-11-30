@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TeleportScene : MonoBehaviour
 {
-    public static int bossBeaten = 0;
+    public static int bossBeaten = 2;
 
     public Respawn respawn;
 
@@ -17,7 +17,10 @@ public class TeleportScene : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex == 0) // if player is in menu
             {
                 TeleportToBoss(bossBeaten + 1);
-                respawn.setterMenu(true);
+                if (respawn != null)
+                {
+                    respawn.setterMenu(true);
+                }
             }
             else // if player is not in menu (boss map)
             {

@@ -13,6 +13,8 @@ public class TikbalangDialogue : MonoBehaviour
     public GameObject TPQuest;
     public GameObject TPManager;
 
+    public GameObject Quest1;
+
     public bool gameOver = false;
 
     public TextMeshProUGUI nameText;
@@ -46,7 +48,10 @@ public class TikbalangDialogue : MonoBehaviour
     void Update()
     {
         p.setMove(false);
-        t.setMove(false);
+        if (t != null)
+        {
+            t.setMove(false);
+        }
         bm.SetActive(false);
 
         if (Input.GetMouseButtonDown(0))
@@ -68,6 +73,7 @@ public class TikbalangDialogue : MonoBehaviour
 
     void StartDialogue()
     {
+        Input.ResetInputAxes();
         nameIndex = 0;
         dialogueIndex = 0;
         StartCoroutine(TypeNameLine());
@@ -132,8 +138,23 @@ public class TikbalangDialogue : MonoBehaviour
             }
             else
             {
+                if (Quest1 != null)
+                {
+                    Quest1.SetActive(true);
+                }
+
                 p.setMove(true);
-                t.setMove(true);
+                if (t != null)
+                {
+                    t.setMove(true);
+                }
+
+                if (TPManager != null)
+                {
+                    TPManager.SetActive(true);
+                    TPQuest.SetActive(true);
+                }
+
                 bm.SetActive(true);
                 Destroy(gameObject);
             }
