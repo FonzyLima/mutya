@@ -15234,7 +15234,7 @@ RectTransform:
   m_Children:
   - {fileID: 1970730658}
   m_Father: {fileID: 957903406}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -15576,7 +15576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.586077, y: -1.8879064, z: -10}
+  m_LocalPosition: {x: 12.588207, y: -1.8879083, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17093,10 +17093,10 @@ RectTransform:
   - {fileID: 2023193675}
   - {fileID: 1851955191}
   - {fileID: 1592397675}
+  - {fileID: 1504288005}
   - {fileID: 1700181616}
   - {fileID: 1917357383}
   - {fileID: 440052059}
-  - {fileID: 1504288005}
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29782,7 +29782,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 957903406}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -33422,7 +33422,7 @@ RectTransform:
   - {fileID: 401829862}
   - {fileID: 1142472883}
   m_Father: {fileID: 957903406}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -35443,6 +35443,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c2f08b61811fb6a46bf77275f6e0ebe0, type: 3}
   - {fileID: 21300000, guid: 8c7ef63de30f02645ab50e909be848d7, type: 3}
   BookSFX: {fileID: 1917357378}
+  time: 1
+  timer: 0
 --- !u!114 &1917357381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35497,7 +35499,7 @@ RectTransform:
   - {fileID: 1628704964}
   - {fileID: 1509345962}
   m_Father: {fileID: 957903406}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
