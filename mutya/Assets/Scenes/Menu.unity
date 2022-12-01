@@ -15924,6 +15924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tikbalang_item: 1
+  DialogueBakunawa: {fileID: 0}
   DialogueManananggal: {fileID: 0}
   DialogueTikbalang: {fileID: 0}
 --- !u!82 &1572406602
@@ -20508,7 +20509,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Evil mythological creatures with intense greed for power creep within the
-    shadows. For years, the Bakunawa, Mananggal, and Tikbalang disturbed the peace
+    shadows. For years, the Bakunawa, Manananggal, and Tikbalang disturbed the peace
     within the forest.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68ca4ee2bddbac142bb9e0fd671c2121, type: 2}
