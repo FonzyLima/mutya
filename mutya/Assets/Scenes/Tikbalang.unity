@@ -14916,6 +14916,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c2f08b61811fb6a46bf77275f6e0ebe0, type: 3}
   - {fileID: 21300000, guid: 8c7ef63de30f02645ab50e909be848d7, type: 3}
   BookSFX: {fileID: 1102533438}
+  time: 1
+  timer: 0
 --- !u!114 &1102533441
 MonoBehaviour:
   m_ObjectHideFlags: 0
