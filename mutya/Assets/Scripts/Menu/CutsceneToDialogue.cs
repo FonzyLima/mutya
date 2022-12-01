@@ -27,7 +27,7 @@ public class CutsceneToDialogue : MonoBehaviour
     public GameObject MenuDialogue;
     public AudioSource stopBGM;
 
-    private float timer = 41;
+    private float timer = 89;
     private bool sceneDone = false;
 
     // Update is called once per frame
