@@ -19,6 +19,9 @@ public class BookFlipper : MonoBehaviour
 
     public AudioSource BookSFX;
 
+    public float time = 1.0f;
+    public float timer;
+
 
     void Start()
     {
@@ -45,15 +48,20 @@ public class BookFlipper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) && pageCounter < 9)
+        timer += Time.deltaTime;
+        if (timer >= time) 
         {
-            StartCoroutine(nextPage());
-        }
+            if (Input.GetKeyDown(KeyCode.RightArrow) && pageCounter < 9)
+            {
+                StartCoroutine(nextPage());
+                timer = 0;
+            }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && pageCounter > 0)
-        {
-            StartCoroutine(prevPage());
-            
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && pageCounter > 0)
+            {
+                StartCoroutine(prevPage());
+                timer = 0;
+            }
         }
     }
 
