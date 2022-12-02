@@ -8,6 +8,8 @@ public class Earthquake : MonoBehaviour
     public GameObject crack;
     public GameObject quake1;
     public GameObject quake2;
+    public GameObject stunned;
+    public GameObject player;
     public AudioSource quakeSFX;
     void Start()
     {
@@ -18,6 +20,8 @@ public class Earthquake : MonoBehaviour
         if(other.tag == "crack")
         {
             playerMovement.canMove = false;
+            stunned.transform.position = new Vector3(player.transform.position.x+-.5f,player.transform.position.y+-.78f,0);
+            stunned.SetActive(true);
             StartCoroutine(delayStun());
             
         }
@@ -45,6 +49,7 @@ public class Earthquake : MonoBehaviour
         yield return new WaitForSeconds(8f);
         playerMovement.canMove = true;
         crack.SetActive(false);
+        stunned.SetActive(false);
     }
 
 }
