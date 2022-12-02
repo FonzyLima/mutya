@@ -11,7 +11,13 @@ public class SoundCollide : MonoBehaviour
     public GameObject WinDialogue;
     public GameObject whipTailPrefab;
     public GameObject garnetPrefab;
-
+    public GameObject moon0;
+    public GameObject moon1;
+    public GameObject moon2;
+    public GameObject moon3;
+    public GameObject moon4;
+    public GameObject moon5;
+    public GameObject moon6;
     public float currentHealth = 10f;
     public float maxHealth = 10f;
     // Start is called before the first frame update
@@ -29,6 +35,13 @@ public class SoundCollide : MonoBehaviour
     {
         if(currentHealth==0){
             //win condition
+            moon0.SetActive(false);
+            moon1.SetActive(false);
+            moon2.SetActive(false);
+            moon3.SetActive(false);
+            moon4.SetActive(false);
+            moon5.SetActive(false);
+            moon6.SetActive(false);
             print("Game Over!");
             TPScene.addBossBeaten();
             gameManager.SetActive(false);
