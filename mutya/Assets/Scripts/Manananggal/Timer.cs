@@ -12,6 +12,11 @@ public class Timer : MonoBehaviour
     [SerializeField] public Color orange;
     [SerializeField] public Color red;
 
+    public GameObject DeathScreen;
+    public GameObject DeathDialogue;
+    public ManananggalDialogue dialogue;
+    public Respawn respawn;
+
     public int Duration;
     
     private int remainingDuration;
@@ -49,11 +54,16 @@ public class Timer : MonoBehaviour
             finalSFX.Pause();
             yield return null;
         }
+        OnEnd();
     }
 
     private void OnEnd()
     {
         print("End");
+        DeathScreen.SetActive(true);
+        DeathDialogue.SetActive(true);
+        dialogue.gameOverSet(true);
+        respawn.setterDead(true);
     }
 
     public void pauseTimer (bool val)

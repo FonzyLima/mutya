@@ -16529,6 +16529,10 @@ MonoBehaviour:
   finalSFX: {fileID: 344254870}
   orange: {r: 1, g: 0.7411765, b: 0.7411765, a: 1}
   red: {r: 1, g: 0, b: 0, a: 1}
+  DeathScreen: {fileID: 217753752}
+  DeathDialogue: {fileID: 388608287}
+  dialogue: {fileID: 388608291}
+  respawn: {fileID: 314390171}
   Duration: 120
   Pause: 0
 --- !u!114 &344254868
@@ -16581,7 +16585,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 80d5ea5ef63bd6841ae3dfa824b98420, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -21211,6 +21215,10 @@ MonoBehaviour:
   finalSFX: {fileID: 0}
   orange: {r: 0, g: 0, b: 0, a: 0}
   red: {r: 0, g: 0, b: 0, a: 0}
+  DeathScreen: {fileID: 0}
+  DeathDialogue: {fileID: 0}
+  dialogue: {fileID: 0}
+  respawn: {fileID: 0}
   Duration: 120
   Pause: 0
 --- !u!114 &742861105
