@@ -11,15 +11,20 @@ public class Earthquake : MonoBehaviour
     public GameObject stunned;
     public GameObject player;
     public AudioSource quakeSFX;
+    public SoundWaves soundWaves;
+
     void Start()
     {
         playerMovement = GetComponent<BakunawaSceneMovement>();
+        // soundWaves = gameObject.GetComponent<SoundWaves>();
     }
     private void OnTriggerEnter2D(Collider2D other) 
-    {        
+    {    
+        soundWaves = gameObject.GetComponent<SoundWaves>();    
         if(other.tag == "crack")
         {
             playerMovement.canMove = false;
+            // soundWaves.enabled = false;
             stunned.transform.position = new Vector3(player.transform.position.x+-.5f,player.transform.position.y+-.78f,0);
             stunned.SetActive(true);
             StartCoroutine(delayStun());
@@ -48,6 +53,7 @@ public class Earthquake : MonoBehaviour
     public IEnumerator delayStun(){
         yield return new WaitForSeconds(8f);
         playerMovement.canMove = true;
+        soundWaves.enabled = true;
         crack.SetActive(false);
         stunned.SetActive(false);
     }
