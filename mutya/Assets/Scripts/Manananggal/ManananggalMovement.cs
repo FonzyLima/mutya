@@ -36,11 +36,11 @@ public class ManananggalMovement : MonoBehaviour
         while(duration <= 120f){
             if(duration % 5 == 0){
                 if(dist < 50f){
-                    tiktikSFX.volume = 0.3f;
+                    tiktikSFX.volume = 0.05f;
                     print("CLOSE");
                 }
                 else{
-                    tiktikSFX.volume = 1f;
+                    tiktikSFX.volume = 0.5f;
                     print("FAR");
                 }
             tiktikSFX.Play();
