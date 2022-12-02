@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class PlayerWinManananggal : MonoBehaviour
 {
@@ -23,10 +24,18 @@ public class PlayerWinManananggal : MonoBehaviour
 
     public GameObject pickUpText;
 
+    public Vector3[] location;
+
     private void Start()
     {
         pickUpText.gameObject.SetActive(false);
         invManager = GameObject.Find("Player").GetComponent<InventoryManager>();
+
+        Random rnd = new Random();
+        int pos = rnd.Next(0, location.Length);
+        if(location.Length != 0){
+            gameObject.transform.position = location[pos];
+        }
     }
 
     private void Update()
