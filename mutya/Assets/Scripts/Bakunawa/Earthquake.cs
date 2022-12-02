@@ -16,15 +16,13 @@ public class Earthquake : MonoBehaviour
     void Start()
     {
         playerMovement = GetComponent<BakunawaSceneMovement>();
-        // soundWaves = gameObject.GetComponent<SoundWaves>();
     }
     private void OnTriggerEnter2D(Collider2D other) 
-    {    
-        soundWaves = gameObject.GetComponent<SoundWaves>();    
+    {        
         if(other.tag == "crack")
         {
             playerMovement.canMove = false;
-            // soundWaves.enabled = false;
+            soundWaves.enabled = false;
             stunned.transform.position = new Vector3(player.transform.position.x+-.5f,player.transform.position.y+-.78f,0);
             stunned.SetActive(true);
             StartCoroutine(delayStun());
