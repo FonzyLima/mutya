@@ -58,7 +58,7 @@ public class TikbalangAI : MonoBehaviour
         {
             bool isNoisy = playerMovement.isMoving && (!playerMovement.isCrouching || playerMovement.inGrass);
             if (Vector2.Distance(transform.position, playerPos.position) < 1.5){ // If player is near tikbalang
-                AudioSource.PlayClipAtPoint(attackSFX, transform.position);
+                AudioSource.PlayClipAtPoint(attackSFX, transform.position, 0.1f);
 
                 Vector3 dir = playerPos.position - transform.position;
                 float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -77,7 +77,7 @@ public class TikbalangAI : MonoBehaviour
                 }
             }
             else if(found || isNoisy && Vector2.Distance(transform.position, playerPos.position) < distance){// If player is noisy near tikbalang
-                AudioSource.PlayClipAtPoint(attackSFX, transform.position);
+                AudioSource.PlayClipAtPoint(attackSFX, transform.position, 0.1f);
                 
                 Vector3 dir = playerPos.position - transform.position;
                 float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
