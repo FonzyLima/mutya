@@ -52,6 +52,7 @@ public class MenuDialogue : MonoBehaviour
             playBGM.Play();
             
         StartDialogue();
+        Input.ResetInputAxes();
     }
 
     // Update is called once per frame

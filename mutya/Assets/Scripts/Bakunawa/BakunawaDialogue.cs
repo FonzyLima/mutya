@@ -45,6 +45,7 @@ public class BakunawaDialogue : MonoBehaviour
             SFXPlayer.Play();
             
         StartDialogue();
+        Input.ResetInputAxes();
     }
 
     // Update is called once per frame
