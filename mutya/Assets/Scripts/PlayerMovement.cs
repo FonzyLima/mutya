@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
 
-            if (Input.GetKeyDown(KeyCode.LeftControl)){
+            if (Input.GetKeyDown(KeyCode.LeftShift)){
                 isCrouching = true;
                 animator.SetBool("isCrouching", isCrouching);
                 SpriteRenderer.sprite = Crouching;
@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
                 moveSpeed = 2;
             }
 
-            if (Input.GetKeyUp(KeyCode.LeftControl)){
+            if (Input.GetKeyUp(KeyCode.LeftShift)){
                 isCrouching = false;
                 animator.SetBool("isCrouching", isCrouching);
                 SpriteRenderer.sprite = Standing;

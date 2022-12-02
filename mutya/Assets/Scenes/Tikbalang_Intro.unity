@@ -24644,7 +24644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can use CTRL to Crouch and be quiet when the tikbalang is near!
+  m_text: You can use LEFT SHIFT to Crouch and be quiet when the tikbalang is near!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4a9d80f708da083478ad42e4bd8f0b9b, type: 2}
   m_sharedMaterial: {fileID: 4029075191954932110, guid: 4a9d80f708da083478ad42e4bd8f0b9b, type: 2}
