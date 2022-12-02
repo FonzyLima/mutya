@@ -21854,6 +21854,10 @@ PrefabInstance:
       propertyPath: pickUpText
       value: 
       objectReference: {fileID: 22462451}
+    - target: {fileID: 4366049984093750029, guid: 36a023f8b8b95ab46854482d4cdb17d4, type: 3}
+      propertyPath: location.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4705156359220997124, guid: 36a023f8b8b95ab46854482d4cdb17d4, type: 3}
       propertyPath: m_Name
       value: Item
