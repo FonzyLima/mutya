@@ -34,11 +34,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  m_Clip: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   m_Loop: 1
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.1
 --- !u!114 &-8052009539275561300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -436,11 +436,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  m_Clip: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   m_Loop: 1
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.1
 --- !u!114 &-5479547444296657934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1521,11 +1521,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  m_Clip: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   m_Loop: 1
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.1
 --- !u!114 &-1788017627258047607
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1538,11 +1538,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  m_Clip: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   m_Loop: 1
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.1
 --- !u!114 &-1479698278366672818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1795,11 +1795,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  m_Clip: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   m_Loop: 1
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.1
 --- !u!114 &16803005651890758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2164,11 +2164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  m_Clip: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   m_Loop: 1
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.1
 --- !u!114 &650358779610974689
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2310,11 +2310,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  m_Clip: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   m_Loop: 1
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.1
 --- !u!114 &1655718731926933932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2554,7 +2554,7 @@ MonoBehaviour:
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.1
 --- !u!114 &3937125228497286042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3648,10 +3648,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: NewMaria
   - m_Version: 1
-    m_Start: 37.36666666666667
-    m_ClipIn: 7.733333333333334
+    m_Start: 37.46666666666667
+    m_ClipIn: 7.833333333333336
     m_Asset: {fileID: -6976858756736432120}
-    m_Duration: 2.50951410774141
+    m_Duration: 2.4095141077414084
     m_TimeScale: 1
     m_ParentTrack: {fileID: 5408661797549835265}
     m_EaseInDuration: 0
@@ -4778,11 +4778,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: c1e7b9c8b6e345f41b8cf8943a7c6103, type: 3}
+  m_Clip: {fileID: 8300000, guid: 7aae6cc1d03e9694baca493d30cb0020, type: 3}
   m_Loop: 1
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.1
 --- !u!114 &8898608936902280066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4839,8 +4839,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 1c45ec1672e5bde4788619806f516672, type: 3}
+  m_Clip: {fileID: 8300000, guid: 7afb71f03889b1243a5c5de51a9001b2, type: 3}
   m_Loop: 1
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.1
