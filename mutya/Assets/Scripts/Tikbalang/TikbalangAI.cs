@@ -123,6 +123,7 @@ public class TikbalangAI : MonoBehaviour
                 animator.SetFloat("Vertical", dir.y);
                 animator.SetFloat("Speed", dir.sqrMagnitude);
                 transform.position = Vector2.MoveTowards(transform.position, waypoints[wIdx].transform.position, moveSpeed * Time.deltaTime);
+
                 if(transform.position == waypoints[wIdx].transform.position){
                     stop = true;
                     StartCoroutine(Waiter());
