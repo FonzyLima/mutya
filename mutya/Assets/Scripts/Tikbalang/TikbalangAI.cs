@@ -33,11 +33,14 @@ public class TikbalangAI : MonoBehaviour
 
     public AudioClip attackSFX;
 
+    public bool stop;
+
 
     // Start is called before the first frame update
     private void Start()
     {
         //get starting waypoint
+        stop = false;
         transform.position = waypoints[wIdx].transform.position;
 
         //get player position
@@ -107,22 +110,28 @@ public class TikbalangAI : MonoBehaviour
     }
 
     private void Move(){
-        moveSpeed = 4f;
-        if (wIdx < waypoints.Length){
-            Vector3 dir = waypoints[wIdx].transform.position - playerPos.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            dir.Normalize();
 
-            animator.SetFloat("Horizontal", dir.x);
-            animator.SetFloat("Vertical", dir.y);
-            animator.SetFloat("Speed", dir.sqrMagnitude);
-            transform.position = Vector2.MoveTowards(transform.position, waypoints[wIdx].transform.position, moveSpeed * Time.deltaTime);
-            if(transform.position == waypoints[wIdx].transform.position){
-                wIdx += 1;
+        moveSpeed = 4f;
+
+        if (!stop){
+            if (wIdx < waypoints.Length){
+                Vector3 dir = waypoints[wIdx].transform.position - playerPos.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                dir.Normalize();
+    
+                animator.SetFloat("Horizontal", dir.x);
+                animator.SetFloat("Vertical", dir.y);
+                animator.SetFloat("Speed", dir.sqrMagnitude);
+                transform.position = Vector2.MoveTowards(transform.position, waypoints[wIdx].transform.position, moveSpeed * Time.deltaTime);
+                if(transform.position == waypoints[wIdx].transform.position){
+                    stop = true;
+                    StartCoroutine(Waiter());
+                    wIdx += 1;
+                }
             }
-        }
-        else{
-            wIdx = 0;
+            else{
+                wIdx = 0;
+            }
         }
     }
 
@@ -139,5 +148,11 @@ public class TikbalangAI : MonoBehaviour
             tDialogue.gameOverSet(true);
             respawn.setterDead(true);
         }
+    }
+
+    IEnumerator Waiter(){
+        //Wait for 4 seconds
+        yield return new WaitForSeconds(2);
+        stop = false;
     }
 }
